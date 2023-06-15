@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Palette+Mosaic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: rgb(3, 3, 23);
+    background-image: url("imgs/background.jpg");
+    background-origin: border-box;
 }
 .mainpage{
     align-items: center;
@@ -69,22 +72,34 @@ button:hover{
     border-radius: 20px;
     margin-right: 15%;
     overflow: hidden;
+    border: 8px dashed cyan;
 }
 .mainpage2{
     width: 40%;
     height: inherit;
     background-color: ;
     float: right;
+    text-align: center;
+    color: yellow;
+    font-size: 28px;
+    font-family: 'Lobster', cursive;
 }
 .mainpage3{
     width: 60%;
     height: inherit;
-    background-color: blueviolet;
+    background-color: ;
     float: left;
+    padding: 20% 0 0 0;
+    text-align: center;
+    color: rgba(0, 136, 169, 1.0);
+    font-size: 24px;
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 35px;
 }
 .dttimg{
     cursor: pointer;
-    max-width: 83%;
-    max-height: 83%;
-    margin: 8% 0 0 20%;
+    max-width: 85%;
+    max-height: 85%;
+    margin: 3%;
 }
