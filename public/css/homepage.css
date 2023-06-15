@@ -69,3 +69,15 @@ button:hover{
     border-radius: 7%;
     margin-right: 15%;
 }
+.mainpage2{
+    width: 50%;
+    height: inherit;
+    background-color: blue;
+    float: right;
+}
+.mainpage3{
+    width: 50%;
+    height: inherit;
+    background-color: blueviolet;
+    float: left;
+}
