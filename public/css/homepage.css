@@ -6,16 +6,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-image: url("imgs/background.jpg");
-    background-origin: border-box;
 }
-.mainpage{
-    align-items: center;
+
+.mainn{
+    background-image: url("../imgs/background.jpg");
+    background-size: 1550px 1100px;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 li, a, button{
     font-family: 'Kablammo', cursive;
     font-family: 'Palette Mosaic', cursive;
-
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
@@ -44,14 +46,12 @@ header{
 }
 .navlink li a{
     transition: all 0.3s ease 0s;
+    color: rgba(0, 136, 169, 1);
 }
 .navlink li a:hover{
-    color: aqua;
+    color: black;
 }
-.navlink li a::after{
-    color: #edf0f1;
-    background-color: rgba(0, 136, 169, 0.8);
-}
+
 button{
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
@@ -66,13 +66,12 @@ button:hover{
 .mainpage{
     width: 70%;
     height: 550px;
-    background-color: white;
+    background-color: ;
     margin-top: 45px;
     margin-left: 15%;
     border-radius: 20px;
     margin-right: 15%;
     overflow: hidden;
-    border: 8px dashed cyan;
 }
 .mainpage2{
     width: 40%;
