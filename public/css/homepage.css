@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Palette+Mosaic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
@@ -17,19 +17,23 @@
 }
 
 li, a, button{
-    font-family: 'Kablammo', cursive;
-    font-family: 'Palette Mosaic', cursive;
-    font-weight: 500;
+    font-weight: 800;
     font-size: 18px;
+    font-family: 'Kanit', sans-serif;
     color: #edf0f1;
     text-decoration: none;
 }
+li{
+    border-right: 1px solid rgb(18, 89, 136);
+}
 
 header{
+    background-color: rgba(0, 169, 152, 0.219);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 25px 10%;
+    border-bottom: 2px solid rgb(18, 89, 136);
 }
 .logo{
     cursor: pointer;
@@ -110,7 +114,7 @@ button:hover{
     padding-right: 0%;
 }
 @keyframes shadowmove {
-    50%{text-shadow: 10px 10px 30px rgb(108, 237, 147)}
+    70%{text-shadow: 10px 10px 30px rgb(80, 235, 127)}
 }
 .mainpage3 h3{
     letter-spacing: 1.5px;
