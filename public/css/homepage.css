@@ -13,7 +13,7 @@
     background-size: 1550px 1100px;
     background-position: center;
     background-attachment: fixed;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(0px);
 }
 
 li, a, button{
@@ -65,11 +65,11 @@ button:hover{
     background-color: rgba(0, 136, 169, 0.8);
 }
 .mainpage{
-    width: 70%;
+    width: 80%;
     height: 550px;
     background-color: ;
     margin-top: 45px;
-    margin-left: 15%;
+    margin-left: 10%;
     border-radius: 20px;
     margin-right: 15%;
     overflow: hidden;
@@ -83,10 +83,18 @@ button:hover{
     color: rgba(0, 136, 169, 1.0);
     font-size: 35px;
     font-family: 'Lobster', cursive;
-    padding: 0 0 5% 0;
+    padding: 0 0 6% 0;
+    position: relative;
+}
+#borderleft{
+    position: absolute;
+    border-left: 4px dashed rgb(9, 239, 189);
+    top: 33%;
+    bottom: 18%;
+
 }
 .mainpage2 p{
-    padding-top: 5px;
+    padding-top: -15px;
 }
 .mainpage3{
     width: 60%;
@@ -99,6 +107,7 @@ button:hover{
     font-size: 24px;
     font-family: 'Fjalla One', sans-serif;
     animation: shadowmove 5s infinite;
+    padding-right: 0%;
 }
 @keyframes shadowmove {
     50%{text-shadow: 10px 10px 30px rgb(108, 237, 147)}
@@ -106,11 +115,11 @@ button:hover{
 .mainpage3 h3{
     letter-spacing: 1.5px;
     line-height: 35px;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 .dttimg{
+    position: relative;
     cursor: pointer;
     max-width: 90%;
-    max-height: 90%;
-    padding: 3%;
+    max-height: 85%;
 }
