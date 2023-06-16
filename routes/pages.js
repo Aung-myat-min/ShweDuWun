@@ -15,6 +15,10 @@ router.get('/store', (req, res) => {
 })
 
 router.get('/items', (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/items.html"));
+    res.render("items");
+})
+
+router.get('/terms', (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/terms.html"));
 })
 module.exports = router;

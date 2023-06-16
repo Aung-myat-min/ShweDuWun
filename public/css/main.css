@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mainn{
+    background-image: url("../imgs/69.jpg");
+    background-size: 1550px 1100px;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(0px);
+}
+
+li, a, button{
+    font-weight: 800;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    color: #edf0f1;
+    text-decoration: none;
+}
+li{
+    border-right: 1px solid rgb(18, 89, 136);
+}
+
+header{
+    background-color: rgba(0, 169, 152, 0.219);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 10%;
+    border-bottom: 2px solid rgb(18, 89, 136);
+}
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    max-width: 10%;
+    max-height: 8%;
+}
+.navlink{
+    list-style: none;
+    margin-right: 20px;
+}
+.navlink li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.navlink li a{
+    transition: all 0.3s ease 0s;
+    color: rgba(0, 136, 169, 1);
+}
+.navlink li a:hover{
+    color: black;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: rgba(0, 136, 169, 0.8);
+}
