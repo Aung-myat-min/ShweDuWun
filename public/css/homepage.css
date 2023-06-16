@@ -9,17 +9,18 @@
 }
 
 .mainn{
-    background-image: url("../imgs/background.jpg");
+    background-image: url("../imgs/69.jpg");
     background-size: 1550px 1100px;
     background-position: center;
     background-attachment: fixed;
+    backdrop-filter: blur(3px);
 }
 
 li, a, button{
     font-family: 'Kablammo', cursive;
     font-family: 'Palette Mosaic', cursive;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -77,28 +78,39 @@ button:hover{
     width: 40%;
     height: inherit;
     background-color: ;
-    float: right;
+    float: left;
     text-align: center;
-    color: yellow;
-    font-size: 28px;
+    color: rgba(0, 136, 169, 1.0);
+    font-size: 35px;
     font-family: 'Lobster', cursive;
+    padding: 0 0 5% 0;
+}
+.mainpage2 p{
+    padding-top: 5px;
 }
 .mainpage3{
     width: 60%;
     height: inherit;
     background-color: ;
-    float: left;
-    padding: 20% 0 0 0;
+    float: right;
+    padding: 10% 0 0 0;
     text-align: center;
     color: rgba(0, 136, 169, 1.0);
     font-size: 24px;
     font-family: 'Fjalla One', sans-serif;
+    animation: shadowmove 5s infinite;
+}
+@keyframes shadowmove {
+    50%{text-shadow: 10px 10px 30px rgb(108, 237, 147)}
+}
+.mainpage3 h3{
     letter-spacing: 1.5px;
     line-height: 35px;
+    margin-top: 1%;
 }
 .dttimg{
     cursor: pointer;
-    max-width: 85%;
-    max-height: 85%;
-    margin: 3%;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 3%;
 }
