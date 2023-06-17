@@ -65,44 +65,57 @@ header button:hover{
     color: black;
 }
 footer{
-    background-color: blue;
+    background-color: rgba(0, 169, 152, 0.319);
     width: 100%;
     height: 40vh;
     margin-top: 3%;
-    text-align: center;
+    border-top: 4px solid black;
+    
 }
 .footer1{
     width: 33.33%;
-    height: 90%;
-    background-color: black;
+    height: 83%;
+
     font-family: 'Dancing Script', cursive;
     font-size: 30px;
-    padding: 3% 3.5% 0;
-    color: aqua;
+    color: black;
     float: left;
+    text-align: center;
+    padding: 3% 3.5% 0;
+    text-shadow: 1px 1px 15px bisque;
 }
 .footer1 h3{
-    border-top: 2px solid aqua;
+    border-top: 4px solid aqua;
     padding-top: 3%;
+}
+.footer1 h1, .footer1 h3{
+    border-right: 4px solid aqua;
 }
 .footer2{
     width: 33.33%;
-    height: 90%;
-    background-color: red;
+    height: 83%;
     float: left;
-    padding-top: 20px;
+    padding-top: 35px;
+    text-shadow: 1px 1px 15px bisque;
+
+}
+.footer2 li{
+    list-style-type: none;
+    padding: 2px 0 0 25%;
+    border-right: 3px solid cyan;
 }
 .footer2 li a{
     font-weight: 800;
     font-size: 18px;
-    font-family: 'Kanit', sans-serif;
-    color: aqua;
+    color: black;
     text-decoration: none;
+    padding: 2% 0 2% 0;
+
 }
 .footer3{
     width: 33.33%;
-    height: 90%;
-    background-color: gray;
+    height: 83%;
+
     float: right;
     text-align: left;
 }
@@ -114,10 +127,36 @@ footer{
 .footer3 font button{
     background-color: black;
     color: aqua;
-    padding: 6px 50px;
-    border: solid 1px green;
-    margin: 20px 0 0 3%;
+    padding: 3px 50px;
+    border: solid 1px whitesmoke;
+    margin: 15px 0 0 3%;
+    cursor: pointer;
+}
+.footer3 font button:hover{
+    background-color: aqua;
+    color: black;
 }
 .icons{
     list-style-type: none;
+    display: flex;
+    font-size: 40px;
+    font-family: 'Kanit', sans-serif;
+    margin: 2% 4%; 
+    color: aqua;
+    text-shadow: 1px 1px 10px black;
+}
+.icons li{
+    padding: 2% 18px 0;
+    cursor: pointer;
+}
+.footer4{
+    float: left;
+    height: 10%;
+    width: inherit;
+    padding: 2px 20% 0;
+    text-align: center;
+}
+.footer4 h4{
+    padding-top: 10px;
+    border-top: 4px solid black;
 }
