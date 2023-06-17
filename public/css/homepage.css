@@ -1,0 +1,59 @@
+.mainpage{
+    width: 80%;
+    height: 550px;
+    background-color: ;
+    margin-top: 45px;
+    margin-left: 10%;
+    border-radius: 20px;
+    margin-right: 15%;
+    overflow: hidden;
+}
+.mainpage2{
+    width: 40%;
+    height: inherit;
+    background-color: ;
+    float: left;
+    text-align: center;
+    color: rgba(0, 136, 169, 1.0);
+    font-size: 35px;
+    font-family: 'Lobster', cursive;
+    padding: 0 0 6% 0;
+    position: relative;
+}
+#borderleft{
+    position: absolute;
+    border-left: 4px dashed rgb(9, 239, 189);
+    top: 33%;
+    bottom: 18%;
+
+}
+.mainpage2 p{
+    padding-top: -15px;
+}
+.mainpage3{
+    width: 60%;
+    height: inherit;
+    background-color: ;
+    float: right;
+    padding: 10% 0 0 0;
+    text-align: center;
+    color: rgba(0, 136, 169, 1.0);
+    font-size: 24px;
+    font-family: 'Fjalla One', sans-serif;
+    animation: shadowmove 5s infinite;
+    padding-right: 0%;
+}
+@keyframes shadowmove {
+    70%{text-shadow: 10px 10px 30px rgb(80, 235, 127)}
+}
+.mainpage3 h3{
+    letter-spacing: 1.5px;
+    line-height: 35px;
+    margin-top: 2%;
+}
+.dttimg{
+    position: relative;
+    cursor: pointer;
+    max-width: 90%;
+    max-height: 85%;
+}
