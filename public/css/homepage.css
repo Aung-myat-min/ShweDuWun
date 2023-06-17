@@ -1,13 +1,7 @@
-.mainn{
-    background-image: url("../imgs/69.jpg");
-    background-size: 1550px 1100px;
-    background-position: center;
-    background-attachment: fixed;
-    backdrop-filter: blur(0px);
-}
 .mainpage{
     width: 80%;
     height: 550px;
+    background-color: ;
     margin-top: 45px;
     margin-left: 10%;
     border-radius: 20px;
@@ -17,6 +11,7 @@
 .mainpage2{
     width: 40%;
     height: inherit;
+    background-color: ;
     float: left;
     text-align: center;
     color: rgba(0, 136, 169, 1.0);
@@ -27,9 +22,9 @@
 }
 #borderleft{
     position: absolute;
-    border-left: 2px dashed rgb(9, 239, 189);
-    top: 24%;
-    bottom: 40%;
+    border-left: 4px dashed rgb(9, 239, 189);
+    top: 33%;
+    bottom: 18%;
 
 }
 .mainpage2 p{
@@ -38,6 +33,7 @@
 .mainpage3{
     width: 60%;
     height: inherit;
+    background-color: ;
     float: right;
     padding: 10% 0 0 0;
     text-align: center;
