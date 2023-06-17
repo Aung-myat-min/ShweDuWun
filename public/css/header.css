@@ -8,13 +8,7 @@
     padding: 0;
 }
 
-.mainn{
-    background-image: url("../imgs/69.jpg");
-    background-size: 1550px 1100px;
-    background-position: center;
-    background-attachment: fixed;
-    backdrop-filter: blur(0px);
-}
+
 
 li, a, button{
     font-weight: 800;
@@ -24,7 +18,7 @@ li, a, button{
     text-decoration: none;
 }
 li{
-    border-right: 1px solid rgb(18, 89, 136);
+    border-right: 2px solid rgb(18, 89, 136);
 }
 
 header{
@@ -32,7 +26,7 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 25px 10%;
+    padding: 2% 10%;
     border-bottom: 2px solid rgb(18, 89, 136);
 }
 .logo{
@@ -67,4 +61,15 @@ button{
 }
 button:hover{
     background-color: rgba(0, 136, 169, 0.8);
+}
+footer{
+    background-color: blue;
+    width: 100%;
+    height: 40vh;
+    margin-top: 3%;
+}
+.footer1{
+    width: 33.3%;
+    height: 85%;
+    background-color: black;
 }
