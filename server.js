@@ -15,10 +15,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/homepage.html"));
 })
 
-app.get('/homepage', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/homepage.html")); // nothing but for vercel bug
-})
-
 app.get('/contactus', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/contactus.html"));
 })
@@ -37,6 +33,6 @@ app.get('/delivery', (req, res) => {
 //routes
 
 app.listen(port);
-console.log("\n===== *** WEB is running *** =====\n")
+console.log("\n===== *** WEB is running on localhost:5001 *** =====\n")
 
 module.exports = app;
