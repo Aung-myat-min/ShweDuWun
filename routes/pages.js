@@ -18,7 +18,7 @@ router.get('/items', (req, res) => {
     res.render("items");
 })
 
-router.get('/terms', (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/terms.html"));
+router.get('/delivery', (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/delivery.html"));
 })
 module.exports = router;

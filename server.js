@@ -7,7 +7,6 @@ app.set("view engine", "ejs");
 app.use("/js", express.static(__dirname+"/public/js"));
 app.use("/css", express.static(__dirname+"/public/css"));
 app.use("/imgs", express.static(__dirname+"/public/imgs"));
-app.use("/", require('./routes/pages'));
 
 //routes
 app.get('/', (req, res) => {
@@ -26,8 +25,8 @@ app.get('/items', (req, res) => {
     res.render("items");
 })
 
-app.get('/terms', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/terms.html"));
+app.get('/delivery', (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/delivery.html"));
 })
 //routes
 
