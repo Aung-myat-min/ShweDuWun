@@ -4,6 +4,8 @@ const port = 5001;
 
 const app = express();
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
+
 app.use("/js", express.static(__dirname+"/public/js"));
 app.use("/css", express.static(__dirname+"/public/css"));
 app.use("/imgs", express.static(__dirname+"/public/imgs"));
@@ -14,7 +16,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/homepage', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/homepage.html"));
+    res.sendFile(path.join(__dirname, "/views/homepage.html")); // nothing but for vercel bug
 })
 
 app.get('/contactus', (req, res) => {
