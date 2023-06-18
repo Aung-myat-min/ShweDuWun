@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/homepage.html"));
 })
 
+app.get('/homepage', (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/homepage.html"));
+})
+
 app.get('/contactus', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/contactus.html"));
 })
