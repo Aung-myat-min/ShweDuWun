@@ -9,16 +9,17 @@ section{
 
 #left{
     flex: 35%;
+    margin-left: 5vh;
 }
 #left img{
     width: 80%;
     margin: 10%;
     box-shadow: 25px 25px rgba(0, 0, 0, .6);
-    margin-top: 20%;
+    margin-top: 15%;
 }
 #left p{
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     font-family: 'Courier New', Courier, monospace;
     color: white;
     text-shadow: 3px 3px #000000;
@@ -28,6 +29,11 @@ section{
 #right{
     text-align: justify;
     flex: 65%;
+}
+#right p{
+    font-size: 2.5em;
+    padding: 10% 10vh;
+    padding-bottom: 0;
 }
 
 @media (max-width: 800px) {

@@ -9,7 +9,9 @@
     padding: 0;
 }
 
-
+body{
+    background-image: url("../imgs/69.jpg");
+}
 
 header li a, button{
     font-weight: 800;
