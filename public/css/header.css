@@ -11,6 +11,10 @@
 
 .mainn{
     background-image: url("../imgs/69.jpg");
+    background-size: 1550px 1100px;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(0px);
 }
 
 header li a, button{
