@@ -147,13 +147,17 @@ footer{
     display: flex;
     font-size: 40px;
     font-family: 'Kanit', sans-serif;
-    margin: 2% 4%; 
-    color: aqua;
+    margin: 3% 4%; 
     text-shadow: 1px 1px 10px black;
+}
+.icons a{
+    text-decoration: none;
+    color: aqua;
 }
 .icons li{
     padding: 2% 18px 0;
     cursor: pointer;
+
 }
 .footer4{
     float: left;
