@@ -14,6 +14,8 @@ And if you want to link some css, js and images. Just use
 - js/ + filename
 - imgs/ + filename
 
-respecitvely
+accordingly.
+
+BTW, if you want to view the up to date version of the site. __ Please, visit to [ShweDuWun.com](https://mom-website-git-main-aung-myat-min.vercel.app/store)__
 
 # Good Luck 🍀

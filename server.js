@@ -30,6 +30,10 @@ app.get('/items', (req, res) => {
 app.get('/delivery', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/delivery.html"));
 })
+
+app.get('/card', (req, res) => {
+    res.sendFile(path.join(__dirname + "/views/card.html"));
+})
 //routes
 
 app.listen(port);
