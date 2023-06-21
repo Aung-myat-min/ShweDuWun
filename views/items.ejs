@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/header.css" type="text/css">
-    <link rel="stylesheet" href="css/items.css" type="text/css">
+    <link rel="stylesheet" href="/css/header.css" type="text/css">
+    <link rel="stylesheet" href="/css/items.css" type="text/css">
     <script src="https://kit.fontawesome.com/ef09da54b9.js" crossorigin="anonymous"></script>
     <title>Website4MyMomsBusiness</title>
 </head>
 <body class="mainn">
     <div>
-
         <header>
-            <img class="logo" src="imgs/sdwlogo.png" alt="logo">
+            <img class="logo" src="/imgs/sdwlogo.png" alt="logo">
             <nav>
                 <ul class="navlink">
                     <li><a href="/">Homepage</a></li>
@@ -22,15 +21,14 @@
             </nav>
             <a class="cta" href="/contactus"><button>About & Contact</button></a>
         </header>
-        
     </div>
     <section>
         <div id="left">
-            <img src="imgs/drug.png" alt="">
-            <p>1500MMK</p>
+            <img src="/imgs/item_photos/<%= image %>" alt="" id="image">
+            <p id="price"><%= price %></p>
         </div>
         <div id="right">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint nobis impedit saepe aut a nulla, aliquam dolorum voluptas necessitatibus quos, quidem eius ab! Nisi sapiente debitis culpa id molestiae veritatis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, fugiat. Provident, non placeat. Magnam fugit praesentium eligendi ullam voluptatibus fugiat consequuntur laboriosam, aliquam atque! Incidunt, quaerat. Amet obcaecati vero magni.</p>
+            <p id="details"><%= details %></p>
         </div>
     </section>
     <div class="footerclass">
@@ -40,7 +38,6 @@
                 <br>
                 <h3>Medical Product Distributor</h3>
             </div>
-
             <div class="footer2">
                 <ul>
                     <li><a href="#">Pages</a></li>
@@ -59,7 +56,6 @@
                     <br>
                     <button type="submit">Subscribe</button>
                 </font>
-
                 <ul class="icons">
                     <li><i class="fa-brands fa-facebook fa-beat"></i></li>
                     <li><i class="fa-brands fa-facebook-messenger fa-fade"></i></li>

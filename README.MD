@@ -16,6 +16,8 @@ And if you want to link some css, js and images. Just use
 
 accordingly.
 
-BTW, if you want to view the up to date version of the site. __ Please, visit to [ShweDuWun.com](https://mom-website-git-main-aung-myat-min.vercel.app/store)__
+BTW, if you want to view the up to date version of the site. __Please, visit to [ShweDuWun.com](https://mom-website-git-main-aung-myat-min.vercel.app/store)__
+
+>And for the test I use the photo and some details from FAME. So, I give the credit to FAME.
 
 # Good Luck 🍀
