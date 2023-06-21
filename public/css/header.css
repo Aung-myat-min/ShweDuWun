@@ -48,11 +48,11 @@ header{
 }
 .navlink li{
     display: inline-block;
-    padding: 0px 20px;
 }
 .navlink li a{
     transition: all 0.3s ease 0s;
     color: rgba(0, 136, 169, 1);
+    padding: 0px 20px;
 }
 .navlink li a:hover{
     color: black;
@@ -121,9 +121,9 @@ footer{
 .footer3{
     width: 33.33%;
     height: 83%;
-
     float: right;
     text-align: left;
+    padding-left: 10px;
 }
 .footer3 font input{
     padding: 2% 150px 2% 10px;
@@ -141,6 +141,9 @@ footer{
 .footer3 font button:hover{
     background-color: aqua;
     color: black;
+    padding: 3px 55px;
+    font-size: 23px;
+    border: solid 4px black;
 }
 .icons{
     list-style-type: none;
@@ -169,4 +172,91 @@ footer{
 .footer4 h4{
     padding-top: 10px;
     border-top: 4px solid black;
+}
+
+@media only screen and (max-width: 700px){
+    header{
+        width: 100%;
+        top: 70px;
+        right: 0;
+        z-index: 2;
+        
+        background-color: rgba(0, 169, 152, 0.219);
+    }
+    footer{
+        display: inline-block;
+        width: 100%;
+        height: 50vh;
+    }
+    .footer1{
+        width: 50%;
+        height: 50%;
+        float: left;
+        font-size: 17px;
+        padding: 12% 3% 0 0;
+    }
+    .footer1 h3{
+        border-top: 2px solid aqua;
+        padding-top: 3%;
+        border-right: 3px solid aqua;
+    }
+    .footer1 h1{
+        border-right: 3px solid aqua;
+        top: 0; 
+    }
+    .footer2{
+        width: 50%;
+        height: 50%;
+        float: right;
+        padding-top: 10px;
+    }
+    .footer2 li{
+        padding: 5px 0 0 4%;
+        font-weight: 600;
+        border-left: 2px solid aqua;
+    }
+    .footer2 li a{
+        font-size: 15px;
+        color: black;
+        text-decoration: none;
+        padding: 1% 0 0 0;
+    }
+    .footer3{
+        width: 100%;
+        display: inline-block;
+        float: none;
+        padding: 2% 5%;
+        border-top: 4px solid black;
+        
+    }
+    .footer3 font input{
+        padding: 2% 150px 2% 10px;
+        margin: 1px 0 0 0;
+        border: solid 3px black;
+    }
+    .footer3 font button{
+        background-color: black;
+        color: aqua;
+        padding: 3px 50px;
+        border: solid 1px whitesmoke;
+        margin: 10px 0 0 0;
+        cursor: pointer;
+    }
+    .footer3 font button:hover{
+        background-color: aqua;
+        color: black;
+        padding: 3px 51px;
+        font-size: 20px;
+        border: solid 4px black;
+    }
+    .icons{
+        font-size: 30px;
+        margin: 1% 0 0 0;
+        padding-left: 5px;
+    }
+    .icons li{
+        padding: 1% 20px 0;
+    }
+
+
 }
