@@ -178,7 +178,7 @@ footer{
 
 
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 800px){
     header{
         width: 100%;
         top: 70px;
@@ -197,7 +197,7 @@ footer{
         height: 50%;
         float: left;
         font-size: 17px;
-        padding: 12% 3% 0 0;
+        padding: 12% 3% 0 2%;
     }
     .footer1 h3{
         border-top: 2px solid aqua;
@@ -206,7 +206,6 @@ footer{
     }
     .footer1 h1{
         border-right: 3px solid aqua;
-        top: 0; 
     }
     .footer2{
         width: 50%;
@@ -214,6 +213,7 @@ footer{
         float: right;
         padding-top: 10px;
         padding-bottom: 7px;
+        padding-right: 2px;
     }
     .footer2 li{
         padding: 5px 0 0 3%;
@@ -274,6 +274,9 @@ footer{
     .footer4 h4{
         padding-top: 10px;
         border-top: 4px solid black;
+    }
+    #smallertext{
+        font-size: 13px;
     }
     /*TODO - fix the footer in mobile resposive,
     Also do header*/
