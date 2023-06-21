@@ -4,26 +4,6 @@ const port = 5001;
 const fs = require('fs');
 const csv = require('csv-parser');
 
-const findRowById = (id) => {
-    return new Promise((resolve, reject) => {
-      fs.createReadStream(__dirname + '/public/item_details.csv')
-        .pipe(csv({ separator: '|' })) // Set the separator as '|'
-        .on('data', (data) => {
-          if (data.ID === id) {
-            resolve(data);
-            console.log(data)
-          }
-        })
-        .on('end', () => {
-          reject(new Error('Row not found'));
-        })
-        .on('error', (error) => {
-          reject(error);
-        });
-    });
-  };
-  
-
 const app = express();
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views'));
@@ -34,7 +14,7 @@ app.use("/imgs", express.static(__dirname+"/public/imgs"));
 
 //routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/homepage.html"));
+    res.sendFile(path.join(__dirname, "/views/.html"));
 })
 
 app.get('/contactus', (req, res) => {
