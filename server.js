@@ -14,7 +14,7 @@ app.use("/imgs", express.static(__dirname+"/public/imgs"));
 
 //routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/.html"));
+    res.sendFile(path.join(__dirname, "/views/homepage.html"));
 })
 
 app.get('/contactus', (req, res) => {

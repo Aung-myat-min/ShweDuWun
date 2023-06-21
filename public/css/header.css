@@ -9,6 +9,8 @@
     padding: 0;
 }
 
+/*TODO From here*/
+
 body{
     background-image: url("../imgs/69.jpg");
     background-size: 1550px 1100px;
@@ -76,8 +78,10 @@ footer{
     height: 40vh;
     margin-top: 3%;
     border-top: 4px solid black;
-    
 }
+
+/*TODO To here*/
+
 .footer1{
     width: 33.33%;
     height: 83%;
