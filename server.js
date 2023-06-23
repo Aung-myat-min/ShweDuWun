@@ -34,8 +34,8 @@ const csvParserConfig = {
     headers: ['Item_id', 'Details', 'Value'],
     skipLines: 1, // Skip the first line (header row)
 };
-  
-  
+
+
 app.get('/items/:id', (req, res) => {
     const id = req.params.id;
     console.log('ID:', id);
@@ -74,15 +74,10 @@ app.get('/items/:id', (req, res) => {
         res.render('error', { message: 'Error reading CSV file' });
       });
   });
-  
-   
+
 
 app.get('/delivery', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/delivery.html"));
-})
-
-app.get('/card', (req, res) => {
-    res.sendFile(path.join(__dirname + "/views/card.html"));
 })
 //routes
 
