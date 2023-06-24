@@ -1,180 +1,246 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-#homebody{
-    height: auto;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.mainpage{
-    width: 80%;
-    height: 550px;
-    margin-top: 45px;
-    margin-left: 10%;
-    border-radius: 20px;
-    margin-right: 15%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
+#homebody {
+  height: auto;
 }
-.mainpage2{
-    flex: 40%;
-    height: inherit;
-    float: left;
-    text-align: center;
-    color: rgba(0, 136, 169, 1.0);
-    font-size: 35px;
-    font-family: 'Lobster', cursive;
-    padding: 0 0 6% 0;
-    position: relative;
-}
-#borderleft{
-    position: absolute;
-    border-left: 4px dashed rgb(9, 239, 189);
-    top: 25%;
-    bottom: 40%;
 
+.mainpage {
+  width: 80%;
+  height: 550px;
+  margin-top: 45px;
+  margin-left: 10%;
+  border-radius: 20px;
+  margin-right: 15%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
-.mainpage2 p{
-    padding-top: -15px;
+.mainpage2 {
+  flex: 40%;
+  height: inherit;
+  float: left;
+  text-align: center;
+  color: rgba(0, 136, 169, 1);
+  font-size: 35px;
+  font-family: "Lobster", cursive;
+  padding: 0 0 6% 0;
+  position: relative;
 }
-.mainpage3{
-    flex: 60%;
-    height: inherit;
-    float: right;
-    padding: 10% 0 0 0;
-    text-align: center;
-    color: rgba(0, 136, 169, 1.0);
-    font-size: 24px;
-    font-family: 'Fjalla One', sans-serif;
-    animation: shadowmove 5s infinite;
-    padding-right: 0%;
+#borderleft {
+  position: absolute;
+  border-left: 4px dashed rgb(9, 239, 189);
+  top: 25%;
+  bottom: 40%;
+}
+.mainpage2 p {
+  padding-top: -15px;
+}
+.mainpage3 {
+  flex: 60%;
+  height: inherit;
+  float: right;
+  padding: 10% 0 0 0;
+  text-align: center;
+  color: rgba(0, 136, 169, 1);
+  font-size: 24px;
+  font-family: "Fjalla One", sans-serif;
+  animation: shadowmove 5s infinite;
+  padding-right: 0%;
 }
 
 @media screen and (max-width: 851px) {
-    .mainpage{
-        flex-direction: column;
-        height: auto;
-    }
-    #borderleft{
-        display: none;
-    }
-    #toShop{
-        border: 0;
-        width: 100%;
-        margin: 0;
-        height: 50vh;
-    }
-    #Tleft{
-        margin-left: .3%;
-        width: 115%;
-        height: 40vh;
-    }
-    #toShop a{
-        margin-top: -30px;
-    }
-    .Tright{
-        display: none;
-    }
+  .mainpage {
+    flex-direction: column;
+    height: auto;
+  }
+  #borderleft {
+    display: none;
+  }
+  #toShop {
+    border: 0;
+    width: 100%;
+    margin: 0;
+    height: 50vh;
+  }
+  #Tleft {
+    margin-left: 0.3%;
+    width: 115%;
+    height: 40vh;
+  }
+  #toShop a {
+    margin-top: -30px;
+  }
+  .Tright {
+    display: none;
+  }
+  #deli_img {
+    float: left;
+    width: 100%;
+    height: 300px;
+  }
+  #deli_id {
+    width: 98%;
+    margin: 0 1%;
+  }
+  #deli_id p {
+    font-size: 1.5em;
+  }
 }
 @keyframes shadowmove {
-    70%{text-shadow: 10px 10px 30px rgb(80, 235, 127)}
+  70% {
+    text-shadow: 10px 10px 30px rgb(80, 235, 127);
+  }
 }
-.mainpage3 h3{
-    letter-spacing: 1.5px;
-    line-height: 35px;
-    margin-top: 2%;
+.mainpage3 h3 {
+  letter-spacing: 1.5px;
+  line-height: 35px;
+  margin-top: 2%;
 }
-.dttimg{
-    position: relative;
-    cursor: pointer;
-    max-width: 90%;
-    max-height: 85%;
-}
-
-.toShop{
-    width: 86%;
-    height: 70vh;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 15px;
-    text-align: center;
-    margin: 5vh 7%;
-    border: 4px solid black;
-    border-radius: 0 0 25px 25px;
-}
-.toShop a{
-    text-decoration: none;
-    font-size: 1.2em;
-    font-family: 'Fjalla One', sans-serif;
-    padding: 2vh 3vh;
-    border-radius: 0 0 25px 25px;
-    box-shadow: 2px 3px 5px black;
-    background-color: aquamarine;
-    grid-column: 1 / span 2;
-    transition: 400ms linear;
-}
-.toShop a:hover{
-    background-color: rgb(19, 171, 221);
-    color: white;
-    font-size: 1.5em;
+.dttimg {
+  position: relative;
+  cursor: pointer;
+  max-width: 90%;
+  max-height: 85%;
 }
 
-.TV{
-    position: relative;
-    margin: auto auto;
-    height: 60vh;
-    width: 80%;
-    background-image: url('../imgs/TV.png');
-    background-position: center;
-    background-size: 100% 90%;
-    background-repeat: no-repeat;
+.toShop {
+  width: 86%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+  text-align: center;
+  margin: 5vh 7%;
+  border: 4px solid black;
+  border-radius: 0 0 25px 25px;
 }
-.cut{
-    height: 80%;
-    width: 95%;
-    overflow: hidden;
-    margin: auto auto;
+.toShop a {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: "Fjalla One", sans-serif;
+  padding: 2vh 3vh;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 2px 3px 5px black;
+  background-color: aquamarine;
+  grid-column: 1 / span 2;
+  transition: 400ms linear;
 }
-.images{
-    margin: 6% 0;
-    height: 100%;
-    width: 400%;
-    -webkit-animation:slide 25s ease-in-out infinite;
-    -moz-animation:slide 25s ease-in-out infinite;
-    -ms-animation:slide 25s ease-in-out infinite;
-    -o-animation:slide 25s ease-in-out infinite;
-    animation:slide 25s ease-in-out infinite;
-    animation-delay: 3s;
-}
-
-.images img{
-    height: 90%;
-    width: 24%;
-    display: inline-block;
+.toShop a:hover {
+  background-color: rgb(19, 171, 221);
+  color: white;
+  font-size: 1.5em;
 }
 
+.TV {
+  position: relative;
+  margin: auto auto;
+  height: 60vh;
+  width: 80%;
+  background-image: url("../imgs/TV.png");
+  background-position: center;
+  background-size: 100% 90%;
+  background-repeat: no-repeat;
+}
+.cut {
+  height: 80%;
+  width: 95%;
+  overflow: hidden;
+  margin: auto auto;
+}
+.images {
+  margin: 6% 0;
+  height: 100%;
+  width: 400%;
+  -webkit-animation: slide 25s ease-in-out infinite;
+  -moz-animation: slide 25s ease-in-out infinite;
+  -ms-animation: slide 25s ease-in-out infinite;
+  -o-animation: slide 25s ease-in-out infinite;
+  animation: slide 25s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.images img {
+  height: 90%;
+  width: 24%;
+  display: inline-block;
+}
 
 @keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-25%);
-    }
-    50% {
-        transform: translateX(-50%);
-    }
-    75% {
-        transform: translateX(-75%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  75% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*Start Deli*/
+.deli {
+  width: 90%;
+  height: auto;
+  margin: 0 5%;
+  position: relative;
+  padding-top: 25px;
+}
+
+.deli h1 {
+  font-size: 3em;
+  font-family: "Fjalla One", sans-serif;
+  position: absolute;
+  display: inline-block;
+  background-color: rgb(73, 197, 204);
+  padding: 1vh 2vh;
+  line-height: 50px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.box {
+  margin-top: 25px;
+  border: 3px solid black;
+  background-image: url("../imgs/sample.png");
+  background-position: center;
+  background-size: 100;
+  padding: 35px 5px 0 10px;
+}
+
+.box img {
+  height: 100px;
+  width: 250px;
+  float: right;
+}
+.box p {
+  font-size: 2em;
+  font-family: "Fjalla One", sans-serif;
+  line-height: 1.6em;
+  text-align: justify;
+}
+.box a {
+  text-decoration: none;
+  padding: 1vh 2vh;
+  margin: 10px;
+  background-color: purple;
+  font-size: 1.2em;
+  transition: 200ms ease-in-out;
+}
+.box a:hover {
+  color: white;
+  background-color: rgb(230, 12, 230);
 }
