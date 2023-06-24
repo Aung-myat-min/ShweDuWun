@@ -8,14 +8,10 @@
     padding: 0;
 }
 
-.mainn{
-    background-image: url("../imgs/69.jpg");
-    background-size: 1550px 1100px;
-    background-position: center;
-    background-attachment: fixed;
-    backdrop-filter: blur(0px);
-
+#homebody{
+    height: auto;
 }
+
 .mainpage{
     width: 80%;
     height: 550px;
@@ -69,6 +65,23 @@
     #borderleft{
         display: none;
     }
+    #toShop{
+        border: 0;
+        width: 100%;
+        margin: 0;
+        height: 50vh;
+    }
+    #Tleft{
+        margin-left: .3%;
+        width: 115%;
+        height: 40vh;
+    }
+    #toShop a{
+        margin-top: -30px;
+    }
+    .Tright{
+        display: none;
+    }
 }
 @keyframes shadowmove {
     70%{text-shadow: 10px 10px 30px rgb(80, 235, 127)}
@@ -85,7 +98,83 @@
     max-height: 85%;
 }
 
+.toShop{
+    width: 86%;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+    text-align: center;
+    margin: 5vh 7%;
+    border: 4px solid black;
+    border-radius: 0 0 25px 25px;
+}
+.toShop a{
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Fjalla One', sans-serif;
+    padding: 2vh 3vh;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 2px 3px 5px black;
+    background-color: aquamarine;
+    grid-column: 1 / span 2;
+    transition: 400ms linear;
+}
+.toShop a:hover{
+    background-color: rgb(19, 171, 221);
+    color: white;
+    font-size: 1.5em;
+}
+
+.TV{
+    position: relative;
+    margin: auto auto;
+    height: 60vh;
+    width: 80%;
+    background-image: url('../imgs/TV.png');
+    background-position: center;
+    background-size: 100% 90%;
+    background-repeat: no-repeat;
+}
+.cut{
+    height: 80%;
+    width: 95%;
+    overflow: hidden;
+    margin: auto auto;
+}
+.images{
+    margin: 6% 0;
+    height: 100%;
+    width: 400%;
+    -webkit-animation:slide 25s ease-in-out infinite;
+    -moz-animation:slide 25s ease-in-out infinite;
+    -ms-animation:slide 25s ease-in-out infinite;
+    -o-animation:slide 25s ease-in-out infinite;
+    animation:slide 25s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+.images img{
+    height: 90%;
+    width: 24%;
+    display: inline-block;
+}
 
 
-
-/*TODO - Do mobile version, increase heights of div, then make 2 divs (img div and sentneces div already had in website) upper and under.*/
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-75%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
