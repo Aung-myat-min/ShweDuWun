@@ -37,8 +37,8 @@
 #borderleft {
   position: absolute;
   border-left: 4px dashed rgb(9, 239, 189);
-  top: 25%;
-  bottom: 40%;
+  top: 13%;
+  height: 45vh;
 }
 .mainpage2 p {
   padding-top: -15px;
@@ -54,6 +54,7 @@
   font-family: "Fjalla One", sans-serif;
   animation: shadowmove 5s infinite;
   padding-right: 0%;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 851px) {
