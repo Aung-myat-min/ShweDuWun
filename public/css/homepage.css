@@ -8,10 +8,6 @@
   padding: 0;
 }
 
-#homebody {
-  height: auto;
-}
-
 .mainpage {
   width: 80%;
   height: 550px;
@@ -223,7 +219,7 @@
   background-size: 450px;
   padding: 35px 5px 0 10px;
 }
-.box1{
+.box1 {
   background-image: url("../imgs/iconsdesign.png");
 }
 

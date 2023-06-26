@@ -84,3 +84,35 @@ td {
   border: 2px solid black;
   border-collapse: collapse;
 }
+
+@media only screen and (max-width: 851px) {
+  #deliveryh1 {
+    margin: auto 20%;
+    height: 60%;
+    margin-bottom: 2vh;
+  }
+  .cities h1 {
+    font-size: 2em;
+  }
+  .cities input {
+    width: 80%;
+    margin: 1vh 10%;
+    font-size: 1.2em;
+  }
+  .mainsection hr {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .search {
+    width: 100%;
+    margin: auto 0;
+  }
+  .search button {
+    width: 90%;
+    margin: 0.5vh 5%;
+  }
+  .search table {
+    width: 90%;
+    margin: 10px 5%;
+  }
+}
