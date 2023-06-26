@@ -1,0 +1,86 @@
+.brief {
+  width: 90%;
+  margin: 5%;
+  height: auto;
+  border: 3px solid black;
+  padding: 2vh;
+}
+.brief h1 {
+  font-size: 2em;
+  background-color: yellow;
+  display: inline-block;
+  padding: 1vh 1.2vh;
+  margin: 10px;
+}
+.brief p {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin: 5px 5%;
+  text-align: justify;
+}
+
+.mainsection {
+  height: auto;
+  width: 80%;
+  margin: 0 10%;
+  text-align: center;
+}
+.mainsection hr {
+  width: 60%;
+  margin: 1vh;
+  border: 3px dotted black;
+  margin-left: 20%;
+}
+
+.cities {
+}
+.cities h1 {
+  font-size: 3em;
+  margin: 7px;
+}
+.cities input {
+  width: 30%;
+  font-size: 1.8em;
+  padding: 1vh;
+  margin: 1vh;
+  background-color: rgba(255, 255, 0, 0.4);
+}
+
+.search {
+  width: 70%;
+  height: auto;
+  margin-left: 15%;
+  padding: 1vh;
+  border: 5px black solid;
+}
+.search h1 {
+  font-size: 2em;
+  margin: 2vh;
+}
+.search button {
+  width: 80%;
+  text-align: left;
+  font-size: 1.5em;
+  padding: 1vh;
+  margin: 1.5vh;
+}
+.search button i {
+  float: right;
+}
+.content {
+  display: none;
+}
+.search table {
+  width: 70%;
+  margin: 0 15%;
+}
+.search td {
+  font-size: 1.3em;
+  padding: 1vh 0;
+}
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
