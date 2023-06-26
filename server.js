@@ -57,9 +57,10 @@ app.get("/items/:id", (req, res) => {
       console.log("Found Row:", row);
       if (row) {
         const dataToEJS = {
+          name: rowList[1],
           image: id + ".png",
-          price: rowList[2],
-          details: rowList[1],
+          price: rowList[3],
+          details: rowList[2],
         };
         res.render("items", dataToEJS);
       } else {

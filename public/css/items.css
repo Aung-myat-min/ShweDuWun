@@ -8,6 +8,7 @@ section {
 }
 
 #left {
+  text-align: center;
   flex: 35%;
   margin-left: 5vh;
 }
@@ -15,7 +16,6 @@ section {
   width: 80%;
   margin: 10%;
   box-shadow: 25px 25px rgba(0, 0, 0, 0.6);
-  margin-top: 15%;
 }
 #left p {
   text-align: center;
@@ -24,6 +24,10 @@ section {
   color: white;
   text-shadow: 3px 3px #000000;
   font-weight: 800;
+}
+#left h1 {
+  font-size: 3.5em;
+  margin-top: 3vh;
 }
 
 #right {
