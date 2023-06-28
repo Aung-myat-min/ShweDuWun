@@ -1,0 +1,32 @@
+@media only screen and (max-width: 851px) {
+  .desktop {
+    display: none;
+  }
+  #mobile {
+    display: block;
+    padding: 0 2%;
+  }
+  #mobile h1 {
+    font-size: 2em;
+    text-align: center;
+    padding: 3vh;
+  }
+  #mobile h2,
+  p {
+    font-size: 1.3em;
+    padding-left: 2vh;
+  }
+  #mobile p {
+    color: gray;
+    font-size: 1.1em;
+  }
+  .inputs {
+    margin: 5px 0;
+  }
+  .inputs input {
+    height: 100%;
+    width: 95%;
+    padding: 0.7vh;
+    font-size: 1.15em;
+  }
+}
