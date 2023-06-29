@@ -1,0 +1,28 @@
+@media only screen and (max-width: 851px) {
+  .aboutus {
+    padding: 0;
+  }
+  .containerimg,
+  .under,
+  .rightabout {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  .upper {
+    padding: 0 2%;
+  }
+  .containerimg h1 {
+    font-size: 2em;
+  }
+  .containerimg img {
+    height: 40vh;
+  }
+  .under h2 {
+    height: 100px;
+  }
+  .leftabout {
+    padding-bottom: 20px;
+    border-bottom: 3px double black;
+  }
+}

@@ -1,22 +1,12 @@
-:root {
-  --gradient: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-}
 .aboutus {
-  background-color: red;
   width: 100%;
   height: auto;
   padding: 3% 7%;
 }
 .upper {
   padding: 4vh 10%;
-  background-color: aliceblue;
   width: 100%;
-  height: 40vh;
+  height: 70vh;
 }
 .upper img {
   float: right;
@@ -25,17 +15,50 @@
 .containerimg {
   float: right;
   height: 60vh;
-  width: 60%;
+  width: 75%;
   background-color: skyblue;
   box-shadow: inset 5vh 0 33px -2px skyblue,
     inset 10vh 0 15px -4px rgb(78, 191, 236),
     inset 20vh 0 15px -4px rgb(4, 163, 226);
   border: solid 6px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: row;
 }
 .upper h1 {
-  position: fixed;
-  font-size: 4em;
+  font-size: 3.5em;
   text-align: center;
   height: 60vh;
-  padding-top: 20vh;
+  float: left;
+  flex: 50%;
+}
+
+.under {
+  padding: 4vh 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.leftabout {
+  flex: 25%;
+  position: relative;
+}
+.leftabout h2 {
+  text-align: center;
+  font-size: 2em;
+  margin: 1vh;
+}
+.leftabout .sub_left1 {
+  position: absolute;
+  bottom: 20px;
+}
+
+.rightabout {
+  display: flex;
+  flex-direction: row;
+  flex: 75%;
+}
+.rightabout p {
+  flex: 50%;
+  line-height: 2em;
+  font-size: 1.3em;
 }
