@@ -31,7 +31,7 @@ app.get("/items", (req, res) => {
 
 const csvParserConfig = {
   delimiter: "|",
-  headers: ["Item_id", "Details", "Value"],
+  headers: ["Item_id", "Name", "Details", "Value"],
   skipLines: 1, // Skip the first line (header row)
 };
 
@@ -43,16 +43,19 @@ app.get("/items/:id", (req, res) => {
   fs.createReadStream(__dirname + "/public/item_details.csv")
     .pipe(csv(csvParserConfig)) // Pass the parser configuration
     .on("data", (data) => {
-      console.log("Row:", data);
       results.push(data);
     })
     .on("end", () => {
       const row = results.find((row) => row.Item_id.startsWith(id)); // Compare substring
+      if (row == undefined) {
+        res.render("error", { message: "Error reading CSV file" });
+        return 0;
+      }
       const rowString = JSON.stringify(row); // Convert row object to string
       const cleanedString = rowString.replace(/["{}]/g, ""); // Remove unwanted characters
       const rowList = cleanedString.split("|"); // Split the string back into a list using '|'
 
-      console.log(rowList);
+      console.log(id, "heeee" + rowString);
 
       console.log("Found Row:", row);
       if (row) {
@@ -62,15 +65,12 @@ app.get("/items/:id", (req, res) => {
           price: rowList[3],
           details: rowList[2],
         };
+        console.log(rowList[1]);
         res.render("items", dataToEJS);
       } else {
         console.error("Row not found");
         res.render("error", { message: "Item not found" });
       }
-    })
-    .on("error", (error) => {
-      console.error(error);
-      res.render("error", { message: "Error reading CSV file" });
     });
 });
 
