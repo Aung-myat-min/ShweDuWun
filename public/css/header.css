@@ -16,8 +16,7 @@ body {
   background-attachment: fixed;
   background-size: 200vh 100%;
   position: relative;
-  padding-top: 15%;
-  /*TODO - fix background img size*/
+  padding-top: 7vh;
 }
 .bordering {
   border-right: 2px solid rgb(18, 89, 136);
@@ -31,7 +30,6 @@ header {
   border-bottom: 2px solid rgb(18, 89, 136);
   height: 15vh;
   width: 100%;
-  position: -webkit-sticky;
   position: fixed;
   top: 0;
   left: 0;
@@ -54,7 +52,6 @@ header nav {
   width: 10%;
   padding: 3vh;
 }
-/*TODO - make navigation bar sticky*/
 nav a {
   text-decoration: none;
   font-weight: 800;
@@ -157,6 +154,8 @@ footer {
   height: 42vh;
   margin-top: 10%;
   border-top: 4px solid black;
+  overflow-x: hidden;
+  position: relative;
 }
 .footer1 {
   width: 33.33%;
