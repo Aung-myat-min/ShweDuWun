@@ -15,9 +15,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 200vh 100%;
+  position: relative;
+  padding-top: 15%;
   /*TODO - fix background img size*/
 }
-
 .bordering {
   border-right: 2px solid rgb(18, 89, 136);
   height: 30%;
@@ -26,21 +27,17 @@ body {
 }
 
 header {
-  display: block;
   background-color: rgba(0, 169, 152, 1);
   border-bottom: 2px solid rgb(18, 89, 136);
   height: 15vh;
   width: 100%;
   position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: auto;
   z-index: 999;
   transition: 100ms linear;
 }
-
 header nav {
   width: 50%;
   height: 80%;
