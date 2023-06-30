@@ -29,5 +29,17 @@
   scale: 1.1;
 }
 .product:hover {
-  box-shadow: 5px 15px 23px aqua;
+  box-shadow: 5px 15px 23px rgb(255, 133, 255);
+}
+.product button{
+  font-size: 15px;
+  font-weight: bold;
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+.product button:hover{
+  font-size: 14px;
+  border: 2px solid black;
+  color: rgb(17, 0, 255);
+  background-color: rgb(255, 133, 255);
 }

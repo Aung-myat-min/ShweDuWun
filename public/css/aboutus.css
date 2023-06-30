@@ -13,7 +13,7 @@
   height: 60vh;
 }
 .containerimg {
-  float: right;
+  margin-left: 140px;
   height: 60vh;
   width: 75%;
   background-color: skyblue;

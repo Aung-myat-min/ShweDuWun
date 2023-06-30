@@ -2,8 +2,11 @@
   width: 80%;
   height: 80vh;
   margin: 3% 10%;
-  background-color: rgba(226, 243, 130, 0.74);
+  background-color: rgba(3, 145, 247, 0.74);
   background-image: url("../imgs/mail_send.png");
+  border: 2px solid aqua;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 .left {
@@ -22,12 +25,14 @@
   width: 100%;
   text-align: center;
   font-size: 3em;
+  margin-bottom: 2px;
 }
 .sub_left {
   position: absolute;
-  bottom: 0;
   height: 24%;
   width: 100%;
+  margin: 3vh 0 0 3vh;
+  background-color: rgba(83, 178, 247, 0.74);
 }
 .sub_left h2 {
   padding: 3vh 0 1vh 1vh;
@@ -43,7 +48,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 5px;
+  margin-top: 1px;
+  background-color: rgba(85, 184, 255, 0.74);
 }
 .sub_left1 a {
   margin: auto 2px;
@@ -52,6 +58,7 @@
   padding: 1vh;
   background-color: yellowgreen;
   color: white;
+  border-radius: 5px;
 }
 
 .right {
@@ -78,6 +85,7 @@ textarea,
 button {
   padding: 1.5vh 1vh;
   font-size: 1.2em;
+  border: 3px solid black;
 }
 form div {
   display: flex;
