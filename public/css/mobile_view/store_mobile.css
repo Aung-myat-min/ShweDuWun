@@ -1,0 +1,17 @@
+@media (max-width: 851px) {
+  .product {
+    flex-basis: 33.33%; /* Show 3 items per row on narrower screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    flex-basis: 50%; /* Show 2 items per row on even narrower screens */
+  }
+}
+
+@media (max-width: 320px) {
+  .product {
+    flex-basis: 100%; /* Show 1 item per row on smallest screens */
+  }
+}

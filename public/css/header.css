@@ -10,11 +10,11 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background-image: url("../imgs/69.jpg");
+  background-image: url("../imgs/sample69.png");
   background-position: center;
-  background-size: 100% 100%;
-  backdrop-filter: blur(0px);
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 200vh 100%;
   /*TODO - fix background img size*/
 }
 
