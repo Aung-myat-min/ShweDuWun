@@ -27,7 +27,7 @@
 }
 .mainsection hr {
   width: 60%;
-  margin: 1vh;
+  margin: 4vh;
   border: 3px dotted black;
   margin-left: 20%;
 }
@@ -43,7 +43,8 @@
   font-size: 1.8em;
   padding: 1vh;
   margin: 1vh;
-  background-color: rgba(255, 255, 0, 0.4);
+  background-color: rgba(5, 255, 180, 0.4);
+  border: 3px solid rgba(255, 0, 72, 0.296);
 }
 
 .search {
@@ -52,10 +53,14 @@
   margin-left: 15%;
   padding: 1vh;
   border: 5px black solid;
+  border-radius: 25px;
+  background-color: rgba(0, 195, 255, 0.296);
+  
 }
 .search h1 {
   font-size: 2em;
   margin: 2vh;
+  border-bottom: 1px dashed black;
 }
 .search button {
   width: 80%;
@@ -63,6 +68,12 @@
   font-size: 1.5em;
   padding: 1vh;
   margin: 1.5vh;
+}
+.search button:hover{
+  color: cyan;
+  border: 4.5px black solid;
+  box-shadow: 0px 0px 25px cyan;
+  background-color: black;
 }
 .search button i {
   float: right;
