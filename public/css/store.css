@@ -1,8 +1,6 @@
-+section {
-  position: relative;
+section {
   width: 100%;
-  height: auto;
-  background-color: red;
+  height: 95vh;
   padding-bottom: 60px;
 }
 
@@ -13,8 +11,13 @@
   padding: 5%;
   width: 73%;
   float: right;
+  height: 100%;
+  overflow-y: scroll;
+  margin-top: 5vh;
 }
-
+.products4::-webkit-scrollbar {
+  display: none;
+}
 .product {
   flex: 23%;
   overflow: hidden;
@@ -61,13 +64,11 @@
 }
 
 .categories {
-  position: fixed;
-  top: 15vh;
-  bottom: 0;
-  left: 0;
   width: 27%;
-  height: auto;
+  height: 80vh;
   background-color: white;
+  float: left;
+  margin-top: 10vh;
 }
 
 .sort {
@@ -79,16 +80,16 @@
   flex-direction: column;
   border-bottom: 5px solid black;
 
-  >h1 {
+  > h1 {
     font-size: 3em;
     margin: 0 0 10px 0;
 
-    >i {
+    > i {
       float: right;
     }
   }
 
-  >p {
+  > p {
     color: gray;
   }
 }
@@ -101,11 +102,11 @@
   flex-direction: column;
   background-color: rgb(233, 230, 231);
 
-  >h2 {
+  > h2 {
     font-size: 2em;
   }
 
-  >.buttons {
+  > .buttons {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -113,9 +114,20 @@
     margin-top: 5px;
     height: 90%;
 
-    >button {
+    > button {
       height: 7vh;
       font-size: 1.2em;
     }
   }
+}
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
