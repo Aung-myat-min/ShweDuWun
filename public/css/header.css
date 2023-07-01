@@ -17,6 +17,18 @@ body {
   background-attachment: fixed;
   background-size: 220vh 100%;
   padding-top: 7vh;
+  position: relative;
+}
+
+#messenger {
+  text-decoration: none;
+  position: fixed;
+  bottom: 3vh;
+  right: 3vh;
+  font-size: 5em;
+  background: linear-gradient(to right, #0695ff, #a334fa, #ff6968);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bordering {
