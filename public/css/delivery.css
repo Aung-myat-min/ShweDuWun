@@ -5,6 +5,7 @@
   border: 3px solid black;
   padding: 2vh;
 }
+
 .brief h1 {
   font-size: 2em;
   background-color: yellow;
@@ -12,6 +13,7 @@
   padding: 1vh 1.2vh;
   margin: 10px;
 }
+
 .brief p {
   font-size: 1.5em;
   line-height: 1.2em;
@@ -19,12 +21,15 @@
   text-align: justify;
 }
 
+
+
 .mainsection {
   height: auto;
   width: 80%;
   margin: 0 10%;
   text-align: center;
 }
+
 .mainsection hr {
   width: 60%;
   margin: 4vh;
@@ -32,27 +37,47 @@
   margin-left: 20%;
 }
 
-.cities {
-}
+.cities {}
+
 .cities h1 {
   font-size: 3em;
   margin: 7px;
 }
+
 .cities input {
   width: 30%;
-  font-size: 1.8em;
+  font-size: 1.3em;
   padding: 1vh;
   margin: 1vh;
   background-color: rgba(5, 255, 180, 0.4);
   border: 2px solid rgb(0, 0, 85);
   border-radius: 11px;
 }
-.cities input:hover{
+
+.cities input:hover {
   background-color: rgba(148, 105, 255, 0.296);
-  border: 2.5px solid black;
+  border: 2.1px solid black;
   font-size: 1.3em;
 }
 
+#city-list {
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 40%;
+}
+
+#city-list li {
+  padding: 8px;
+  border-bottom: 2px dashed black;
+  background-color: rgba(69, 240, 255, 0.6);
+  border-radius: 18px;
+  margin: 2px 0;
+}
+#city-list li:hover{
+  background-color: rgba(69, 199, 255, 0.6);
+}
 .search {
   width: 70%;
   height: auto;
@@ -61,13 +86,15 @@
   border: 5px black solid;
   border-radius: 25px;
   background-color: rgba(148, 105, 255, 0.296);
-  
+
 }
+
 .search h1 {
   font-size: 2em;
   margin: 2vh;
   border-bottom: 1px dashed black;
 }
+
 .search button {
   width: 80%;
   text-align: left;
@@ -75,26 +102,32 @@
   padding: 1vh;
   margin: 1.5vh;
 }
-.search button:hover{
-  color: cyan;
+
+.search button:hover {
+  color: rgb(0, 0, 0);
   border: 4.5px black solid;
   box-shadow: 0px 0px 25px cyan;
-  background-color: black;
+
 }
+
 .search button i {
   float: right;
 }
+
 .content {
   display: none;
 }
+
 .search table {
   width: 70%;
   margin: 0 15%;
 }
+
 .search td {
   font-size: 1.3em;
   padding: 1vh 0;
 }
+
 table,
 th,
 td {
@@ -108,26 +141,32 @@ td {
     height: 60%;
     margin-bottom: 2vh;
   }
+
   .cities h1 {
     font-size: 2em;
   }
+
   .cities input {
     width: 80%;
     margin: 1vh 10%;
     font-size: 1.2em;
   }
+
   .mainsection hr {
     width: 80%;
     margin-left: 10%;
   }
+
   .search {
     width: 100%;
     margin: auto 0;
   }
+
   .search button {
     width: 90%;
     margin: 0.5vh 5%;
   }
+
   .search table {
     width: 90%;
     margin: 10px 5%;

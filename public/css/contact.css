@@ -4,9 +4,10 @@
   margin: 3% 10%;
   background-color: rgba(3, 145, 247, 0.74);
   background-image: url("../imgs/mail_send.png");
-  border: 2px solid aqua;
+  border: 3px solid aqua;
   border-radius: 25px;
   overflow: hidden;
+  box-shadow: 0 10px 20px rgb(90, 241, 255);
 }
 
 .left {
