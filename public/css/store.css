@@ -1,11 +1,22 @@
++section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: red;
+  padding-bottom: 60px;
+}
+
 .products4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 5%;
+  width: 73%;
+  float: right;
 }
+
 .product {
-  flex: 20%;
+  flex: 23%;
   overflow: hidden;
   background: white;
   color: black;
@@ -18,28 +29,93 @@
   align-items: center;
   justify-content: center;
   border-radius: 1.2rem;
-  margin: 2rem;
+  margin: 0.5vh;
   border: black 2px solid;
 }
+
 .product img {
   height: 150px;
   margin: 1rem;
 }
+
 .product img:hover {
   scale: 1.1;
 }
+
 .product:hover {
   box-shadow: 5px 15px 23px rgb(255, 133, 255);
 }
-.product button{
+
+.product button {
   font-size: 15px;
   font-weight: bold;
   border: 1.5px solid black;
   border-radius: 5px;
 }
-.product button:hover{
+
+.product button:hover {
   font-size: 14px;
   border: 2px solid black;
   color: rgb(17, 0, 255);
   background-color: rgb(255, 133, 255);
+}
+
+.categories {
+  position: fixed;
+  top: 15vh;
+  bottom: 0;
+  left: 0;
+  width: 27%;
+  height: auto;
+  background-color: white;
+}
+
+.sort {
+  height: 30%;
+  width: 100%;
+  padding: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 5px solid black;
+
+  >h1 {
+    font-size: 3em;
+    margin: 0 0 10px 0;
+
+    >i {
+      float: right;
+    }
+  }
+
+  >p {
+    color: gray;
+  }
+}
+
+.subcate {
+  height: 70%;
+  width: 100%;
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(233, 230, 231);
+
+  >h2 {
+    font-size: 2em;
+  }
+
+  >.buttons {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 5px;
+    height: 90%;
+
+    >button {
+      height: 7vh;
+      font-size: 1.2em;
+    }
+  }
 }

@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/header.css" type="text/css" />
-    <link rel="stylesheet" href="css/store.css" type="text/css" />
-    <link rel="stylesheet" href="css/mobile_view/store_mobile.css" />
-    <script
-      src="https://kit.fontawesome.com/ef09da54b9.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Store</title>
-  </head>
-  <body class="mainn">
-    <header>
-      <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
-      <nav>
-        <button id="toggleButton"><i class="fa fa-bars"></i></button>
-        <div class="hidden">
-          <a href="/">Homepage</a><span class="bordering"></span>
-          <a href="/store" id="active">Stores</a>
-          <span class="bordering"></span> <a href="/delivery">Services</a>
-          <span class="bordering"></span>
-          <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh"
-            >About & Contact</a
-          >
-        </div>
-      </nav>
-    </header>
-    <script src="js/navigation.js"></script>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" type="text/css" />
+  <link rel="stylesheet" href="css/store.css" type="text/css" />
+  <link rel="stylesheet" href="css/mobile_view/store_mobile.css" />
+  <script src="https://kit.fontawesome.com/ef09da54b9.js" crossorigin="anonymous"></script>
+  <title>Store</title>
+</head>
+
+<body class="mainn">
+  <header>
+    <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
+    <nav>
+      <button id="toggleButton"><i class="fa fa-bars"></i></button>
+      <div class="hidden">
+        <a href="/">Homepage</a><span class="bordering"></span>
+        <a href="/store" id="active">Stores</a>
+        <span class="bordering"></span> <a href="/delivery">Services</a>
+        <span class="bordering"></span>
+        <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh">About & Contact</a>
+      </div>
+    </nav>
+  </header>
+  <script src="js/navigation.js"></script>
+  <section>
+    <div class="categories">
+      <div class="sort">
+        <h1>Sort by <i class="fa-solid fa-arrow-down-wide-short"></i></h1>
+        <p>Let's See what is new?</p>
+      </div>
+      <div class="subcate">
+        <h2>Filter</h2>
+        <div class="buttons">
+          <button>Type 1</button>
+          <button>Type 1</button>
+          <button>Type 1</button>
+          <button>Type 1</button>
+          <button>Type 1</button>
+        </div>
+      </div>
+    </div>
     <div class="products4">
       <div class="product">
         <img src="imgs/item_photos/P01.jpg" alt="product-image" />
@@ -455,9 +468,7 @@
               <a href="#"><i class="fa-brands fa-facebook fa-beat"></i></a>
             </li>
             <li>
-              <a href="#"
-                ><i class="fa-brands fa-facebook-messenger fa-fade"></i
-              ></a>
+              <a href="#"><i class="fa-brands fa-facebook-messenger fa-fade"></i></a>
             </li>
             <li>
               <a href="#"><i class="fa-solid fa-envelope fa-flip"></i></a>
@@ -472,5 +483,6 @@
         </div>
       </footer>
     </div>
-  </body>
+</body>
+
 </html>

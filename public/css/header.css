@@ -9,13 +9,14 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
   background-image: url("../imgs/691.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 220vh 100%;
-  /*TODO - fix background img size*/
+  padding-top: 7vh;
 }
 
 .bordering {
@@ -31,12 +32,9 @@ header {
   border-bottom: 2px solid rgb(18, 89, 136);
   height: 15vh;
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: auto;
   z-index: 999;
   transition: 100ms linear;
 }
@@ -57,6 +55,7 @@ header nav {
   width: 10%;
   padding: 3vh;
 }
+
 /*TODO - make navigation bar sticky*/
 nav a {
   text-decoration: none;
@@ -70,10 +69,12 @@ nav a {
   margin: 2vh 0.5vh;
   border-radius: 25px;
 }
+
 nav div {
   display: flex;
   margin-left: 20%;
 }
+
 nav a:hover {
   color: black;
 }
@@ -114,6 +115,7 @@ header button:hover {
   #toggleButton {
     display: block;
   }
+
   nav div {
     display: inline-block;
     margin: 0;
@@ -124,19 +126,23 @@ header button:hover {
     left: 0px;
     z-index: 0;
   }
+
   #active {
     border-radius: 0;
   }
+
   nav div a {
     display: block;
     width: 100%;
     border-radius: 0;
     margin: 0;
   }
+
   .show {
     opacity: 1;
     visibility: visible;
   }
+
   .hidden {
     opacity: 0;
     visibility: hidden;
@@ -160,7 +166,10 @@ footer {
   height: 42vh;
   margin-top: 10%;
   border-top: 4px solid black;
+  overflow-x: hidden;
+  position: relative;
 }
+
 .footer1 {
   width: 33.33%;
   height: 83%;
@@ -173,14 +182,17 @@ footer {
   padding: 3% 3.5% 0;
   text-shadow: 1px 1px 15px bisque;
 }
+
 .footer1 h3 {
   border-top: 4px solid aqua;
   padding-top: 3%;
 }
+
 .footer1 h1,
 .footer1 h3 {
   border-right: 4px solid aqua;
 }
+
 .footer2 {
   width: 33.33%;
   height: 83%;
@@ -188,11 +200,13 @@ footer {
   padding-top: 35px;
   text-shadow: 1px 1px 15px bisque;
 }
+
 .footer2 li {
   list-style-type: none;
   padding: 2px 0 0 25%;
   border-right: 3px solid cyan;
 }
+
 .footer2 li a {
   font-weight: 800;
   font-size: 18px;
@@ -200,6 +214,7 @@ footer {
   text-decoration: none;
   padding: 2% 0 2% 0;
 }
+
 .footer3 {
   width: 33.33%;
   height: 83%;
@@ -207,11 +222,13 @@ footer {
   text-align: left;
   padding-left: 10px;
 }
+
 .footer3 font input {
   padding: 2% 150px 2% 10px;
   margin: 20px 0 0 3%;
   border: solid 3px black;
 }
+
 .footer3 font button {
   background-color: black;
   color: aqua;
@@ -220,6 +237,7 @@ footer {
   margin: 15px 0 0 3%;
   cursor: pointer;
 }
+
 .footer3 font button:hover {
   background-color: aqua;
   color: black;
@@ -227,6 +245,7 @@ footer {
   font-size: 23px;
   border: solid 4px black;
 }
+
 .icons {
   list-style-type: none;
   display: flex;
@@ -235,14 +254,17 @@ footer {
   margin: 3% 4%;
   text-shadow: 1px 1px 10px black;
 }
+
 .icons a {
   text-decoration: none;
   color: aqua;
 }
+
 .icons li {
   padding: 2% 18px 0;
   cursor: pointer;
 }
+
 .footer4 {
   float: left;
   height: 10%;
@@ -250,6 +272,7 @@ footer {
   padding: 2px 20% 0;
   text-align: center;
 }
+
 .footer4 h4 {
   padding-top: 10px;
   border-top: 4px solid black;
@@ -261,6 +284,7 @@ footer {
     width: 100%;
     height: 50vh;
   }
+
   .footer1 {
     width: 50%;
     height: 50%;
@@ -268,14 +292,17 @@ footer {
     font-size: 17px;
     padding: 12% 3% 0 2%;
   }
+
   .footer1 h3 {
     border-top: 2px solid aqua;
     padding-top: 3%;
     border-right: 3px solid aqua;
   }
+
   .footer1 h1 {
     border-right: 3px solid aqua;
   }
+
   .footer2 {
     width: 50%;
     height: 50%;
@@ -284,17 +311,20 @@ footer {
     padding-bottom: 7px;
     padding-right: 2px;
   }
+
   .footer2 li {
     padding: 5px 0 0 3%;
     font-weight: 600;
     border-left: 2px solid aqua;
     border-right: none;
   }
+
   .footer2 li a {
     font-size: 15px;
     color: black;
     text-decoration: none;
   }
+
   .footer3 {
     width: 100%;
     height: 40%;
@@ -302,14 +332,17 @@ footer {
     float: none;
     padding: 2% 5%;
   }
+
   .footer3 font {
     border-top: 4px solid black;
   }
+
   .footer3 font input {
     padding: 2% 150px 2% 10px;
     margin: 1px 0 0 0;
     border: solid 3px black;
   }
+
   .footer3 font button {
     background-color: black;
     color: aqua;
@@ -318,6 +351,7 @@ footer {
     margin: 10px 0 0 0;
     cursor: pointer;
   }
+
   .footer3 font button:hover {
     background-color: aqua;
     color: black;
@@ -325,14 +359,17 @@ footer {
     font-size: 20px;
     border: solid 4px black;
   }
+
   .icons {
     font-size: 30px;
     margin: 1% 0 0 0;
     padding-left: 5px;
   }
+
   .icons li {
     padding: 1% 20px 0;
   }
+
   .footer4 {
     float: left;
     height: 10%;
@@ -340,13 +377,16 @@ footer {
     padding: 2px 20% 0;
     text-align: center;
   }
+
   .footer4 h4 {
     padding-top: 10px;
     border-top: 4px solid black;
   }
+
   #smallertext {
     font-size: 13px;
   }
+
   /*TODO - fix the footer in mobile resposive, Also do header*/
   /*Ok! I will fix it tomorrow*/
 }
