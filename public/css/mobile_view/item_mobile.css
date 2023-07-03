@@ -1,0 +1,15 @@
+@media (max-width: 800px) {
+  section {
+    flex-direction: column;
+    width: 96%;
+    margin: 0 2%;
+    > #left {
+      margin: 0;
+      > img {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

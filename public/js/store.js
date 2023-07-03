@@ -1,6 +1,8 @@
 const buttons = document.querySelectorAll(".categorybtn");
 const items = document.querySelectorAll(".product");
 const container = document.querySelector(".products4");
+const showcate = document.querySelector("#sort");
+const showing = document.querySelector("#subcate");
 
 // Add click event listener to each button
 buttons.forEach((button) => {
@@ -35,3 +37,11 @@ function reveal() {
 }
 
 container.addEventListener("scroll", reveal);
+
+showcate.addEventListener("click", () => {
+  if (showing.classList.contains("hidden")) {
+    showing.setAttribute("class", "show");
+  } else {
+    showing.setAttribute("class", "hidden");
+  }
+});
