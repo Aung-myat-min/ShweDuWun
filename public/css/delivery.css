@@ -129,12 +129,13 @@
 .content {
   font-size: 14px;
   color: black;
-
+  border-radius: 13px;
 }
 
 .content tr td {
   background-color: rgba(148, 105, 255, 0.296);
   font-weight: bold;
+  
 }
 
 table,
