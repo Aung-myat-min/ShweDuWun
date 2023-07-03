@@ -211,19 +211,22 @@ let users = [
   "သရက် ",
   "မြိတ်၊ ကော့သောင်း ",
   "ထားဝယ်၊ ရေဖြူ ",
-  "မောင်းမကန် "
-
-
+  "မောင်းမကန် ",
 ];
 
 ul = document.getElementById("city-list");
 
 let render_lists = function (lists) {
   let li = "";
-  for (index in lists) {
-    li += "<li>" + lists[index] + "</li>";
+  if (lists == null || lists.length == 0) {
+    ul.innerHTML =
+      "<li id='no_city' style='background-color: rgba(255, 0, 0, 0.376);border:0;'>No city found! Try something.</li>";
+  } else {
+    for (index in lists) {
+      li += "<li>" + lists[index] + "</li>";
+    }
+    ul.innerHTML = li;
   }
-  ul.innerHTML = li;
 };
 
 // lets filters it

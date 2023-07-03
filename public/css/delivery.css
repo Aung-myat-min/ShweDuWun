@@ -21,8 +21,6 @@
   text-align: justify;
 }
 
-
-
 .mainsection {
   height: auto;
   width: 80%;
@@ -37,8 +35,6 @@
   margin-left: 20%;
 }
 
-.cities {}
-
 .cities h1 {
   font-size: 3em;
   margin: 7px;
@@ -47,7 +43,7 @@
 .cities input {
   width: 30%;
   font-size: 1.3em;
-  padding: 1vh;
+  padding: 1.2vh;
   margin: 1vh;
   background-color: rgba(5, 255, 180, 0.4);
   border: 2px solid rgb(0, 0, 85);
@@ -65,7 +61,7 @@
   list-style-type: none;
   font-size: 18px;
   font-weight: bold;
-  padding: 0 40%;
+  padding: 0 30%;
 }
 
 #city-list li {
@@ -74,6 +70,7 @@
   background-color: rgba(69, 240, 255, 0.6);
   border-radius: 18px;
   margin: 2px 0;
+
 }
 
 #city-list li:hover {
@@ -88,7 +85,6 @@
   border: 5px black solid;
   border-radius: 25px;
   background-color: rgba(148, 105, 255, 0.296);
-
 }
 
 .search h1 {
@@ -109,7 +105,6 @@
   color: rgb(0, 0, 0);
   border: 4.5px black solid;
   box-shadow: 0px 0px 25px cyan;
-
 }
 
 .search button i {
@@ -134,9 +129,10 @@
 .content {
   font-size: 14px;
   color: black;
-  
+
 }
-.content tr td{
+
+.content tr td {
   background-color: rgba(148, 105, 255, 0.296);
   font-weight: bold;
 }
@@ -184,4 +180,11 @@ td {
     width: 90%;
     margin: 10px 5%;
   }
+}
+
+#no_city {
+  color: gray;
+  font-size: 1.2em;
+  font-style: italic;
+  border: 0;
 }

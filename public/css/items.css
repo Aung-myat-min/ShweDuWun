@@ -1,6 +1,6 @@
 section {
   width: 84%;
-  height: 70vh;
+  height: auto;
   background-color: rgb(201, 238, 246);
   margin: 7vh 8%;
   display: flex;
@@ -19,15 +19,15 @@ section {
 }
 #left p {
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   font-family: "Courier New", Courier, monospace;
   color: white;
   text-shadow: 3px 3px #000000;
   font-weight: 800;
 }
 #left h1 {
-  font-size: 3.5em;
-  margin-top: 3vh;
+  font-size: 2.5em;
+  margin-top: 2vh;
 }
 
 #right {
@@ -35,13 +35,7 @@ section {
   flex: 65%;
 }
 #right p {
-  font-size: 2.5em;
+  font-size: 2em;
   padding: 10% 10vh;
   padding-bottom: 0;
-}
-
-@media (max-width: 800px) {
-  section {
-    flex-direction: column;
-  }
 }

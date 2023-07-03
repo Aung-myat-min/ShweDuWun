@@ -3,10 +3,18 @@ const path = require("path");
 const port = 5001;
 const fs = require("fs");
 const csv = require("csv-parser");
+const RateLimit = require("express-rate-limit");
+var limiter = RateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 10000,
+});
 
 const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+
+// apply rate limiter to all requests
+app.use(limiter);
 
 app.use("/js", express.static(__dirname + "/public/js"));
 app.use("/css", express.static(__dirname + "/public/css"));
@@ -54,8 +62,6 @@ app.get("/items/:id", (req, res) => {
       const rowString = JSON.stringify(row); // Convert row object to string
       const cleanedString = rowString.replace(/["{}]/g, ""); // Remove unwanted characters
       const rowList = cleanedString.split("|"); // Split the string back into a list using '|'
-
-      console.log(id, "heeee" + rowString);
 
       console.log("Found Row:", row);
       if (row) {
