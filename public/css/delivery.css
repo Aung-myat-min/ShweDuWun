@@ -75,9 +75,11 @@
   border-radius: 18px;
   margin: 2px 0;
 }
-#city-list li:hover{
+
+#city-list li:hover {
   background-color: rgba(69, 199, 255, 0.6);
 }
+
 .search {
   width: 70%;
   height: auto;
@@ -128,10 +130,21 @@
   padding: 1vh 0;
 }
 
+.btn,
+.content {
+  font-size: 14px;
+  color: black;
+  
+}
+.content tr td{
+  background-color: rgba(148, 105, 255, 0.296);
+  font-weight: bold;
+}
+
 table,
 th,
 td {
-  border: 2px solid black;
+  border: 2.5px solid black;
   border-collapse: collapse;
 }
 
