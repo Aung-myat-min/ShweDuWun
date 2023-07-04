@@ -15,6 +15,37 @@
     <title>Contact Us</title>
   </head>
   <body class="mainn">
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "100813059743677");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v17.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
     <header>
       <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
       <nav>
@@ -34,8 +65,6 @@
     </header>
     <script src="js/navigation.js"></script>
 
-
-
     <section class="aboutus">
       <div class="upper">
         <div class="containerimg">
@@ -43,7 +72,7 @@
             Daw Thet Htar <br />
             & <br />Daw Aye Myint
           </h1>
-          <img src="imgs/dtt&me.png" alt="DawThetHtar&DawAyeMyint"/>
+          <img src="imgs/dtt&me.png" alt="DawThetHtar&DawAyeMyint" />
         </div>
       </div>
       <div class="under">
@@ -168,8 +197,6 @@
       </form>
     </section>
 
-
-    
     <div class="footerclass">
       <footer>
         <div class="footer1">
