@@ -1,201 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/header.css" type="text/css" />
-    <link href="css/homepage.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <script
-      src="https://kit.fontawesome.com/ef09da54b9.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Home-ShweDuWun</title>
-    <link
-      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-      rel="stylesheet"
-    />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    <!-- Javascript -->
-    <script src="js/main.js"></script>
-  </head>
-  <body class="mainn">
-    <!-- Messenger Chat plugin Code -->
-    <div id="fb-root"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" type="text/css" />
+  <link href="css/homepage.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <script src="https://kit.fontawesome.com/ef09da54b9.js" crossorigin="anonymous"></script>
+  <title>Home-ShweDuWun</title>
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <!-- Javascript -->
+  <script src="js/main.js"></script>
+</head>
 
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "100813059743677");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+<body class="mainn">
+  <!-- Messenger Chat plugin Code -->
+  <div id="fb-root"></div>
 
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v17.0",
-        });
-      };
+  <!-- Your Chat plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-    <!--
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "100813059743677");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v17.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+  <!--
     <a href="#" id="messenger">
       <i class="fa-brands fa-facebook-messengr"></i
     ></a>-->
 
-    <header>
-      <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
-      <nav>
-        <button id="toggleButton"><i class="fa fa-bars"></i></button>
-        <div class="hidden">
-          <a href="/" id="active">Homepage</a><span class="bordering"></span>
-          <a href="/store">Stores</a><span class="bordering"></span>
-          <a href="/delivery">Services</a><span class="bordering"></span>
-          <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh"
-            >About & Contact</a
-          >
-        </div>
-      </nav>
-    </header>
-    <script src="js/navigation.js"></script>
-    <div class="mainpage">
-      <div class="mainpage2">
-        <img class="dttimg" src="imgs/dtt.png" />
-        <p>Client's Happiness Is Our Goal</p>
+  <header>
+    <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
+    <nav>
+      <button id="toggleButton"><i class="fa fa-bars"></i></button>
+      <div class="hidden">
+        <a href="/" id="active">Homepage</a><span class="bordering"></span>
+        <a href="/store">Stores</a><span class="bordering"></span>
+        <a href="/delivery">Services</a><span class="bordering"></span>
+        <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh">About & Contact</a>
       </div>
-      <div class="mainpage3">
-        <div id="borderleft"></div>
-        <h1>
-          Buying more than 1,000,000 Forever Living Products cost will be off
-          10% of the price.
-        </h1>
-        <h3>
-          We are sending and delivering our products to every town in Myanmar.
-          Please contact us fast; we will transfer our products to every client
-          within a week.
-        </h3>
+    </nav>
+  </header>
+  <script src="js/navigation.js"></script>
+  <div class="mainpage">
+    <div class="mainpage2">
+      <img class="dttimg" src="imgs/dtt.png" />
+      <p>Client's Happiness Is Our Goal</p>
+    </div>
+    <div class="mainpage3">
+      <div id="borderleft"></div>
+      <h1>
+        Buying more than 1,000,000 Forever Living Products cost will be off
+        10% of the price.
+      </h1>
+      <h3>
+        We are sending and delivering our products to every town in Myanmar.
+        Please contact us fast; we will transfer our products to every client
+        within a week.
+      </h3>
+    </div>
+  </div>
+  <section class="toShop" id="toShop">
+    <div class="TV Tleft" id="Tleft">
+      <div class="cut">
+        <div class="images">
+          <img src="imgs/item_photos/P14.jpg" alt="" />
+          <img src="imgs/item_photos/P15.jpg" alt="" />
+          <img src="imgs/item_photos/P14.jpg" alt="" />
+          <img src="imgs/item_photos/P15.jpg" alt="" />
+        </div>
       </div>
     </div>
-    <section class="toShop" id="toShop">
-      <div class="TV Tleft" id="Tleft">
-        <div class="cut">
-          <div class="images">
-            <img src="imgs/item_photos/P14.jpg" alt="" />
-            <img src="imgs/item_photos/P15.jpg" alt="" />
-            <img src="imgs/item_photos/P14.jpg" alt="" />
-            <img src="imgs/item_photos/P15.jpg" alt="" />
-          </div>
+    <div class="TV Tright">
+      <div class="cut">
+        <div class="images">
+          <img src="imgs/item_photos/P15.jpg" alt="" />
+          <img src="imgs/item_photos/P14.jpg" alt="" />
+          <img src="imgs/item_photos/P15.jpg" alt="" />
+          <img src="imgs/item_photos/P14.jpg" alt="" />
         </div>
       </div>
-      <div class="TV Tright">
-        <div class="cut">
-          <div class="images">
-            <img src="imgs/item_photos/P15.jpg" alt="" />
-            <img src="imgs/item_photos/P14.jpg" alt="" />
-            <img src="imgs/item_photos/P15.jpg" alt="" />
-            <img src="imgs/item_photos/P14.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-      <a href="/store">To Store</a>
-    </section>
+    </div>
+    <a href="/store">To Store</a>
+  </section>
 
-    <section class="deli" id="deli_id">
-      <h1>Delivery?</h1>
-      <div class="box">
-        <div class="box1">
-          <img src="imgs/delivery.png" alt="" id="deli_img" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
-            similique quaerat itaque temporibus, distinctio aspernatur ipsam
-            aliquid deleniti ut praesentium beatae non eius? Ipsum recusandae
-            illum voluptatem labore assumenda ipsam! Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit. Nihil, mollitia? Omnis est voluptatum
-            sed quo tempora, voluptas quos, consectetur reiciendis dolor eos
-            earum itaque? Cum laudantium at quam ut aperiam! Lorem ipsum, dolor
-            sit amet consectetur adipisicing elit. minima fugie. Click here to
-            know more about
-            <a href="/delivery">DELIVERY</a>
-          </p>
-        </div>
+  <section class="deli" id="deli_id">
+    <h1>Delivery?</h1>
+    <div class="box">
+      <div class="box1">
+        <img src="imgs/delivery.png" alt="" id="deli_img" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
+          similique quaerat itaque temporibus, distinctio aspernatur ipsam
+          aliquid deleniti ut praesentium beatae non eius? Ipsum recusandae
+          illum voluptatem labore assumenda ipsam! Lorem ipsum, dolor sit amet
+          consectetur adipisicing elit. Nihil, mollitia? Omnis est voluptatum
+          sed quo tempora, voluptas quos, consectetur reiciendis dolor eos
+          earum itaque? Cum laudantium at quam ut aperiam! Lorem ipsum, dolor
+          sit amet consectetur adipisicing elit. minima fugie. Click here to
+          know more about
+          <a href="/delivery">DELIVERY</a>
+        </p>
       </div>
-    </section>
-    <!-- This site is converting visitors into subscribers and customers with respond.io - https://respond.io -->
-    <!--<script
+    </div>
+  </section>
+  <!-- This site is converting visitors into subscribers and customers with respond.io - https://respond.io -->
+  <!--<script
       src="https://app.respond.io/facebook/chat/plugin/163164/100813059743677"
       async
     ></script>-->
-    <!-- https://respond.io/ -->
-    <div id="dialog-4" title="In Myanmar">
-      Please Turn on VPN for Messenger support.
-      <br />
-      <br />
-      <img src="imgs/messenger.png" alt="" />
-    </div>
-    <div class="footerclass">
-      <footer>
-        <div class="footer1">
-          <h1>ShweDuWun</h1>
+  <!-- https://respond.io/ -->
+  <div id="dialog-4" title="In Myanmar">
+    Please Turn on VPN for Messenger support.
+    <br />
+    <br />
+    <img src="imgs/messenger.png" alt="" />
+  </div>
+  <div class="footerclass">
+    <footer>
+      <div class="footer1">
+        <h1>ShweDuWun</h1>
+        <br />
+        <h3>Medical Product Distributor</h3>
+      </div>
+
+      <div class="footer2">
+        <ul>
+          <li><a href="/">Pages</a></li>
           <br />
-          <h3>Medical Product Distributor</h3>
-        </div>
+          <li><a href="/store">stores</a></li>
+          <li><a href="/delivery">services</a></li>
+          <li><a href="/contactus">about</a></li>
+          <li><a href="/contactus">contact</a></li>
+          <br />
+          <li><a id="smallertext" href="#">Contact2WebsiteDeveloper</a></li>
+        </ul>
+      </div>
+      <div class="footer3">
+        <font>
+          <input type="email" required placeholder="Type your Email..." />
+          <br />
+          <button type="submit">Subscribe</button>
+        </font>
 
-        <div class="footer2">
-          <ul>
-            <li><a href="#">Pages</a></li>
-            <br />
-            <li><a href="#">stores</a></li>
-            <li><a href="#">services</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-            <br />
-            <li id="smallertext"><a href="#">Contact2WebsiteDeveloper</a></li>
-          </ul>
-        </div>
-        <div class="footer3">
-          <font>
-            <input type="email" required placeholder="Type your Email..." />
-            <br />
-            <button type="submit">Subscribe</button>
-          </font>
+        <ul class="icons">
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook fa-beat"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook-messenger fa-fade"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-envelope fa-flip"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-youtube fa-bounce"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer4">
+        <h4>Copyright@ 2023-2024</h4>
+      </div>
+    </footer>
+  </div>
+  <script src="js/navigation.js"></script>
+</body>
 
-          <ul class="icons">
-            <li>
-              <a href="#"><i class="fa-brands fa-facebook fa-beat"></i></a>
-            </li>
-            <li>
-              <a href="#"
-                ><i class="fa-brands fa-facebook-messenger fa-fade"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-envelope fa-flip"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-youtube fa-bounce"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer4">
-          <h4>Copyright@ 2023-2024</h4>
-        </div>
-      </footer>
-    </div>
-    <script src="js/navigation.js"></script>
-  </body>
 </html>

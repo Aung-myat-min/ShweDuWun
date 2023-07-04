@@ -302,8 +302,8 @@ footer {
     width: 50%;
     height: 50%;
     float: left;
-    font-size: 17px;
-    padding: 12% 3% 0 2%;
+    font-size: 15px;
+    padding: 12% 3% 0 1%;
   }
 
   .footer1 h3 {
@@ -336,6 +336,10 @@ footer {
     font-size: 15px;
     color: black;
     text-decoration: none;
+  }
+
+  .footer2 li #smallertext {
+    font-size: 12px;
   }
 
   .footer3 {
@@ -402,7 +406,7 @@ footer {
 }
 
 #dialog-4 {
-  > img {
+  >img {
     width: 100%;
   }
 }

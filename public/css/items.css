@@ -2,7 +2,7 @@ section {
   width: 84%;
   height: auto;
   background-color: rgb(201, 238, 246);
-  margin: 7vh 8%;
+  margin: 10vh 8%;
   display: flex;
   border: solid 4px black;
 }
@@ -12,11 +12,13 @@ section {
   flex: 35%;
   margin-left: 5vh;
 }
+
 #left img {
   width: 80%;
   margin: 10%;
   box-shadow: 25px 25px rgba(0, 0, 0, 0.6);
 }
+
 #left p {
   text-align: center;
   font-size: 3em;
@@ -25,6 +27,7 @@ section {
   text-shadow: 3px 3px #000000;
   font-weight: 800;
 }
+
 #left h1 {
   font-size: 2.5em;
   margin-top: 2vh;
@@ -34,6 +37,7 @@ section {
   text-align: justify;
   flex: 65%;
 }
+
 #right p {
   font-size: 2em;
   padding: 10% 10vh;

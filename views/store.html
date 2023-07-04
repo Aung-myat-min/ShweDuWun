@@ -1,542 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/header.css" type="text/css" />
-    <link rel="stylesheet" href="css/store.css" type="text/css" />
-    <link rel="stylesheet" href="css/mobile_view/store_mobile.css" />
-    <script
-      src="https://kit.fontawesome.com/ef09da54b9.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Store</title>
-    <link
-      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-      rel="stylesheet"
-    />
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-    <!-- Javascript -->
-    <script src="js/main.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" type="text/css" />
+  <link rel="stylesheet" href="css/store.css" type="text/css" />
+  <link rel="stylesheet" href="css/mobile_view/store_mobile.css" />
+  <script src="https://kit.fontawesome.com/ef09da54b9.js" crossorigin="anonymous"></script>
+  <title>Store</title>
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-  <body class="mainn">
-    <!-- Messenger Chat plugin Code -->
-    <div id="fb-root"></div>
+  <!-- Javascript -->
+  <script src="js/main.js"></script>
+</head>
 
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
+<body class="mainn">
+  <!-- Messenger Chat plugin Code -->
+  <div id="fb-root"></div>
 
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "100813059743677");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+  <!-- Your Chat plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v17.0",
-        });
-      };
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "100813059743677");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
 
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-    <header>
-      <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
-      <nav>
-        <button id="toggleButton"><i class="fa fa-bars"></i></button>
-        <div class="hidden">
-          <a href="/">Homepage</a><span class="bordering"></span>
-          <a href="/store" id="active">Stores</a>
-          <span class="bordering"></span> <a href="/delivery">Services</a>
-          <span class="bordering"></span>
-          <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh"
-            >About & Contact</a
-          >
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v17.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+  <header>
+    <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
+    <nav>
+      <button id="toggleButton"><i class="fa fa-bars"></i></button>
+      <div class="hidden">
+        <a href="/">Homepage</a><span class="bordering"></span>
+        <a href="/store" id="active">Stores</a>
+        <span class="bordering"></span> <a href="/delivery">Services</a>
+        <span class="bordering"></span>
+        <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh">About & Contact</a>
+      </div>
+    </nav>
+  </header>
+  <script src="js/navigation.js"></script>
+  <section>
+    <div class="categories">
+      <button id="sort">
+        <div class="sort">
+          <h1>Sort by <i class="fa-solid fa-arrow-down-wide-short"></i></h1>
+          <p>Let's See what is new?</p>
         </div>
-      </nav>
-    </header>
-    <script src="js/navigation.js"></script>
-    <section>
-      <div class="categories">
-        <button id="sort">
-          <div class="sort">
-            <h1>Sort by <i class="fa-solid fa-arrow-down-wide-short"></i></h1>
-            <p>Let's See what is new?</p>
-          </div>
-        </button>
-        <div class="hidden" id="subcate">
-          <h2>Filter</h2>
-          <div class="buttons">
-            <button class="categorybtn" data-category="all">All</button>
-            <button class="categorybtn" data-category="type1">Type 1</button>
-            <button class="categorybtn" data-category="">Type 1</button>
-            <button class="categorybtn" data-category="">Type 1</button>
-            <button class="categorybtn" data-category="">Type 1</button>
-          </div>
+      </button>
+      <div class="hidden" id="subcate">
+        <h2>Filter</h2>
+        <div class="buttons">
+          <button class="categorybtn" data-category="all">All</button>
+          <button class="categorybtn" data-category="type1">Type 1</button>
+          <button class="categorybtn" data-category="">Type 1</button>
+          <button class="categorybtn" data-category="">Type 1</button>
+          <button class="categorybtn" data-category="">Type 1</button>
         </div>
       </div>
-      <div class="products4">
-        <div class="product type1">
-          <img src="imgs/item_photos/P01.jpg" alt="product-image" />
-          <h4>Aloe Vera Gel (ရှားစောင်းလက်ပတ်အနှစ်/ရှားစောင်းဝါ)</h4>
-          <br />
-          <a href="/items/P01"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product type1">
-          <img src="imgs/item_photos/P02.jpg" alt="product-image" />
-          <h4>Forever B12 Plus (သွေးအားကောင်း)</h4>
-          <br />
-          <a href="/items/P02"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product">
-          <img src="imgs/item_photos/P03.jpg" alt="product-image" />
-          <h4>Summer's eve Feminine Douche (သားအိမ်ဆေးတန်)</h4>
-          <br />
-          <a href="/items/P03"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product">
-          <img src="imgs/item_photos/P04.jpg" alt="product-image" />
-          <h4>Forever Aloe Vera Gelly (အစုံလိမ်းဆေး)</h4>
-          <br />
-          <a href="/items/P04"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-        <div class="product">
-          <img src="imgs/item_photos/P05.jpg" alt="product-image" />
-          <h4>Forever Garcinia Plus (အဆီကျဆေး)</h4>
-          <p>............</p>
-          <a href="/items/P05"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product">
-          <img src="imgs/item_photos/P06.jpg" alt="product-image" />
-          <h4>Forever Bee Propolis (ပျားသလက်)</h4>
-          <br />
-          <a href="/items/P06"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product">
-          <img src="imgs/item_photos/P07.jpg" alt="product-image" />
-          <h4>Forever Bee Pollen (ပန်းဝတ်မှုံ)</h4>
-          <br />
-          <a href="/items/P07"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product">
-          <img src="imgs/item_photos/P08.jpg" alt="product-image" />
-          <h4>Forever Royal Jelly (ပျားဘုရင်)</h4>
-          <br />
-          <a href="/items/P08"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P09.jpg" alt="product-image" />
-          <h4>Forever Aloe Berry (ရှားစောင်းဘယ်ရီ)</h4>
-          <p>............</p>
-          <a href="/items/P09"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P10.jpg" alt="product-image" />
-          <h4>Forever Lite Ultra (ဓါတ်စာမှုန့်)</h4>
-          <br />
-          <a href="/items/P10"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P11.jpg" alt="product-image" />
-          <h4>Forever Calcium (ကယ်လ်ဆီယမ်)</h4>
-          <br />
-          <a href="/items/P11"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P12.jpg" alt="product-image" />
-          <h4>Forever Arctic Sea (ငါးဆီ)</h4>
-          <br />
-          <a href="/items/P12"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P13.jpg" alt="product-image" />
-          <h4>LANCÔME (မျက်နှာဂျီးချွတ်)</h4>
-          <p>............</p>
-          <a href="/items/P13"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P14.jpg" alt="product-image" />
-          <h4>Forever Aloe Peaches (မက်မွန်ရှားစောင်း)</h4>
-          <br />
-          <a href="/items/P14"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P15.jpg" alt="product-image" />
-          <h4>Forever smoothing exfoliator [ဂျီးချွတ်]</h4>
-          <br />
-          <a href="/items/P15"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P16.jpg" alt="product-image" />
-          <h4>Forever Aloe Avocado Soap (ရှားစောင်းထောပတ်ဆပ်ပြာ)</h4>
-          <br />
-          <a href="/items/P16"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P17.jpg" alt="product-image" />
-          <h4>Forever Aloe Freedom (လိမ္မော်, စပျစ်ရှားစောင်း/ရှားပြာ)</h4>
-          <p>............</p>
-          <a href="/items/P17"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P18.jpg" alt="product-image" />
-          <h4>Forever Bee Honey (ပျားရည်)</h4>
-          <br />
-          <a href="/items/P18"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P19.jpg" alt="product-image" />
-          <h4>Summer's eve Moisturizing Jelly</h4>
-          <br />
-          <a href="/items/P19"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P20.jpg" alt="product-image" />
-          <h4>Summer's eve Cleansing Mist</h4>
-          <br />
-          <a href="/items/P20"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P21.jpg" alt="product-image" />
-          <h4>Forever Aloe Sunscreen</h4>
-          <p>............</p>
-          <a href="/items/P21"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P22.jpg" alt="product-image" />
-          <h4>Forever refining gel mask (ညပေါင်းတင်)</h4>
-          <br />
-          <a href="/items/P22"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P23.jpg" alt="product-image" />
-          <h4>Aloe Deep Moisturizing Cream (အသားရည်စိုစွတ်)</h4>
-          <br />
-          <a href="/items/P23"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P24.jpg" alt="product-image" />
-          <h4>Forever Immu (Immublend)</h4>
-          <br />
-          <a href="/items/P24"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P25.jpg" alt="product-image" />
-          <h4>Forever Aloe Scrub (ဂျီးချွတ်)</h4>
-          <p>............</p>
-          <a href="/items/P25"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P26.jpg" alt="product-image" />
-          <h4>Forever Vita MultiVitamins (ကလေးအားဆေး)</h4>
-          <br />
-          <a href="/items/P26"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P27.jpg" alt="product-image" />
-          <h4>Forever Bright Toothgel (သွားတိုက်ဆေး)</h4>
-          <br />
-          <a href="/items/P27"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P28.jpg" alt="product-image" />
-          <h4>Aloe ever-shield (ရှားစောင်းဂျိုင်းလိမ်း)</h4>
-          <br />
-          <a href="/items/P28"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P29.jpg" alt="product-image" />
-          <h4>Aloe Propolis Créam (အမာရွတ်, တင်းတိတ်)</h4>
-          <p>............</p>
-          <a href="/items/P29"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P30.jpg" alt="product-image" />
-          <h4>Forever Alpha-E Factor (အရေးကြောင်း မျက်နှာ စိုတင်းဆီ)</h4>
-          <br />
-          <a href="/items/P30"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P31.jpg" alt="product-image" />
-          <h4>SK-ll Cleanser</h4>
-          <br />
-          <a href="/items/P31"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P32.jpg" alt="product-image" />
-          <h4>SK-ll Toner</h4>
-          <br />
-          <a href="/items/P32"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P33.jpg" alt="product-image" />
-          <h4>SK-ll Essence</h4>
-          <p>............</p>
-          <a href="/items/P33"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P34.jpg" alt="product-image" />
-          <h4>SK-ll Anti-Aging Moisturiser</h4>
-          <br />
-          <a href="/items/P34"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P35.jpg" alt="product-image" />
-          <h4>Forever Absorbent-C (ကွေကာ ဗီတာမင်စီ)</h4>
-          <br />
-          <a href="/items/P35"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P36.jpg" alt="product-image" />
-          <h4>Forever Fields of Greens (သက်သက်လွတ် ဓါတ်စာ)</h4>
-          <br />
-          <a href="/items/P36"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P37.jpg" alt="product-image" />
-          <h4>Forever Lean (ဆီးချိုအဆီချ)</h4>
-          <p>............</p>
-          <a href="/items/P37"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P38.jpg" alt="product-image" />
-          <h4>Forever Lycium Plus (မျက်စိ/အသည်းအားဆေး)</h4>
-          <br />
-          <a href="/items/P38"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P39.jpg" alt="product-image" />
-          <h4>Forever Active Pro-B (အူမကြီးအားဆေး) )</h4>
-          <br />
-          <a href="/items/P39"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P40.jpg" alt="product-image" />
-          <h4>Forever iVision (မျက်စိအားဆေး)</h4>
-          <br />
-          <a href="/items/P40"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P41.jpg" alt="product-image" />
-          <h4>Forever infinite firming complex (ကော်လဂျင်)</h4>
-          <p>............</p>
-          <a href="/items/P41"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P42.jpg" alt="product-image" />
-          <h4>Forever Focus (ဦးနှောက်အားဆေး)</h4>
-          <br />
-          <a href="/items/P42"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P43.jpg" alt="product-image" />
-          <h4>Forever Move (အရိုး, အဆစ်, အကြော)</h4>
-          <br />
-          <a href="/items/P43"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P44.jpg" alt="product-image" />
-          <h4>Aloe Heat Lotion (ကိုက်ခဲနာကျင်)</h4>
-          <br />
-          <a href="/items/P44"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P45.jpg" alt="product-image" />
-          <h4>Aloe Jojoba Shampoo (ခေါင်းလျှော်ရည်)</h4>
-          <p>............</p>
-          <a href="/items/P45"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P46.jpg" alt="product-image" />
-          <h4>Aloe Jojoba Conditioner (ဆံသားဖြည့်တင်း)</h4>
-          <br />
-          <a href="/items/P46"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P47.jpg" alt="product-image" />
-          <h4>Forever Liquid Soap (မျက်နှာသစ်)</h4>
-          <br />
-          <a href="/items/P47"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P48.jpg" alt="product-image" />
-          <h4>Forever Aloe MPD 2x Ultra Detergent (အထွေထွေသုံး ဆပ်ပြာ)</h4>
-          <br />
-          <a href="/items/P48"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P49.jpg" alt="product-image" />
-          <h4>Forever Aloe Activator (မျက်နှာသန့်စင်)</h4>
-          <p>............</p>
-          <a href="/items/P49"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P50.jpg" alt="product-image" />
-          <h4>Forever Balancing Toner (တိုနာရည်)</h4>
-          <br />
-          <a href="/items/P50"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P51.jpg" alt="product-image" />
-          <h4>Forever Eye Cream</h4>
-          <br />
-          <a href="/items/P51"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P52.jpg" alt="product-image" />
-          <h4>Forever Refreshing Gel Cleanser (မျက်နှာသစ်)</h4>
-          <br />
-          <a href="/items/P52"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P53.jpg" alt="product-image" />
-          <h4>Forever infinite hydrating cleanser (မျက်နှာသစ်)</h4>
-          <p>............</p>
-          <a href="/items/P53"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P54.jpg" alt="product-image" />
-          <h4>Forever Infinite firming serum</h4>
-          <br />
-          <a href="/items/P54"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P55.jpg" alt="product-image" />
-          <h4>Forever infinite restoring cream (စိုဓါတ် créme)</h4>
-          <br />
-          <a href="/items/P55"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-
-        <div class="product reveal">
-          <img src="imgs/item_photos/P56.jpg" alt="product-image" />
-          <h4>Forever Aloe Lips (နှုတ်ခမ်းဆီ)</h4>
-          <br />
-          <a href="/items/P56"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
-        </div>
-      </div>
-    </section>
-    <script src="js/store.js"></script>
-    <div id="dialog-4" title="In Myanmar">
-      Please Turn on VPN for Messenger support.
-      <br />
-      <br />
-      <img src="imgs/messenger.png" alt="" />
     </div>
-    <footer>
-      <div class="footer1">
-        <h1>ShweDuWun</h1>
+    <div class="products4">
+      <div class="product type1">
+        <img src="imgs/item_photos/P01.jpg" alt="product-image" />
+        <h4>Aloe Vera Gel (ရှားစောင်းလက်ပတ်အနှစ်/ရှားစောင်းဝါ)</h4>
         <br />
-        <h3>Medical Product Distributor</h3>
+        <a href="/items/P01"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
       </div>
 
-      <div class="footer2">
-        <ul>
-          <li><a href="/items/P">Pages</a></li>
-          <br />
-          <li><a href="/items/P">stores</a></li>
-          <li><a href="/items/P">services</a></li>
-          <li><a href="/items/P">about</a></li>
-          <li><a href="/items/P">contact</a></li>
-          <br />
-          <li><a href="/items/P">Contact2WebsiteDevelopers</a></li>
-        </ul>
+      <div class="product type1">
+        <img src="imgs/item_photos/P02.jpg" alt="product-image" />
+        <h4>Forever B12 Plus (သွေးအားကောင်း)</h4>
+        <br />
+        <a href="/items/P02"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
       </div>
-      <div class="footer3">
-        <font>
-          <input type="email" required placeholder="Type your Email..." />
-          <br />
-          <button type="submit">Subscribe</button>
-        </font>
 
-        <ul class="icons">
-          <li>
-            <a href="/items/P"><i class="fa-brands fa-facebook fa-beat"></i></a>
-          </li>
-          <li>
-            <a href="/items/P"
-              ><i class="fa-brands fa-facebook-messenger fa-fade"></i
-            ></a>
-          </li>
-          <li>
-            <a href="/items/P"><i class="fa-solid fa-envelope fa-flip"></i></a>
-          </li>
-          <li>
-            <a href="/items/P"
-              ><i class="fa-brands fa-youtube fa-bounce"></i
-            ></a>
-          </li>
-        </ul>
+      <div class="product">
+        <img src="imgs/item_photos/P03.jpg" alt="product-image" />
+        <h4>Summer's eve Feminine Douche (သားအိမ်ဆေးတန်)</h4>
+        <br />
+        <a href="/items/P03"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
       </div>
-      <div class="footer4">
-        <h4>Copyright@ 2023-2024</h4>
+
+      <div class="product">
+        <img src="imgs/item_photos/P04.jpg" alt="product-image" />
+        <h4>Forever Aloe Vera Gelly (အစုံလိမ်းဆေး)</h4>
+        <br />
+        <a href="/items/P04"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
       </div>
-    </footer>
-  </body>
+      <div class="product">
+        <img src="imgs/item_photos/P05.jpg" alt="product-image" />
+        <h4>Forever Garcinia Plus (အဆီကျဆေး)</h4>
+        <p>............</p>
+        <a href="/items/P05"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product">
+        <img src="imgs/item_photos/P06.jpg" alt="product-image" />
+        <h4>Forever Bee Propolis (ပျားသလက်)</h4>
+        <br />
+        <a href="/items/P06"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product">
+        <img src="imgs/item_photos/P07.jpg" alt="product-image" />
+        <h4>Forever Bee Pollen (ပန်းဝတ်မှုံ)</h4>
+        <br />
+        <a href="/items/P07"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product">
+        <img src="imgs/item_photos/P08.jpg" alt="product-image" />
+        <h4>Forever Royal Jelly (ပျားဘုရင်)</h4>
+        <br />
+        <a href="/items/P08"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P09.jpg" alt="product-image" />
+        <h4>Forever Aloe Berry (ရှားစောင်းဘယ်ရီ)</h4>
+        <p>............</p>
+        <a href="/items/P09"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P10.jpg" alt="product-image" />
+        <h4>Forever Lite Ultra (ဓါတ်စာမှုန့်)</h4>
+        <br />
+        <a href="/items/P10"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P11.jpg" alt="product-image" />
+        <h4>Forever Calcium (ကယ်လ်ဆီယမ်)</h4>
+        <br />
+        <a href="/items/P11"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P12.jpg" alt="product-image" />
+        <h4>Forever Arctic Sea (ငါးဆီ)</h4>
+        <br />
+        <a href="/items/P12"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P13.jpg" alt="product-image" />
+        <h4>LANCÔME (မျက်နှာဂျီးချွတ်)</h4>
+        <p>............</p>
+        <a href="/items/P13"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P14.jpg" alt="product-image" />
+        <h4>Forever Aloe Peaches (မက်မွန်ရှားစောင်း)</h4>
+        <br />
+        <a href="/items/P14"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P15.jpg" alt="product-image" />
+        <h4>Forever smoothing exfoliator [ဂျီးချွတ်]</h4>
+        <br />
+        <a href="/items/P15"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P16.jpg" alt="product-image" />
+        <h4>Forever Aloe Avocado Soap (ရှားစောင်းထောပတ်ဆပ်ပြာ)</h4>
+        <br />
+        <a href="/items/P16"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P17.jpg" alt="product-image" />
+        <h4>Forever Aloe Freedom (လိမ္မော်, စပျစ်ရှားစောင်း/ရှားပြာ)</h4>
+        <p>............</p>
+        <a href="/items/P17"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P18.jpg" alt="product-image" />
+        <h4>Forever Bee Honey (ပျားရည်)</h4>
+        <br />
+        <a href="/items/P18"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P19.jpg" alt="product-image" />
+        <h4>Summer's eve Moisturizing Jelly</h4>
+        <br />
+        <a href="/items/P19"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P20.jpg" alt="product-image" />
+        <h4>Summer's eve Cleansing Mist</h4>
+        <br />
+        <a href="/items/P20"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P21.jpg" alt="product-image" />
+        <h4>Forever Aloe Sunscreen</h4>
+        <p>............</p>
+        <a href="/items/P21"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P22.jpg" alt="product-image" />
+        <h4>Forever refining gel mask (ညပေါင်းတင်)</h4>
+        <br />
+        <a href="/items/P22"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P23.jpg" alt="product-image" />
+        <h4>Aloe Deep Moisturizing Cream (အသားရည်စိုစွတ်)</h4>
+        <br />
+        <a href="/items/P23"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P24.jpg" alt="product-image" />
+        <h4>Forever Immu (Immublend)</h4>
+        <br />
+        <a href="/items/P24"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P25.jpg" alt="product-image" />
+        <h4>Forever Aloe Scrub (ဂျီးချွတ်)</h4>
+        <p>............</p>
+        <a href="/items/P25"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P26.jpg" alt="product-image" />
+        <h4>Forever Vita MultiVitamins (ကလေးအားဆေး)</h4>
+        <br />
+        <a href="/items/P26"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P27.jpg" alt="product-image" />
+        <h4>Forever Bright Toothgel (သွားတိုက်ဆေး)</h4>
+        <br />
+        <a href="/items/P27"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P28.jpg" alt="product-image" />
+        <h4>Aloe ever-shield (ရှားစောင်းဂျိုင်းလိမ်း)</h4>
+        <br />
+        <a href="/items/P28"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P29.jpg" alt="product-image" />
+        <h4>Aloe Propolis Créam (အမာရွတ်, တင်းတိတ်)</h4>
+        <p>............</p>
+        <a href="/items/P29"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P30.jpg" alt="product-image" />
+        <h4>Forever Alpha-E Factor (အရေးကြောင်း မျက်နှာ စိုတင်းဆီ)</h4>
+        <br />
+        <a href="/items/P30"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P31.jpg" alt="product-image" />
+        <h4>SK-ll Cleanser</h4>
+        <br />
+        <a href="/items/P31"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P32.jpg" alt="product-image" />
+        <h4>SK-ll Toner</h4>
+        <br />
+        <a href="/items/P32"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P33.jpg" alt="product-image" />
+        <h4>SK-ll Essence</h4>
+        <p>............</p>
+        <a href="/items/P33"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P34.jpg" alt="product-image" />
+        <h4>SK-ll Anti-Aging Moisturiser</h4>
+        <br />
+        <a href="/items/P34"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P35.jpg" alt="product-image" />
+        <h4>Forever Absorbent-C (ကွေကာ ဗီတာမင်စီ)</h4>
+        <br />
+        <a href="/items/P35"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P36.jpg" alt="product-image" />
+        <h4>Forever Fields of Greens (သက်သက်လွတ် ဓါတ်စာ)</h4>
+        <br />
+        <a href="/items/P36"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P37.jpg" alt="product-image" />
+        <h4>Forever Lean (ဆီးချိုအဆီချ)</h4>
+        <p>............</p>
+        <a href="/items/P37"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P38.jpg" alt="product-image" />
+        <h4>Forever Lycium Plus (မျက်စိ/အသည်းအားဆေး)</h4>
+        <br />
+        <a href="/items/P38"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P39.jpg" alt="product-image" />
+        <h4>Forever Active Pro-B (အူမကြီးအားဆေး) )</h4>
+        <br />
+        <a href="/items/P39"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P40.jpg" alt="product-image" />
+        <h4>Forever iVision (မျက်စိအားဆေး)</h4>
+        <br />
+        <a href="/items/P40"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P41.jpg" alt="product-image" />
+        <h4>Forever infinite firming complex (ကော်လဂျင်)</h4>
+        <p>............</p>
+        <a href="/items/P41"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P42.jpg" alt="product-image" />
+        <h4>Forever Focus (ဦးနှောက်အားဆေး)</h4>
+        <br />
+        <a href="/items/P42"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P43.jpg" alt="product-image" />
+        <h4>Forever Move (အရိုး, အဆစ်, အကြော)</h4>
+        <br />
+        <a href="/items/P43"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P44.jpg" alt="product-image" />
+        <h4>Aloe Heat Lotion (ကိုက်ခဲနာကျင်)</h4>
+        <br />
+        <a href="/items/P44"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P45.jpg" alt="product-image" />
+        <h4>Aloe Jojoba Shampoo (ခေါင်းလျှော်ရည်)</h4>
+        <p>............</p>
+        <a href="/items/P45"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P46.jpg" alt="product-image" />
+        <h4>Aloe Jojoba Conditioner (ဆံသားဖြည့်တင်း)</h4>
+        <br />
+        <a href="/items/P46"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P47.jpg" alt="product-image" />
+        <h4>Forever Liquid Soap (မျက်နှာသစ်)</h4>
+        <br />
+        <a href="/items/P47"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P48.jpg" alt="product-image" />
+        <h4>Forever Aloe MPD 2x Ultra Detergent (အထွေထွေသုံး ဆပ်ပြာ)</h4>
+        <br />
+        <a href="/items/P48"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P49.jpg" alt="product-image" />
+        <h4>Forever Aloe Activator (မျက်နှာသန့်စင်)</h4>
+        <p>............</p>
+        <a href="/items/P49"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P50.jpg" alt="product-image" />
+        <h4>Forever Balancing Toner (တိုနာရည်)</h4>
+        <br />
+        <a href="/items/P50"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P51.jpg" alt="product-image" />
+        <h4>Forever Eye Cream</h4>
+        <br />
+        <a href="/items/P51"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P52.jpg" alt="product-image" />
+        <h4>Forever Refreshing Gel Cleanser (မျက်နှာသစ်)</h4>
+        <br />
+        <a href="/items/P52"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P53.jpg" alt="product-image" />
+        <h4>Forever infinite hydrating cleanser (မျက်နှာသစ်)</h4>
+        <p>............</p>
+        <a href="/items/P53"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P54.jpg" alt="product-image" />
+        <h4>Forever Infinite firming serum</h4>
+        <br />
+        <a href="/items/P54"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P55.jpg" alt="product-image" />
+        <h4>Forever infinite restoring cream (စိုဓါတ် créme)</h4>
+        <br />
+        <a href="/items/P55"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+
+      <div class="product reveal">
+        <img src="imgs/item_photos/P56.jpg" alt="product-image" />
+        <h4>Forever Aloe Lips (နှုတ်ခမ်းဆီ)</h4>
+        <br />
+        <a href="/items/P56"><button>အသေးစိတ်ကြည့်ရှုပါ။</button></a>
+      </div>
+    </div>
+  </section>
+  <script src="js/store.js"></script>
+  <div id="dialog-4" title="In Myanmar">
+    Please Turn on VPN for Messenger support.
+    <br />
+    <br />
+    <img src="imgs/messenger.png" alt="" />
+  </div>
+  <footer>
+    <div class="footer1">
+      <h1>ShweDuWun</h1>
+      <br />
+      <h3>Medical Product Distributor</h3>
+    </div>
+
+    <div class="footer2">
+      <ul>
+        <li><a href="/">Pages</a></li>
+        <br />
+        <li><a href="/store">stores</a></li>
+        <li><a href="/delivery">services</a></li>
+        <li><a href="/contactus">about</a></li>
+        <li><a href="/contactus">contact</a></li>
+        <br />
+        <li><a id="smallertext" href="#">Contact2WebsiteDeveloper</a></li>
+      </ul>
+    </div>
+    <div class="footer3">
+      <font>
+        <input type="email" required placeholder="Type your Email..." />
+        <br />
+        <button type="submit">Subscribe</button>
+      </font>
+
+      <ul class="icons">
+        <li>
+          <a href="/items/P"><i class="fa-brands fa-facebook fa-beat"></i></a>
+        </li>
+        <li>
+          <a href="/items/P"><i class="fa-brands fa-facebook-messenger fa-fade"></i></a>
+        </li>
+        <li>
+          <a href="/items/P"><i class="fa-solid fa-envelope fa-flip"></i></a>
+        </li>
+        <li>
+          <a href="/items/P"><i class="fa-brands fa-youtube fa-bounce"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer4">
+      <h4>Copyright@ 2023-2024</h4>
+    </div>
+  </footer>
+</body>
+
 </html>
