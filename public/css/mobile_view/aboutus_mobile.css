@@ -2,15 +2,23 @@
   .aboutus {
     padding: 0;
   }
+  .containerimg {
+    margin: 0;
+  }
   .containerimg,
   .under,
   .rightabout {
     flex-direction: column;
-    width: 100%;
+    width: 96%;
     padding: 0;
+    text-align: justify;
+    margin: 0 2%;
   }
   .upper {
     padding: 0 2%;
+  }
+  .under {
+    margin: 0;
   }
   .containerimg h1 {
     font-size: 2em;
