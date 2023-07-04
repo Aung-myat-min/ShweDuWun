@@ -75,13 +75,17 @@ app.get("/items/:id", (req, res) => {
         res.render("items", dataToEJS);
       } else {
         console.error("Row not found");
-        res.render("error", { message: "Item not found" });
+        res.redirect(__dirname + "/views/error.html");
       }
     });
 });
 
 app.get("/delivery", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/delivery.html"));
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/views/error.html"));
 });
 //routes
 

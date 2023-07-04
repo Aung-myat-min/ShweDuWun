@@ -399,7 +399,19 @@ footer {
   #smallertext {
     font-size: 13px;
   }
+}
 
-  /*TODO - fix the footer in mobile resposive, Also do header*/
-  /*Ok! I will fix it tomorrow*/
+#dialog-4 {
+  > img {
+    width: 100%;
+  }
+}
+
+.ui-widget-header,
+.ui-state-default,
+ui-button {
+  background: #b9cd6d;
+  border: 1px solid #b9cd6d;
+  color: #ffffff;
+  font-weight: bold;
 }
