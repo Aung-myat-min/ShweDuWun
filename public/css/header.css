@@ -7,7 +7,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -18,6 +17,7 @@ body {
   background-size: 220vh 100%;
   padding-top: 7vh;
   position: relative;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #messenger {
@@ -172,7 +172,9 @@ header button:hover {
     width: 20vh;
   }
 }
-
+.footerclass {
+  font-family: "Dancing Script", cursive;
+}
 footer {
   background-color: rgba(0, 169, 152, 0.319);
   width: 100%;
@@ -181,13 +183,12 @@ footer {
   border-top: 4px solid black;
   overflow-x: hidden;
   position: relative;
+  font-family: "Dancing Script";
 }
 
 .footer1 {
   width: 33.33%;
   height: 83%;
-
-  font-family: "Dancing Script", cursive;
   font-size: 30px;
   color: black;
   float: left;

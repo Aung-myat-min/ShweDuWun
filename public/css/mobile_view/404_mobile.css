@@ -1,0 +1,22 @@
+@media (max-width: 851px) {
+  .message {
+    margin: 20% 0 10% 0;
+    text-align: center;
+    padding: 0 2%;
+    > h1 {
+      margin: 2vh;
+      font-size: 3em;
+      display: inline-block;
+    }
+    > a {
+      text-decoration: none;
+      font-size: 1em;
+      border: solid 2px black;
+      background-color: white;
+      height: 50px;
+      width: 70px;
+      padding: 7px;
+      color: black;
+    }
+  }
+}
