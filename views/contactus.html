@@ -1,248 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header.css" type="text/css" />
+    <link rel="stylesheet" href="css/mobile_view/contact_mobile.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/aboutus.css" />
+    <link rel="stylesheet" href="css/mobile_view/aboutus_mobile.css" />
+    <script
+      src="https://kit.fontawesome.com/ef09da54b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Contact Us</title>
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/header.css" type="text/css" />
-  <link rel="stylesheet" href="css/mobile_view/contact_mobile.css" />
-  <link rel="stylesheet" href="css/contact.css" />
-  <link rel="stylesheet" href="css/aboutus.css" />
-  <link rel="stylesheet" href="css/mobile_view/aboutus_mobile.css" />
-  <script src="https://kit.fontawesome.com/ef09da54b9.js" crossorigin="anonymous"></script>
-  <title>Contact Us</title>
-  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+  </head>
 
-  <!-- Javascript -->
-  <script src="js/main.js"></script>
-</head>
+  <body class="mainn">
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
 
-<body class="mainn">
-  <!-- Messenger Chat plugin Code -->
-  <div id="fb-root"></div>
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-  <!-- Your Chat plugin code -->
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "100813059743677");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-  <script>
-    var chatbox = document.getElementById("fb-customer-chat");
-    chatbox.setAttribute("page_id", "100813059743677");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  </script>
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v17.0",
+        });
+      };
 
-  <!-- Your SDK code -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: "v17.0",
-      });
-    };
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <header>
+      <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
+      <nav>
+        <button id="toggleButton"><i class="fa fa-bars"></i></button>
+        <div class="hidden">
+          <a href="/">Homepage</a><span class="bordering"></span>
+          <a href="/store">Stores</a><span class="bordering"></span>
+          <a href="/delivery">Services</a><span class="bordering"></span>
+          <a
+            href="/contactus"
+            id="active"
+            style="width: auto; padding: 2.2vh 1.5vh"
+            >About & Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+    <script src="js/navigation.js"></script>
 
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  </script>
-  <header>
-    <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
-    <nav>
-      <button id="toggleButton"><i class="fa fa-bars"></i></button>
-      <div class="hidden">
-        <a href="/">Homepage</a><span class="bordering"></span>
-        <a href="/store">Stores</a><span class="bordering"></span>
-        <a href="/delivery">Services</a><span class="bordering"></span>
-        <a href="/contactus" id="active" style="width: auto; padding: 2.2vh 1.5vh">About & Contact</a>
-      </div>
-    </nav>
-  </header>
-  <script src="js/navigation.js"></script>
-
-  <section class="aboutus">
-    <div class="upper">
-      <div class="containerimg">
-        <h1>
-          Daw Thet Htar <br />
-          & <br />Daw Aye Myint
-        </h1>
-        <img src="imgs/dtt&me.png" alt="DawThetHtar&DawAyeMyint" />
-      </div>
-    </div>
-    <div class="under">
-      <div class="rightabout">
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati
-          autem aspernatur illum ex quas ipsa fugit, qui, necessitatibus magni
-          distinctio beatae similique ab nesciunt excepturi? Unde impedit
-          beatae officiis eos.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          tempora non dolor obcaecati, perspiciatis culpa quo, totam impedit
-          itaque ut laudantium? Molestias optio mollitia aperiam ea doloremque
-          hic perferendis aut.
-        </p>
-      </div>
-      <div class="leftabout">
-        <h2>Follow Us On</h2>
-        <div class="sub_left1">
-          <a href=""><i class="fa-brands fa-facebook"></i></a>
-          <a href="" style="background-color: green"><i class="fa-brands fa-facebook-messenger"></i></a>
-          <a href=""><i class="fa-solid fa-envelope"></i></a>
-          <a href=""><i class="fa-solid fa-phone"></i></a>
+    <section class="aboutus">
+      <div class="upper">
+        <div class="containerimg">
+          <h1>
+            Daw Thet Htar <br />
+            & <br />Daw Aye Myint
+          </h1>
+          <img src="imgs/dtt&me.png" alt="DawThetHtar&DawAyeMyint" />
         </div>
       </div>
-    </div>
-  </section>
+      <div class="under">
+        <div class="rightabout">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati
+            autem aspernatur illum ex quas ipsa fugit, qui, necessitatibus magni
+            distinctio beatae similique ab nesciunt excepturi? Unde impedit
+            beatae officiis eos.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+            tempora non dolor obcaecati, perspiciatis culpa quo, totam impedit
+            itaque ut laudantium? Molestias optio mollitia aperiam ea doloremque
+            hic perferendis aut.
+          </p>
+        </div>
+        <div class="leftabout">
+          <h2>Follow Us On</h2>
+          <div class="sub_left1">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href="" style="background-color: green"
+              ><i class="fa-brands fa-facebook-messenger"></i
+            ></a>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="desktop">
-    <div class="left" id="left">
+    <section class="desktop">
+      <div class="left" id="left">
+        <h1>Shwe Du Wun</h1>
+        <div class="sub_left">
+          <h2>You can contact us via</h2>
+          <p>
+            We give 24/7 services. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Sint adipisci dolore nisi excepturi sed, quae qui.
+          </p>
+          <div class="sub_left1">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href="" style="background-color: green"
+              ><i class="fa-brands fa-facebook-messenger"></i
+            ></a>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right" id="right">
+        <h1>Let us know</h1>
+        <p>We will contact u back after a while.</p>
+        <form action="">
+          <div class="name">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Enter your  Name" />
+          </div>
+          <div class="subs">
+            <div class="subemail">
+              <i class="fa-solid fa-envelope"></i>
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter your Email"
+              />
+            </div>
+            <div class="subnumber">
+              <i class="fa-solid fa-mobile"></i
+              ><input
+                type="number"
+                name=""
+                id=""
+                placeholder="Enter your phone number"
+              />
+            </div>
+          </div>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Type your message here."
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="mobile" id="mobile">
       <h1>Shwe Du Wun</h1>
-      <div class="sub_left">
-        <h2>You can contact us via</h2>
-        <p>
-          We give 24/7 services. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Sint adipisci dolore nisi excepturi sed, quae qui.
-        </p>
-        <div class="sub_left1">
-          <a href=""><i class="fa-brands fa-facebook"></i></a>
-          <a href="" style="background-color: green"><i class="fa-brands fa-facebook-messenger"></i></a>
-          <a href=""><i class="fa-solid fa-envelope"></i></a>
-          <a href=""><i class="fa-solid fa-phone"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="right" id="right">
-      <h1>Let us know</h1>
+      <h2>Let us know</h2>
       <p>We will contact u back after a while.</p>
-      <form action="">
-        <div class="name">
+      <form action="" class="formMobile">
+        <div class="inputs">
           <i class="fa-solid fa-user"></i>
           <input type="text" placeholder="Enter your  Name" />
         </div>
-        <div class="subs">
-          <div class="subemail">
-            <i class="fa-solid fa-envelope"></i>
-            <input type="email" name="" id="" placeholder="Enter your Email" />
-          </div>
-          <div class="subnumber">
-            <i class="fa-solid fa-mobile"></i><input type="number" name="" id=""
-              placeholder="Enter your phone number" />
-          </div>
+        <div class="inputs">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" name="" id="" placeholder="Enter your Email" />
         </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Type your message here."></textarea>
+        <div class="inputs">
+          <i class="fa-solid fa-mobile"></i
+          ><input
+            type="number"
+            name=""
+            id=""
+            placeholder="Enter your phone number"
+          />
+        </div>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Type your message here."
+        ></textarea>
         <button type="submit">Send</button>
       </form>
+    </section>
+
+    <div id="dialog-4" title="In Myanmar">
+      Please Turn on VPN for Messenger support.
+      <br />
+      <br />
+      <img src="imgs/messenger.png" alt="" />
     </div>
-<<<<<<< Updated upstream
-  </section>
-
-  <section class="mobile" id="mobile">
-    <h1>Shwe Du Wun</h1>
-    <h2>Let us know</h2>
-    <p>We will contact u back after a while.</p>
-    <form action="" class="formMobile">
-      <div class="inputs">
-        <i class="fa-solid fa-user"></i>
-        <input type="text" placeholder="Enter your  Name" />
-      </div>
-      <div class="inputs">
-        <i class="fa-solid fa-envelope"></i>
-        <input type="email" name="" id="" placeholder="Enter your Email" />
-      </div>
-      <div class="inputs">
-        <i class="fa-solid fa-mobile"></i><input type="number" name="" id="" placeholder="Enter your phone number" />
-      </div>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Type your message here."></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-
-  <div id="dialog-4" title="In Myanmar">
-    Please Turn on VPN for Messenger support.
-    <br />
-    <br />
-    <img src="imgs/messenger.png" alt="" />
-  </div>
-  <div class="footerclass">
-=======
->>>>>>> Stashed changes
-    <footer>
-      <div class="footer1">
-        <h1>ShweDuWun</h1>
-        <br />
-        <h3>Medical Product Distributor</h3>
-      </div>
-
-      <div class="footer2">
-        <ul>
-<<<<<<< Updated upstream
-          <li><a href="/">Pages</a></li>
+    <div class="footerclass">
+      <footer>
+        <div class="footer1">
+          <h1>ShweDuWun</h1>
           <br />
-          <li><a href="/store">stores</a></li>
-          <li><a href="/delivery">services</a></li>
-          <li><a href="/contactus">about</a></li>
-          <li><a href="/contactus">contact</a></li>
-          <br />
-          <li><a id="smallertext" href="#">Contact2WebsiteDeveloper</a></li>
-=======
-          <li><a href="#">Pages</a></li>
-          <br />
-          <li><a href="#">stores</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
-          <br />
-          <li><a href="#">Contact2WebsiteDevelopers</a></li>
->>>>>>> Stashed changes
-        </ul>
-      </div>
-      <div class="footer3">
-        <font>
-          <input type="email" required placeholder="Type your Email..." />
-          <br />
-          <button type="submit">Subscribe</button>
-        </font>
+          <h3>Medical Product Distributor</h3>
+        </div>
 
-        <ul class="icons">
-          <li>
-            <a href="#"><i class="fa-brands fa-facebook fa-beat"></i></a>
-          </li>
-          <li>
-<<<<<<< Updated upstream
-            <a href="#"><i class="fa-brands fa-facebook-messenger fa-fade"></i></a>
-=======
-            <a href="#"
-              ><i class="fa-brands fa-facebook-messenger fa-fade"></i
-            ></a>
->>>>>>> Stashed changes
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-envelope fa-flip"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-youtube fa-bounce"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer4">
-        <h4>Copyright@ 2023-2024</h4>
-      </div>
-    </footer>
-<<<<<<< Updated upstream
-  </div>
-</body>
+        <div class="footer2">
+          <ul>
+            <li><a href="/">Pages</a></li>
+            <br />
+            <li><a href="/store">stores</a></li>
+            <li><a href="/delivery">services</a></li>
+            <li><a href="/contactus">about</a></li>
+            <li><a href="/contactus">contact</a></li>
+            <br />
+            <li><a id="smallertext" href="#">Contact2WebsiteDeveloper</a></li>
+          </ul>
+        </div>
+        <div class="footer3">
+          <font>
+            <input type="email" required placeholder="Type your Email..." />
+            <br />
+            <button type="submit">Subscribe</button>
+          </font>
 
-</html>
-=======
+          <ul class="icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook fa-beat"></i></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-brands fa-facebook-messenger fa-fade"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-envelope fa-flip"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-youtube fa-bounce"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer4">
+          <h4>Copyright@ 2023-2024</h4>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
->>>>>>> Stashed changes

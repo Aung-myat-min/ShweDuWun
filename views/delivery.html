@@ -1,626 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header.css" type="text/css" />
+    <link rel="stylesheet" href="css/delivery.css" />
+    <script
+      src="https://kit.fontawesome.com/ef09da54b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Delivery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/header.css" type="text/css" />
-  <link rel="stylesheet" href="css/delivery.css" />
-  <script src="https://kit.fontawesome.com/ef09da54b9.js" crossorigin="anonymous"></script>
-  <title>Delivery</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+  </head>
 
-  <!-- Javascript -->
-  <script src="js/main.js"></script>
-</head>
+  <body class="mainn">
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
 
-<body class="mainn">
-  <!-- Messenger Chat plugin Code -->
-  <div id="fb-root"></div>
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-  <!-- Your Chat plugin code -->
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "100813059743677");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-  <script>
-    var chatbox = document.getElementById("fb-customer-chat");
-    chatbox.setAttribute("page_id", "100813059743677");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  </script>
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v17.0",
+        });
+      };
 
-  <!-- Your SDK code -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: "v17.0",
-      });
-    };
-
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  </script>
-  <header>
-    <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
-    <nav>
-      <button id="toggleButton"><i class="fa fa-bars"></i></button>
-      <div class="hidden">
-        <a href="/">Homepage</a><span class="bordering"></span>
-        <a href="/store">Stores</a><span class="bordering"></span>
-        <a href="/delivery" id="active">Services</a><span class="bordering"></span>
-        <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh">About & Contact</a>
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <header>
+      <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
+      <nav>
+        <button id="toggleButton"><i class="fa fa-bars"></i></button>
+        <div class="hidden">
+          <a href="/">Homepage</a><span class="bordering"></span>
+          <a href="/store">Stores</a><span class="bordering"></span>
+          <a href="/delivery" id="active">Services</a
+          ><span class="bordering"></span>
+          <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh"
+            >About & Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+    <script src="js/navigation.js"></script>
+    <section class="brief">
+      <h1 id="deliveryh1">Delivery?</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque odio
+        explicabo consequuntur provident facere minus praesentium, aut qui
+        ducimus debitis, hic molestias esse eligendi quidem temporibus vero
+        veniam repellendus enim! Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Maiores ad maxime sed expedita saepe obcaecati.
+        Voluptas distinctio, eveniet quia, delectus voluptatibus nostrum quaerat
+        voluptates qui tenetur placeat est laboriosam veniam. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Reprehenderit asperiores, ex
+        debitis explicabo cum blanditiis vitae! Ex quasi voluptate illum, fuga
+        doloribus esse id ea error ipsum! Tempora, facilis provident.
+      </p>
+    </section>
+    <section class="mainsection">
+      <div class="cities">
+        <h1>Find your city here</h1>
+        <input type="text" name="" placeholder="Type here" id="filter_users" />
+        <ul id="city-list"></ul>
       </div>
-    </nav>
-  </header>
-  <script src="js/navigation.js"></script>
-  <section class="brief">
-    <h1 id="deliveryh1">Delivery?</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque odio
-      explicabo consequuntur provident facere minus praesentium, aut qui
-      ducimus debitis, hic molestias esse eligendi quidem temporibus vero
-      veniam repellendus enim! Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Maiores ad maxime sed expedita saepe obcaecati.
-      Voluptas distinctio, eveniet quia, delectus voluptatibus nostrum quaerat
-      voluptates qui tenetur placeat est laboriosam veniam. Lorem ipsum dolor
-      sit amet consectetur adipisicing elit. Reprehenderit asperiores, ex
-      debitis explicabo cum blanditiis vitae! Ex quasi voluptate illum, fuga
-      doloribus esse id ea error ipsum! Tempora, facilis provident.
-    </p>
-  </section>
-  <section class="mainsection">
-    <div class="cities">
-      <h1>Find your city here</h1>
-      <input type="text" name="" placeholder="Type here" id="filter_users" />
-      <ul id="city-list"></ul>
+      <hr />
+      <div class="search">
+        <h1>Choose your region</h1>
+
+        <button class="btn">
+          ရန်ကုန်တိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>ကျောက်တံတား</td>
+              <td>ပန်းပဲတန်း</td>
+            </tr>
+            <tr>
+              <td>လသာ</td>
+              <td>လမ်းမတော်</td>
+            </tr>
+            <tr>
+              <td>ဗိုလ်တထောင်</td>
+              <td>ပုဇွန်တောင်</td>
+            </tr>
+            <tr>
+              <td>မင်္ဂလာတောင်ညွန့်</td>
+              <td>အလုံ</td>
+            </tr>
+            <tr>
+              <td>ဗဟန်း</td>
+              <td>ဒဂုံ</td>
+            </tr>
+            <tr>
+              <td>ဒဂုံမြို့သစ် (ဆိပ်ကမ်း)</td>
+              <td>ဒဂုံမြို့သစ် (အရှေ့ပိုင်း)</td>
+            </tr>
+            <tr>
+              <td>လှိုင်သာယာ</td>
+              <td>အင်းစိန်</td>
+            </tr>
+            <tr>
+              <td>ကမာရွတ်</td>
+              <td>မင်္ဂလာဒုံ</td>
+            </tr>
+            <tr>
+              <td>ဒဂုံမြို့သစ်(မြောက်ပိုင်း)</td>
+              <td>မြောက်ဥက္ကလာပ</td>
+            </tr>
+            <tr>
+              <td>ရွှေပြည်သာ</td>
+              <td>တာမွေ</td>
+            </tr>
+            <tr>
+              <td>ဒဂုံမြို့သစ်(တောင်ပိုင်း)</td>
+              <td>မရမ်းကုန်း</td>
+            </tr>
+            <tr>
+              <td>ကြည့်မြင်တိုင်</td>
+              <td>တောင်ဥက္ကလာပ</td>
+            </tr>
+            <tr>
+              <td>လှိုင်</td>
+              <td>သန်လျင်</td>
+            </tr>
+            <tr>
+              <td>သင်္ဃန်းကျွန်း</td>
+              <td>သာကေတ</td>
+            </tr>
+            <tr>
+              <td>ဒေါပုံ</td>
+              <td>ရန်ကင်း</td>
+            </tr>
+            <tr>
+              <td>ထောက်ကြန့် ၊ လှည်းကူး</td>
+              <td>မှော်ဘီ၊ တိုက်ကြီး</td>
+            </tr>
+            <tr>
+              <td>ကျောက်တန်း</td>
+              <td>ခရမ်း၊ သုံးခွ</td>
+            </tr>
+            <tr>
+              <td>တွံတေး၊ ဒလ</td>
+              <td>ဥက္ကံ</td>
+            </tr>
+          </table>
+        </div>
+        <button class="btn">
+          ပဲခူးတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>ပဲခူး</td>
+              <td>တောင်ငူ</td>
+            </tr>
+            <tr>
+              <td>ကြို့ပင်ကောက်</td>
+              <td>နတ်တလင်း</td>
+            </tr>
+            <tr>
+              <td>ပြည်၊ ဖြူး</td>
+              <td>ရွှေတောင်၊ ပေါင်းတည်</td>
+            </tr>
+            <tr>
+              <td>ဇီးကုန်း၊ ဒိုက်ဦး</td>
+              <td>ညောင်လေးပင်</td>
+            </tr>
+            <tr>
+              <td>အင်းမ၊ အင်းတကော်</td>
+              <td>ပုတီးကုန်း၊ အုတ်ဖို</td>
+            </tr>
+            <tr>
+              <td>သဲကုန်း၊ သနပ်ပင်</td>
+              <td>ရေတာရှည်</td>
+            </tr>
+            <tr>
+              <td>ဆွာ၊ သာဂရ</td>
+              <td>ကေတုမတီမြို့သစ်</td>
+            </tr>
+            <tr>
+              <td>ကျောက်တံခါး</td>
+              <td>ပဲနွယ်ကုန်း</td>
+            </tr>
+            <tr>
+              <td>အုတ်တွင်း</td>
+              <td>တောကျွဲအင်း</td>
+            </tr>
+            <tr>
+              <td>ရွှေကျင်၊ ဥသျှစ်ပင်</td>
+              <td>သုံးဆယ်</td>
+            </tr>
+            <tr>
+              <td>သာယာဝတီ</td>
+              <td>ပြွန်တန်ဆာ</td>
+            </tr>
+            <tr>
+              <td>လက်ပံတန်း</td>
+              <td>ဝေါ၊ ဇေယျဝတီ</td>
+            </tr>
+            <tr>
+              <td>အောက်မင်းလှ</td>
+              <td>ညောင်ခြေထောက်</td>
+            </tr>
+          </table>
+        </div>
+        <button class="btn">
+          မန္တလေးတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>မန္တလေး</td>
+              <td>အောင်မြေသာဇံ</td>
+            </tr>
+            <tr>
+              <td>ချမ်းအေးသာဇံ</td>
+              <td>မဟာအောင်မြေ</td>
+            </tr>
+            <tr>
+              <td>ချမ်းမြသာစည်</td>
+              <td>ပြည်ကြီးတံခွန်</td>
+            </tr>
+            <tr>
+              <td>အမရပူရ၊ မိတ္ထီလာ</td>
+              <td>ကျောက်ပန်းတောင်း</td>
+            </tr>
+            <tr>
+              <td>တံတားဦး၊ အုန်းချော</td>
+              <td>မိုးကုတ်၊ သာစည်</td>
+            </tr>
+            <tr>
+              <td>ပြင်ဦးလွင်၊ မြင်းခြံ</td>
+              <td>ရမည်းသင်း</td>
+            </tr>
+            <tr>
+              <td>မြစ်ငယ်၊ မလှိုင်</td>
+              <td>ပုလိပ်၊ စဉ့်ကိုင်</td>
+            </tr>
+            <tr>
+              <td>ကျောက်ဆည်</td>
+              <td>ဝမ်းတွင်း၊ သဲတော</td>
+            </tr>
+            <tr>
+              <td>ပျော်ဘွယ်၊ နွားထိုးကြီး</td>
+              <td>ပုဂံ၊ ညောင်ဦး</td>
+            </tr>
+            <tr>
+              <td>မြစ်သား၊ တောင်သာ</td>
+              <td>ကူမဲ၊ မတ္တရာ</td>
+            </tr>
+            <tr>
+              <td>ပုသိမ်ကြီး</td>
+              <td>ဟန်မြင့်မိုရ်လမ်းခွဲ</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          ဧရာဝတီတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>ပုသိမ်</td>
+              <td>ဟင်္သာတ</td>
+            </tr>
+            <tr>
+              <td>ပန်းတနော်</td>
+              <td>ကျုံပျော်၊ ဓနုဖြူ</td>
+            </tr>
+            <tr>
+              <td>လပွတ္တာ၊ ချောင်းသာ</td>
+              <td>ဘိုကလေး</td>
+            </tr>
+            <tr>
+              <td>ငါးသိုင်းချောင်း ၊ ရေကြည်</td>
+              <td>မအူပင်</td>
+            </tr>
+            <tr>
+              <td>မြောင်းမြ</td>
+              <td>ကျိုက်လတ်</td>
+            </tr>
+            <tr>
+              <td>ကျောင်းကုန်း</td>
+              <td>အိမ်မဲ၊ ဖျာပုံ</td>
+            </tr>
+            <tr>
+              <td>ဒေးဒရဲ</td>
+              <td>မြန်အောင်၊ ကြံခင်း</td>
+            </tr>
+            <tr>
+              <td>ညောင်တုန်း</td>
+              <td>ဝါးခယ်မ</td>
+            </tr>
+            <tr>
+              <td>ဇလွန်</td>
+              <td>မော်ကျွန်း</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          ကချင်ပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>မြစ်ကြီးနား</td>
+              <td>မိုးကောင်း</td>
+            </tr>
+            <tr>
+              <td>ဗန်းမော်</td>
+              <td>ရွှေကူ၊ ဟိုပင်</td>
+            </tr>
+            <tr>
+              <td>နမ္မတီး</td>
+              <td>မိုးညှင်း</td>
+            </tr>
+            <tr>
+              <td>ဝိုင်းမော်</td>
+              <td>လွယ်ဂျယ်</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          ရခိုင်ပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>စစ်တွေ၊ သံတွဲ</td>
+              <td>ကျောက်ဖြူ</td>
+            </tr>
+            <tr>
+              <td>ပုဏ္ဏားကျွန်း</td>
+              <td>မင်းပြား</td>
+            </tr>
+            <tr>
+              <td>မြောက်ဦး</td>
+              <td>တောင်ကုတ်</td>
+            </tr>
+            <tr>
+              <td>ငပလီ၊ဂွ</td>
+              <td>ကျောက်တော်</td>
+            </tr>
+            <tr>
+              <td>ဘူးသီးတောင်</td>
+              <td>မောင်းတော</td>
+            </tr>
+            <tr>
+              <td>ရမ်းဗြဲ</td>
+              <td>ပေါက်တော</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          နေပြည်တော် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>နေပြည်တော်</td>
+              <td>ပျဉ်းမနား၊ လယ်ဝေး</td>
+            </tr>
+            <tr>
+              <td>တပ်ကုန်း</td>
+              <td>ပြန်ကပြေး</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          ကရင်ပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>ဘားအံ</td>
+              <td>မြိုင်ကလေး၊ မြဝတီ</td>
+            </tr>
+          </table>
+        </div>
+        <button class="btn">
+          ချင်းပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>ဟားခါး</td>
+              <td>o</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          ရှမ်းပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>တောင်ကြီး</td>
+              <td>လားရှိုး</td>
+            </tr>
+            <tr>
+              <td>အေးသာယာ</td>
+              <td>အောင်ပန်း</td>
+            </tr>
+            <tr>
+              <td>ပင်းတယ</td>
+              <td>သီပေါ၊ နောင်ချို</td>
+            </tr>
+            <tr>
+              <td>ရွှေညောင်၊ ညောင်ရွှေ</td>
+              <td>ကျောက်မဲ</td>
+            </tr>
+            <tr>
+              <td>ဟဲဟိုး၊ ရပ်စောက်</td>
+              <td>ကလော</td>
+            </tr>
+            <tr>
+              <td>ဗထူး</td>
+              <td>မိုးမိတ်</td>
+            </tr>
+            <tr>
+              <td>လွိုင်လင်</td>
+              <td>ပင်လုံ၊ မူဆယ်</td>
+            </tr>
+            <tr>
+              <td>နမ့်စန်(တောင်)</td>
+              <td>တာချီလိတ်</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          တနင်္သာရီတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>မြိတ်</td>
+              <td>ကော့သောင်း</td>
+            </tr>
+            <tr>
+              <td>ထားဝယ်၊ရေဖြူ</td>
+              <td>မောင်းမကန်</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          မကွေးတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>မကွေး</td>
+              <td>မင်းဘူး</td>
+            </tr>
+            <tr>
+              <td>နတ်မောက်</td>
+              <td>ပခုက္ကူ</td>
+            </tr>
+            <tr>
+              <td>တောင်တွင်းကြီး</td>
+              <td>ရေနံချောင်း၊ ချောက်</td>
+            </tr>
+            <tr>
+              <td>ဆိပ်ဖြူ၊ လယ်ကိုင်</td>
+              <td>ပွင့်ဖြူ</td>
+            </tr>
+            <tr>
+              <td>အထက်မင်းလှ</td>
+              <td>စကု၊ စလင်း</td>
+            </tr>
+            <tr>
+              <td>ဆင်ဖြူကျွန်း</td>
+              <td>ရေစကြို</td>
+            </tr>
+            <tr>
+              <td>အောင်လံ</td>
+              <td>သရက်</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          မွန်ပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>မော်လမြိုင်</td>
+              <td>မုတ္တမ</td>
+            </tr>
+            <tr>
+              <td>ချောင်းဆုံ</td>
+              <td>မုဒုံ</td>
+            </tr>
+            <tr>
+              <td>ကျိုက်ထို</td>
+              <td>ဘီးလင်း</td>
+            </tr>
+            <tr>
+              <td>သံဖြူဇရပ်</td>
+              <td>ရေး</td>
+            </tr>
+            <tr>
+              <td>ဇင်းကျိုက်</td>
+              <td>ပေါင်၊ သထုံ</td>
+            </tr>
+            <tr>
+              <td>သုဝဏ္ဏဝတီ</td>
+              <td>ကျိုက္ခမီ၊ လမိုင်း</td>
+            </tr>
+          </table>
+        </div>
+
+        <button class="btn">
+          စစ်ကိုင်းတိုင်: <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
+        </button>
+        <div class="content">
+          <table>
+            <tr>
+              <td>စစ်ကိုင်း</td>
+              <td>မုံရွာ</td>
+            </tr>
+            <tr>
+              <td>ရွှေဘို</td>
+              <td>ရေဦး</td>
+            </tr>
+            <tr>
+              <td>ကန့်ဘလူ</td>
+              <td>ယင်းမာပင်</td>
+            </tr>
+            <tr>
+              <td>ကသာ၊ တမူး</td>
+              <td>ထီးချိုင့်</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <script src="js/delivery.js"></script>
+
+    <div id="dialog-4" title="In Myanmar">
+      Please Turn on VPN for Messenger support.
+      <br />
+      <br />
+      <img src="imgs/messenger.png" alt="" />
     </div>
-    <hr />
-    <div class="search">
-      <h1>Choose your region</h1>
+    <div class="footerclass">
+      <footer>
+        <div class="footer1">
+          <h1>ShweDuWun</h1>
+          <br />
+          <h3>Medical Product Distributor</h3>
+        </div>
 
-      <button class="btn">
-        ရန်ကုန်တိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>ကျောက်တံတား </td>
-            <td>ပန်းပဲတန်း</td>
-          </tr>
-          <tr>
-            <td>လသာ</td>
-            <td>လမ်းမတော် </td>
-          </tr>
-          <tr>
-            <td>ဗိုလ်တထောင် </td>
-            <td>ပုဇွန်တောင် </td>
-          </tr>
-          <tr>
-            <td>မင်္ဂလာတောင်ညွန့်</td>
-            <td>အလုံ </td>
-          </tr>
-          <tr>
-            <td>ဗဟန်း</td>
-            <td>ဒဂုံ </td>
-          </tr>
-          <tr>
-            <td>ဒဂုံမြို့သစ် (ဆိပ်ကမ်း)</td>
-            <td>ဒဂုံမြို့သစ် (အရှေ့ပိုင်း) </td>
-          </tr>
-          <tr>
-            <td>လှိုင်သာယာ </td>
-            <td>အင်းစိန် </td>
-          </tr>
-          <tr>
-            <td>ကမာရွတ် </td>
-            <td>မင်္ဂလာဒုံ </td>
-          </tr>
-          <tr>
-            <td>ဒဂုံမြို့သစ်(မြောက်ပိုင်း) </td>
-            <td>မြောက်ဥက္ကလာပ </td>
-          </tr>
-          <tr>
-            <td>ရွှေပြည်သာ </td>
-            <td>တာမွေ </td>
-          </tr>
-          <tr>
-            <td>ဒဂုံမြို့သစ်(တောင်ပိုင်း) </td>
-            <td>မရမ်းကုန်း </td>
-          </tr>
-          <tr>
-            <td>ကြည့်မြင်တိုင် </td>
-            <td>တောင်ဥက္ကလာပ </td>
-          </tr>
-          <tr>
-            <td>လှိုင် </td>
-            <td>သန်လျင် </td>
-          </tr>
-          <tr>
-            <td>သင်္ဃန်းကျွန်း</td>
-            <td>သာကေတ </td>
-          </tr>
-          <tr>
-            <td>ဒေါပုံ </td>
-            <td>ရန်ကင်း </td>
-          </tr>
-          <tr>
-            <td>ထောက်ကြန့် ၊ လှည်းကူး</td>
-            <td>မှော်ဘီ၊ တိုက်ကြီး </td>
-          </tr>
-          <tr>
-            <td>ကျောက်တန်း </td>
-            <td>ခရမ်း၊ သုံးခွ </td>
-          </tr>
-          <tr>
-            <td>တွံတေး၊ ဒလ </td>
-            <td>ဥက္ကံ </td>
-          </tr>
-        </table>
-      </div>
-      <button class="btn">
-        ပဲခူးတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>ပဲခူး</td>
-            <td>တောင်ငူ </td>
-          </tr>
-          <tr>
-            <td>ကြို့ပင်ကောက် </td>
-            <td>နတ်တလင်း </td>
-          </tr>
-          <tr>
-            <td>ပြည်၊ ဖြူး </td>
-            <td>ရွှေတောင်၊ ပေါင်းတည် </td>
-          </tr>
-          <tr>
-            <td>ဇီးကုန်း၊ ဒိုက်ဦး </td>
-            <td>ညောင်လေးပင်</td>
-          </tr>
-          <tr>
-            <td>အင်းမ၊ အင်းတကော် </td>
-            <td>ပုတီးကုန်း၊ အုတ်ဖို </td>
-          </tr>
-          <tr>
-            <td>သဲကုန်း၊ သနပ်ပင် </td>
-            <td>ရေတာရှည်</td>
-          </tr>
-          <tr>
-            <td>ဆွာ၊ သာဂရ</td>
-            <td>ကေတုမတီမြို့သစ် </td>
-          </tr>
-          <tr>
-            <td>ကျောက်တံခါး </td>
-            <td>ပဲနွယ်ကုန်း </td>
-          </tr>
-          <tr>
-            <td>အုတ်တွင်း </td>
-            <td>တောကျွဲအင်း </td>
-          </tr>
-          <tr>
-            <td>ရွှေကျင်၊ ဥသျှစ်ပင် </td>
-            <td>သုံးဆယ် </td>
-          </tr>
-          <tr>
-            <td>သာယာဝတီ </td>
-            <td>ပြွန်တန်ဆာ </td>
-          </tr>
-          <tr>
-            <td>လက်ပံတန်း </td>
-            <td>ဝေါ၊ ဇေယျဝတီ </td>
-          </tr>
-          <tr>
-            <td>အောက်မင်းလှ</td>
-            <td>ညောင်ခြေထောက်</td>
-          </tr>
-        </table>
-      </div>
-      <button class="btn">
-        မန္တလေးတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>မန္တလေး </td>
-            <td>အောင်မြေသာဇံ </td>
-          </tr>
-          <tr>
-            <td>ချမ်းအေးသာဇံ </td>
-            <td>မဟာအောင်မြေ </td>
-          </tr>
-          <tr>
-            <td>ချမ်းမြသာစည် </td>
-            <td>ပြည်ကြီးတံခွန် </td>
-          </tr>
-          <tr>
-            <td>အမရပူရ၊ မိတ္ထီလာ</td>
-            <td>ကျောက်ပန်းတောင်း </td>
-          </tr>
-          <tr>
-            <td>တံတားဦး၊ အုန်းချော</td>
-            <td>မိုးကုတ်၊ သာစည် </td>
-          </tr>
-          <tr>
-            <td>ပြင်ဦးလွင်၊ မြင်းခြံ</td>
-            <td>ရမည်းသင်း </td>
-          </tr>
-          <tr>
-            <td>မြစ်ငယ်၊ မလှိုင် </td>
-            <td>ပုလိပ်၊ စဉ့်ကိုင် </td>
-          </tr>
-          <tr>
-            <td>ကျောက်ဆည် </td>
-            <td>ဝမ်းတွင်း၊ သဲတော </td>
-          </tr>
-          <tr>
-            <td>ပျော်ဘွယ်၊ နွားထိုးကြီး</td>
-            <td>ပုဂံ၊ ညောင်ဦး </td>
-          </tr>
-          <tr>
-            <td>မြစ်သား၊ တောင်သာ</td>
-            <td>ကူမဲ၊ မတ္တရာ </td>
-          </tr>
-          <tr>
-            <td>ပုသိမ်ကြီး</td>
-            <td>ဟန်မြင့်မိုရ်လမ်းခွဲ </td>
-          </tr>
-        </table>
-      </div>
+        <div class="footer2">
+          <ul>
+            <li><a href="/">Pages</a></li>
+            <br />
+            <li><a href="/store">stores</a></li>
+            <li><a href="/delivery">services</a></li>
+            <li><a href="/contactus">about</a></li>
+            <li><a href="/contactus">contact</a></li>
+            <br />
+            <li><a id="smallertext" href="#">Contact2WebsiteDeveloper</a></li>
+          </ul>
+        </div>
+        <div class="footer3">
+          <font>
+            <input type="email" required placeholder="Type your Email..." />
+            <br />
+            <button type="submit">Subscribe</button>
+          </font>
 
-      <button class="btn">
-        ဧရာဝတီတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>ပုသိမ် </td>
-            <td>ဟင်္သာတ</td>
-          </tr>
-          <tr>
-            <td>ပန်းတနော် </td>
-            <td>ကျုံပျော်၊ ဓနုဖြူ </td>
-          </tr>
-          <tr>
-            <td>လပွတ္တာ၊ ချောင်းသာ </td>
-            <td>ဘိုကလေး </td>
-          </tr>
-          <tr>
-            <td>ငါးသိုင်းချောင်း ၊ ရေကြည် </td>
-            <td>မအူပင်</td>
-          </tr>
-          <tr>
-            <td>မြောင်းမြ </td>
-            <td>ကျိုက်လတ် </td>
-          </tr>
-          <tr>
-            <td>ကျောင်းကုန်း </td>
-            <td>အိမ်မဲ၊ ဖျာပုံ </td>
-          </tr>
-          <tr>
-            <td>ဒေးဒရဲ</td>
-            <td>မြန်အောင်၊ ကြံခင်း </td>
-          </tr>
-          <tr>
-            <td>ညောင်တုန်း </td>
-            <td>ဝါးခယ်မ </td>
-          </tr>
-          <tr>
-            <td>ဇလွန်</td>
-            <td>မော်ကျွန်း</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        ကချင်ပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>မြစ်ကြီးနား </td>
-            <td>မိုးကောင်း </td>
-          </tr>
-          <tr>
-            <td>ဗန်းမော် </td>
-            <td>ရွှေကူ၊ ဟိုပင် </td>
-          </tr>
-          <tr>
-            <td>နမ္မတီး</td>
-            <td>မိုးညှင်း </td>
-          </tr>
-          <tr>
-            <td>ဝိုင်းမော် </td>
-            <td>လွယ်ဂျယ်</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        ရခိုင်ပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>စစ်တွေ၊ သံတွဲ </td>
-            <td>ကျောက်ဖြူ </td>
-          </tr>
-          <tr>
-            <td>ပုဏ္ဏားကျွန်း </td>
-            <td>မင်းပြား</td>
-          </tr>
-          <tr>
-            <td>မြောက်ဦး </td>
-            <td>တောင်ကုတ် </td>
-          </tr>
-          <tr>
-            <td>ငပလီ၊ဂွ </td>
-            <td>ကျောက်တော် </td>
-          </tr>
-          <tr>
-            <td>ဘူးသီးတောင် </td>
-            <td>မောင်းတော</td>
-          </tr>
-          <tr>
-            <td>ရမ်းဗြဲ </td>
-            <td>ပေါက်တော</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        နေပြည်တော် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>နေပြည်တော် </td>
-            <td>ပျဉ်းမနား၊ လယ်ဝေး </td>
-          </tr>
-          <tr>
-            <td>တပ်ကုန်း </td>
-            <td>ပြန်ကပြေး</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        ကရင်ပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>ဘားအံ</td>
-            <td>မြိုင်ကလေး၊ မြဝတီ</td>
-          </tr>
-      </div>
-      <button class="btn">
-        ချင်းပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>ဟားခါး</td>
-            <td>o</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        ရှမ်းပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>တောင်ကြီး </td>
-            <td>လားရှိုး</td>
-          </tr>
-          <tr>
-            <td>အေးသာယာ</td>
-            <td>အောင်ပန်း </td>
-          </tr>
-          <tr>
-            <td>ပင်းတယ </td>
-            <td>သီပေါ၊ နောင်ချို </td>
-          </tr>
-          <tr>
-            <td>ရွှေညောင်၊ ညောင်ရွှေ </td>
-            <td>ကျောက်မဲ </td>
-          </tr>
-          <tr>
-            <td>ဟဲဟိုး၊ ရပ်စောက်</td>
-            <td>ကလော </td>
-          </tr>
-          <tr>
-            <td>ဗထူး</td>
-            <td>မိုးမိတ် </td>
-          </tr>
-          <tr>
-            <td>လွိုင်လင် </td>
-            <td>ပင်လုံ၊ မူဆယ် </td>
-          </tr>
-          <tr>
-            <td>နမ့်စန်(တောင်)</td>
-            <td>တာချီလိတ်</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        တနင်္သာရီတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>မြိတ်</td>
-            <td>ကော့သောင်း </td>
-          </tr>
-          <tr>
-            <td>ထားဝယ်၊ရေဖြူ </td>
-            <td>မောင်းမကန်</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        မကွေးတိုင်း <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>မကွေး </td>
-            <td>မင်းဘူး</td>
-          </tr>
-          <tr>
-            <td>နတ်မောက်</td>
-            <td>ပခုက္ကူ </td>
-          </tr>
-          <tr>
-            <td>တောင်တွင်းကြီး </td>
-            <td>ရေနံချောင်း၊ ချောက် </td>
-          </tr>
-          <tr>
-            <td>ဆိပ်ဖြူ၊ လယ်ကိုင် </td>
-            <td>ပွင့်ဖြူ </td>
-          </tr>
-          <tr>
-            <td>အထက်မင်းလှ</td>
-            <td>စကု၊ စလင်း</td>
-          </tr>
-          <tr>
-            <td>ဆင်ဖြူကျွန်း </td>
-            <td>ရေစကြို </td>
-          </tr>
-          <tr>
-            <td>အောင်လံ </td>
-            <td>သရက်</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        မွန်ပြည်နယ် <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>မော်လမြိုင် </td>
-            <td>မုတ္တမ </td>
-          </tr>
-          <tr>
-            <td>ချောင်းဆုံ</td>
-            <td>မုဒုံ </td>
-          </tr>
-          <tr>
-            <td>ကျိုက်ထို </td>
-            <td>ဘီးလင်း </td>
-          </tr>
-          <tr>
-            <td>သံဖြူဇရပ်</td>
-            <td>ရေး</td>
-          </tr>
-          <tr>
-            <td>ဇင်းကျိုက် </td>
-            <td>ပေါင်၊ သထုံ </td>
-          </tr>
-          <tr>
-            <td>သုဝဏ္ဏဝတီ </td>
-            <td>ကျိုက္ခမီ၊ လမိုင်း</td>
-          </tr>
-        </table>
-      </div>
-
-      <button class="btn">
-        စစ်ကိုင်းတိုင်: <i class="fa-solid fa-arrow-down fa-beat-fade"></i>
-      </button>
-      <div class="content">
-        <table>
-          <tr>
-            <td>စစ်ကိုင်း</td>
-            <td>မုံရွာ </td>
-          </tr>
-          <tr>
-            <td>ရွှေဘို </td>
-            <td>ရေဦး</td>
-          </tr>
-          <tr>
-            <td>ကန့်ဘလူ</td>
-            <td>ယင်းမာပင်</td>
-          </tr>
-          <tr>
-            <td>ကသာ၊ တမူး </td>
-            <td>ထီးချိုင့်</td>
-          </tr>
-        </table>
-      </div>
-
-
+          <ul class="icons">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook fa-beat"></i></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa-brands fa-facebook-messenger fa-fade"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-envelope fa-flip"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-youtube fa-bounce"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer4">
+          <h4>Copyright@ 2023-2024</h4>
+        </div>
+      </footer>
     </div>
-  </section>
-  <script src="js/delivery.js"></script>
-
-
-  <div id="dialog-4" title="In Myanmar">
-    Please Turn on VPN for Messenger support.
-    <br> <br>
-    <img src="imgs/messenger.png" alt="">
-  </div>
-  <div class="footerclass">
-    <footer>
-      <div class="footer1">
-        <h1>ShweDuWun</h1>
-        <br />
-        <h3>Medical Product Distributor</h3>
-      </div>
-
-      <div class="footer2">
-        <ul>
-          <li><a href="/">Pages</a></li>
-          <br />
-          <li><a href="/store">stores</a></li>
-          <li><a href="/delivery">services</a></li>
-          <li><a href="/contactus">about</a></li>
-          <li><a href="/contactus">contact</a></li>
-          <br />
-          <li><a id="smallertext" href="#">Contact2WebsiteDeveloper</a></li>
-        </ul>
-      </div>
-      <div class="footer3">
-        <font>
-          <input type="email" required placeholder="Type your Email..." />
-          <br />
-          <button type="submit">Subscribe</button>
-        </font>
-
-        <ul class="icons">
-          <li>
-            <a href="#"><i class="fa-brands fa-facebook fa-beat"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-facebook-messenger fa-fade"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-solid fa-envelope fa-flip"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-youtube fa-bounce"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer4">
-        <h4>Copyright@ 2023-2024</h4>
-      </div>
-    </footer>
-  </div>
-</body>
-
+  </body>
 </html>
