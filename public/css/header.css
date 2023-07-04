@@ -172,9 +172,11 @@ header button:hover {
     width: 20vh;
   }
 }
+
 .footerclass {
   font-family: "Dancing Script", cursive;
 }
+
 footer {
   background-color: rgba(0, 169, 152, 0.319);
   width: 100%;
@@ -323,7 +325,7 @@ footer {
     float: right;
     padding-top: 10px;
     padding-bottom: 7px;
-    padding-right: 2px;
+    padding-right: 1.5px;
   }
 
   .footer2 li {
@@ -334,13 +336,10 @@ footer {
   }
 
   .footer2 li a {
-    font-size: 15px;
+    font-size: 19px;
     color: black;
     text-decoration: none;
-  }
-
-  .footer2 li #smallertext {
-    font-size: 12px;
+    font-weight: bold;
   }
 
   .footer3 {
