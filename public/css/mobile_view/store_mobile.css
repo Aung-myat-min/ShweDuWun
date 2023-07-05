@@ -4,15 +4,9 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 350px) {
   .product {
-    flex-basis: 50%; /* Show 2 items per row on even narrower screens */
-  }
-}
-
-@media (max-width: 320px) {
-  .product {
-    flex-basis: 100%; /* Show 1 item per row on smallest screens */
+    flex-basis: 50%; /* Show 1 item per row on smallest screens */
   }
 }
 
