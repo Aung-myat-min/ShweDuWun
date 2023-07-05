@@ -4,6 +4,7 @@
   height: auto;
   border: 3px solid black;
   padding: 2vh;
+  margin-top: 20vh;
 }
 
 .brief h1 {
@@ -84,7 +85,7 @@
   padding: 1vh;
   border: 5px black solid;
   border-radius: 25px;
-  background-color: rgba(148, 105, 255, 0.296);
+  background-color: rgba(61, 58, 255, 0.296);
 }
 
 .search h1 {
@@ -133,9 +134,9 @@
 }
 
 .content tr td {
-  background-color: rgba(148, 105, 255, 0.296);
+  background-color: rgba(245, 244, 248, 0.578);
   font-weight: bold;
-  
+
 }
 
 table,

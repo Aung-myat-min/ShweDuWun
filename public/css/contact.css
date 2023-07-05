@@ -1,7 +1,7 @@
 .desktop {
   width: 80%;
   height: 80vh;
-  margin: 3% 10%;
+  margin: 10vh 10%;
   background-color: rgba(3, 145, 247, 0.74);
   background-image: url("../imgs/mail_send.png");
   background-position: right;
@@ -23,6 +23,7 @@
   padding-top: 30%;
   background-color: rgba(255, 255, 255, 0.5);
 }
+
 .left h1 {
   position: absolute;
   top: 50%;
@@ -31,6 +32,7 @@
   font-size: 3em;
   margin-bottom: 2px;
 }
+
 .sub_left {
   position: absolute;
   height: 24%;
@@ -38,13 +40,16 @@
   bottom: 0;
   background-color: rgba(83, 178, 247, 0.74);
 }
+
 .sub_left h2 {
   padding: 3vh 0 1vh 1vh;
 }
+
 .sub_left p {
   color: gray;
   padding-left: 1.2vh;
 }
+
 .sub_left1 {
   height: 5vh;
   width: 70%;
@@ -55,6 +60,7 @@
   margin-top: 1px;
   background-color: rgba(85, 184, 255, 0.74);
 }
+
 .sub_left1 a {
   margin: auto 2px;
   font-size: 1.3em;
@@ -71,19 +77,23 @@
   float: right;
   background-color: rgba(255, 255, 255, 0.24);
 }
+
 .right h1 {
   font-size: 3.1em;
   padding: 3vh 0 0 4vh;
 }
+
 .right p {
   color: gray;
   font-size: 1.3em;
   padding: 1vh 0 0 4vh;
 }
+
 .right form {
   width: 80%;
   margin: 1vh 10%;
 }
+
 .right form input,
 textarea,
 button {
@@ -92,25 +102,30 @@ button {
   font-size: 1.2em;
   border: 3px solid black;
 }
+
 .right form input:focus {
   opacity: 1;
   border: 5px solid rgb(0, 183, 255);
 }
+
 form div {
   display: flex;
   height: 6vh;
   align-items: center;
 }
+
 form div i {
   font-size: 2.5vh;
   text-align: center;
   width: 5vh;
 }
+
 .name {
   display: flex;
   flex-direction: row;
   margin: 1.5vh 0;
 }
+
 .name input {
   width: 95%;
 }
@@ -118,12 +133,15 @@ form div i {
 .subs {
   margin: 1.5vh 0;
 }
+
 .subs div {
   width: 50%;
 }
+
 .subs input {
   width: 90%;
 }
+
 textarea,
 button {
   width: 100%;

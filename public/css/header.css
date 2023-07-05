@@ -10,12 +10,11 @@
 }
 
 body {
-  background-image: url("../imgs/691.jpg");
+  background-image: url("../imgs/692.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 220vh 100%;
-  padding-top: 7vh;
+  background-size: 216vh 100vh;
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -179,7 +178,7 @@ header button:hover {
 }
 
 footer {
-  background-color: rgba(0, 169, 152, 0.319);
+  background-color: rgba(0, 169, 152, 0.769);
   width: 100%;
   height: 42vh;
   margin-top: 10%;
