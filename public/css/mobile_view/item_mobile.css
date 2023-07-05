@@ -2,8 +2,10 @@
   section {
     flex-direction: column;
     width: 96%;
-    margin: 0 2%;
-    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 9vh;
+    margin-bottom: 5vh;
 
     >#left {
       margin: 0;

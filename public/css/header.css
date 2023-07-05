@@ -132,12 +132,13 @@ header button:hover {
   nav div {
     display: inline-block;
     margin: 0;
-    background-color: rgba(0, 136, 169, 0.8);
+    background-color: rgba(0, 169, 158, 0.9);
     top: 15vh;
     position: absolute;
     width: 100%;
     left: 0px;
     z-index: 0;
+    color: black;
   }
 
   #active {
