@@ -4,9 +4,9 @@
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 412px) {
   .product {
-    flex-basis: 50%; /* Show 1 item per row on smallest screens */
+    flex-basis: 47%;
   }
 }
 
