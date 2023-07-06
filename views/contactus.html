@@ -20,15 +20,16 @@
 </head>
 
 <body class="mainn">
-  <!-- Messenger Chat plugin Code -->
+  <!-- Messenger Chat Plugin Code -->
   <div id="fb-root"></div>
 
-  <!-- Your Chat plugin code -->
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
 
   <script>
-    var chatbox = document.getElementById("fb-customer-chat");
-    chatbox.setAttribute("page_id", "100813059743677");
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "107644432183763");
     chatbox.setAttribute("attribution", "biz_inbox");
   </script>
 
@@ -37,19 +38,17 @@
     window.fbAsyncInit = function () {
       FB.init({
         xfbml: true,
-        version: "v17.0",
+        version: 'v17.0'
       });
     };
 
     (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
+      var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
       fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
+    }(document, 'script', 'facebook-jssdk'));
   </script>
   <header>
     <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
