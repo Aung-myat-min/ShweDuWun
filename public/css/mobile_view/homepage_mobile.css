@@ -3,35 +3,46 @@
     flex-direction: column;
     height: auto;
   }
+
   #borderleft {
     display: none;
   }
+
   #toShop {
     border: 0;
     width: 100%;
     margin: 0;
     height: 50vh;
   }
+
   #Tleft {
-    margin-left: 0.3%;
-    width: 115%;
+    margin-top: 0;
+    margin-left: 17px;
+    width: 100%;
     height: 40vh;
   }
+
   #toShop a {
     margin-top: -30px;
+    width: 90%;
+    margin: auto;
   }
+
   .Tright {
     display: none;
   }
+
   #deli_img {
     float: left;
     width: 100%;
     height: 300px;
   }
+
   #deli_id {
     width: 98%;
     margin: 0 1%;
   }
+
   #deli_id p {
     font-size: 1.5em;
   }

@@ -26,9 +26,9 @@
   float: left;
   text-align: center;
   color: rgba(0, 136, 169, 1);
-  font-size: 35px;
+  font-size: 25px;
   font-family: "Lobster", cursive;
-  padding: 3vh 0 6px 0;
+  padding: 3vh 0 18px 0;
   position: relative;
 }
 
@@ -42,6 +42,8 @@
 
 .mainpage2 p {
   padding-top: -15px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.397);
 }
 
 .mainpage3 {
@@ -51,7 +53,7 @@
   padding: 10% 0 0 8%;
   text-align: center;
   color: rgba(0, 136, 169, 1);
-  font-size: 21px;
+  font-size: 20.5px;
   font-family: "Fjalla One", sans-serif;
   animation: shadowmove 5s infinite;
   padding-right: 0%;
@@ -60,7 +62,7 @@
 
 @keyframes shadowmove {
   70% {
-    text-shadow: 10px 10px 30px rgb(80, 235, 127);
+    text-shadow: 10px 10px 30px rgb(34, 123, 248);
   }
 }
 
@@ -68,6 +70,9 @@
   letter-spacing: 1.5px;
   line-height: 35px;
   margin-top: 2%;
+  background-color: rgba(255, 255, 255, 0.699);
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .dttimg {
@@ -75,6 +80,12 @@
   cursor: pointer;
   max-width: 90%;
   max-height: 85%;
+}
+
+#dtt {
+  font-size: 25px;
+  margin: 10vh 0 0 22%;
+
 }
 
 .toShop {
@@ -120,7 +131,7 @@
 
 .cut {
   height: 80%;
-  width: 91%;
+  width: 90%;
   overflow: hidden;
   margin: auto auto;
 }
