@@ -67,7 +67,6 @@ header nav {
   padding: 3vh;
 }
 
-/*TODO - make navigation bar sticky*/
 nav a {
   text-decoration: none;
   font-weight: 800;
@@ -406,7 +405,7 @@ footer {
 }
 
 #dialog-4 {
-  >img {
+  > img {
     width: 100%;
   }
 }
