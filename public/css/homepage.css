@@ -222,13 +222,15 @@
   font-family: "Fjalla One", sans-serif;
   line-height: 1.6em;
   text-align: justify;
+  background-color: rgba(0, 162, 203, 0.7);
+  font-weight: bold;
 }
 
 .box a {
   text-decoration: none;
   padding: 1vh 2vh;
   margin: 10px;
-  background-color: purple;
+  background-color: rgb(0, 200, 255);
   font-size: 1.2em;
   transition: 200ms ease-in-out;
 }
