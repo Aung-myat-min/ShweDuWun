@@ -17,10 +17,13 @@ section {
   height: 100%;
   overflow-y: scroll;
   margin-top: 3vh;
+  border-bottom: 2px solid black;
 }
+
 .products4::-webkit-scrollbar {
   display: none;
 }
+
 .product {
   flex: 23%;
   overflow: hidden;
@@ -71,7 +74,7 @@ section {
   height: 75vh;
   background-color: white;
   float: left;
-  margin-top: 10vh;
+  margin-top: 6.5vh;
 }
 
 #sort {
@@ -90,16 +93,17 @@ section {
   justify-content: center;
   flex-direction: column;
 
-  > h1 {
+  >h1 {
     font-size: 3em;
     margin: 0 0 10px 0;
 
-    > i {
+    >i {
+      margin-top: 23px;
       float: right;
     }
   }
 
-  > p {
+  >p {
     color: gray;
   }
 }
@@ -112,11 +116,11 @@ section {
   flex-direction: column;
   background-color: rgb(233, 230, 231);
 
-  > h2 {
+  >h2 {
     font-size: 2em;
   }
 
-  > .buttons {
+  >.buttons {
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -124,12 +128,13 @@ section {
     margin-top: 5px;
     height: 90%;
 
-    > button {
+    >button {
       height: 7vh;
       font-size: 1.2em;
     }
   }
 }
+
 .reveal {
   position: relative;
   transform: translateY(150px);

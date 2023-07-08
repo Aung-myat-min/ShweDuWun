@@ -56,7 +56,6 @@
   font-size: 20.5px;
   font-family: "Fjalla One", sans-serif;
   animation: shadowmove 5s infinite;
-  padding-right: 0%;
   overflow: hidden;
 }
 
@@ -222,7 +221,7 @@
   font-family: "Fjalla One", sans-serif;
   line-height: 1.6em;
   text-align: justify;
-  background-color: rgba(0, 162, 203, 0.7);
+  background-color: rgba(0, 162, 203, 0.84);
   font-weight: bold;
 }
 

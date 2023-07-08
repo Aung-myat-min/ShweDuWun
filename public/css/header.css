@@ -122,6 +122,18 @@ header button:hover {
   color: black;
 }
 
+@media (max-width: 1300px) {
+  header nav {
+    width: 75%;
+    padding: 0;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+}
+
+
 @media only screen and (max-width: 851px) {
   #toggleButton {
     display: block;
@@ -405,7 +417,7 @@ footer {
 }
 
 #dialog-4 {
-  > img {
+  >img {
     width: 100%;
   }
 }

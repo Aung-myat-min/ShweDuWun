@@ -1,6 +1,7 @@
 @media (max-width: 1300px) {
   .product {
     flex-basis: 30%;
+    height: 360px;
     /* Show 3 items per row on narrower screens */
   }
 }
