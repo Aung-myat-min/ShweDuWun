@@ -2,7 +2,7 @@ section {
   width: 84%;
   height: auto;
   background-color: rgb(201, 238, 246);
-  margin: 10vh 8%;
+  margin: 17vh 8%;
   display: flex;
   border: solid 4px black;
 }
@@ -42,4 +42,22 @@ section {
   font-size: 2em;
   padding: 10% 10vh;
   padding-bottom: 0;
+}
+
+#backbutton {
+  align-items: center;
+  text-align: center;
+}
+
+#backbutton button {
+  padding: 0.7vh;
+  font-size: 20px;
+  background-color: rgba(35, 133, 208, 0.6);
+  border-radius: 8px;
+}
+
+#backbutton button:hover {
+  padding: 0.8vh;
+  border: 3px solid aqua;
+
 }

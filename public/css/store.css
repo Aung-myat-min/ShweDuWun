@@ -65,8 +65,8 @@ section {
 .product button:hover {
   font-size: 14px;
   border: 2px solid black;
-  color: rgb(17, 0, 255);
-  background-color: rgb(255, 133, 255);
+  color: rgb(20, 16, 66);
+  background-color: rgb(82, 231, 254);
 }
 
 .categories {

@@ -1,10 +1,13 @@
 @media only screen and (max-width: 851px) {
   .aboutus {
     padding: 0;
+    margin-top: 20vh;
   }
+
   .containerimg {
     margin: 0;
   }
+
   .containerimg,
   .under,
   .rightabout {
@@ -12,25 +15,41 @@
     width: 96%;
     padding: 0;
     text-align: justify;
-    margin: 0 2%;
+    margin: 0 4.3%;
   }
+
   .upper {
     padding: 0 2%;
   }
+
   .under {
     margin: 0;
   }
+
   .containerimg h1 {
     font-size: 2em;
   }
+
   .containerimg img {
     height: 40vh;
   }
+
   .under h2 {
     height: 100px;
   }
+
   .leftabout {
     padding-bottom: 20px;
     border-bottom: 3px double black;
+  }
+
+  #rightaboutp {
+    border-right: none;
+    border-bottom: 3px solid rgb(55, 50, 103);
+    padding-bottom: 2vh;
+  }
+
+  .rightabout p {
+    margin: 2vh 0;
   }
 }

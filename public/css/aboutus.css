@@ -2,7 +2,6 @@
   width: 100%;
   height: auto;
   padding: 3% 7%;
-  margin-top: 15vh;
 }
 
 .upper {
@@ -71,5 +70,12 @@
 .rightabout p {
   flex: 50%;
   line-height: 2em;
-  font-size: 1.3em;
+  font-size: 1.25em;
+  margin: 0 2vh 0 1vh;
+}
+
+#rightaboutp {
+  border-right: 4px dashed black;
+  font-weight: bold;
+  padding-right: 2vh;
 }
