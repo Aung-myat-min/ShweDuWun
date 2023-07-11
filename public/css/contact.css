@@ -1,7 +1,7 @@
 .desktop {
   width: 80%;
-  height: 80vh;
-  margin: 10vh 10%;
+  height: 65vh;
+  margin: 5vh 10%;
   background-color: rgba(3, 145, 247, 0.74);
   background-image: url("../imgs/mail_send.png");
   background-position: right;
@@ -26,7 +26,7 @@
 
 .left h1 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: 100%;
   text-align: center;
   font-size: 3em;
@@ -35,10 +35,10 @@
 
 .sub_left {
   position: absolute;
-  height: 24%;
+  height: 31%;
   width: 100%;
   bottom: 0;
-  background-color: rgba(83, 178, 247, 0.74);
+  background-color: rgb(79, 184, 229);
 }
 
 .sub_left h2 {
@@ -58,7 +58,6 @@
   flex-direction: row;
   justify-content: space-around;
   margin-top: 1px;
-  background-color: rgba(85, 184, 255, 0.74);
 }
 
 .sub_left1 a {
