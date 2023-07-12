@@ -11,7 +11,7 @@
 .mainpage {
   width: 80%;
   height: 550px;
-  margin-top: 15vh;
+  margin-top: 18vh;
   margin-left: 10%;
   border-radius: 20px;
   margin-right: 15%;
@@ -129,8 +129,8 @@
 }
 
 .cut {
-  height: 80%;
-  width: 90%;
+  height: 78%;
+  width: 91%;
   overflow: hidden;
   margin: auto auto;
 }

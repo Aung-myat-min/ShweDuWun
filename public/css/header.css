@@ -430,3 +430,36 @@ ui-button {
   color: #ffffff;
   font-weight: bold;
 }
+
+.noti {
+  z-index: 2;
+  background-color: rgb(255, 184, 20);
+  font-size: 2em;
+  position: fixed;
+  top: 15vh;
+  width: 100%;
+  text-align: center;
+  animation: pulse 700ms ease-in-out infinite;
+  font-weight: bold;
+}
+
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
