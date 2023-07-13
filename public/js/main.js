@@ -1,7 +1,22 @@
 $(function () {
+  var screenWidth = $(window).width();
+  var screenHeight = $(window).height();
+  var elementWidth = $("#ui-dialog").outerWidth();
+  var elementHeight = $("#ui-dialog").outerHeight();
+
   if (!getCookie("visited")) {
     // Set the cookie to indicate the visit
     setCookie("visited", true, 1); // Expiry set to 1 day (24 hours)
+
+    var centerX = (screenWidth - elementWidth) / 2;
+    var centerY = (screenHeight - elementHeight) / 2;
+
+    // Set the element's position
+    $("#ui-dialog").addClass("centered");
+    $("#ui-dialog").css({
+      top: centerY + "px",
+      left: centerX + "px",
+    });
 
     $("#dialog-4").dialog({
       autoOpen: true,

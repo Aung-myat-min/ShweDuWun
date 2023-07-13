@@ -1,149 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/header.css" type="text/css" />
+    <link rel="stylesheet" href="/css/items.css" type="text/css" />
+    <link rel="stylesheet" href="/css/mobile_view/item_mobile.css" />
+    <script
+      src="https://kit.fontawesome.com/ef09da54b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Website4MyMomsBusiness</title>
+    <link
+      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/header.css" type="text/css" />
-  <link rel="stylesheet" href="/css/items.css" type="text/css" />
-  <link rel="stylesheet" href="/css/mobile_view/item_mobile.css" />
-  <script src="https://kit.fontawesome.com/ef09da54b9.js" crossorigin="anonymous"></script>
-  <title>Website4MyMomsBusiness</title>
-  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <!-- Javascript -->
+    <script src="/js/main.js"></script>
+  </head>
 
-  <!-- Javascript -->
-  <script src="/js/main.js"></script>
-</head>
+  <body class="mainn">
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-<body class="mainn">
-  <!-- Messenger Chat Plugin Code -->
-  <div id="fb-root"></div>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-  <!-- Your Chat Plugin code -->
-  <div id="fb-customer-chat" class="fb-customerchat">
-  </div>
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "107644432183763");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
-  <script>
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "107644432183763");
-    chatbox.setAttribute("attribution", "biz_inbox");
-  </script>
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v17.0",
+        });
+      };
 
-  <!-- Your SDK code -->
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v17.0'
-      });
-    };
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <header>
+      <img class="logo" src="/imgs/sdwlogo.png" alt="logo" />
+      <nav>
+        <button id="toggleButton"><i class="fa fa-bars"></i></button>
+        <div class="hidden">
+          <a href="/">Homepage</a><span class="bordering"></span>
+          <a href="/store" id="active">Stores</a
+          ><span class="bordering"></span> <a href="/delivery">Services</a
+          ><span class="bordering"></span>
+          <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh"
+            >About & Contact</a
+          >
+        </div>
+      </nav>
+    </header>
 
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
-  <header>
-    <img class="logo" src="/imgs/sdwlogo.png" alt="logo" />
-    <nav>
-      <button id="toggleButton"><i class="fa fa-bars"></i></button>
-      <div class="hidden">
-        <a href="/">Homepage</a><span class="bordering"></span>
-        <a href="/store" id="active">Stores</a><span class="bordering"></span> <a href="/delivery">Services</a><span
-          class="bordering"></span>
-        <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh">About & Contact</a>
+    <script src="/js/navigation.js"></script>
+
+    <a href="#buynow" id="noti">CLICK HERE TO BUY!</a>
+    <section>
+      <h1 id="title"><%= name %></h1>
+      <div id="left">
+        <img src="/imgs/item_photos/<%= image %>" alt="" id="image" />
+        <p id="price"><%= price %></p>
       </div>
-    </nav>
-  </header>
-
-  <script src="/js/navigation.js"></script>
-
-  <section>
-    <div id="left">
-      <h1>
-        <%= name %>
-      </h1>
-      <img src="/imgs/item_photos/<%= image %>" alt="" id="image" />
-      <p id="price">
-        <%= price %>
-      </p>
+      <div id="right">
+        <p id="details"><%= details %></p>
+      </div>
+    </section>
+    <form action="" method="post">
+      <!-- TODO make a form look like an order -->
+      <button type="submit">Order Now!</button>
+    </form>
+    <div id="backbutton">
+      <a href="/store">
+        <button>
+          <h2>အ​နောက်သို့ပြန်သွားရန်</h2>
+        </button>
+      </a>
     </div>
-    <div id="right">
-      <p id="details">
-        <%= details %>
-      </p>
-    </div>
-  </section>
 
-  <div id="backbutton">
-    <a href="/store">
-      <button>
-        <h2>အ​နောက်သို့ပြန်သွားရန်</h2>
-      </button>
-    </a>
-  </div>
-
-  <div id="dialog-4" title="In Myanmar">
-    Please Turn on VPN for Messenger support.
-    <br />
-    <br />
-    <img src="/imgs/messenger.png" alt="" />
-  </div>
-  <footer>
-    <div class="footer1">
-      <h1>ShweDuWun</h1>
+    <div id="dialog-4" title="In Myanmar">
+      Please Turn on VPN for Messenger support.
       <br />
-      <h3>Medical Product Distributor</h3>
+      <br />
+      <img src="/imgs/messenger.png" alt="" />
     </div>
-
-    <div class="footer2">
-      <ul>
-        <li><a href="/">Pages</a></li>
+    <footer>
+      <div class="footer1">
+        <h1>ShweDuWun</h1>
         <br />
-        <li><a href="/store">stores</a></li>
-        <li><a href="/delivery">services</a></li>
-        <li><a href="/contactus">about</a></li>
-        <li><a href="/contactus">contact</a></li>
-        <br />
-        <li><a id="smallertext" href="#">Contact2WebsiteDeveloper</a></li>
-      </ul>
-    </div>
-    <div class="footer3">
-      <font>
-        <input type="email" required placeholder="Type your Email..." />
-        <br />
-        <button type="submit">Subscribe</button>
-      </font>
+        <h3>Medical Product Distributor</h3>
+      </div>
 
-      <ul class="icons">
-        <li>
-          <a href="https://www.facebook.com/profile.php?id=100088155742567"><i
-              class="fa-brands fa-facebook fa-beat"></i></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/profile.php?id=100088155742567"><i
-              class="fa-brands fa-facebook-messenger fa-fade"></i></a>
-        </li>
-        <li>
-          <a
-            href="https://mail.google.com/mail/u/0/#inbox?compose=XBcJlDNFHvPCvXtSCZVpSczdbMqCsfGLvJfKwVjGqXrcxJRjJJZdFCPsKCDbGRdjMztgnSrNScJtTnkv"><i
-              class="fa-solid fa-envelope fa-flip"></i></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/channel/UCg1Hq-lxtFiDxpWxJzsCvzg"><i
-              class="fa-brands fa-youtube fa-bounce"></i></a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer4">
-      <h4>Copyright@ 2023-2024</h4>
-    </div>
-  </footer>
-</body>
+      <div class="footer2">
+        <ul>
+          <li><a href="/">Pages</a></li>
+          <br />
+          <li><a href="/store">stores</a></li>
+          <li><a href="/delivery">services</a></li>
+          <li><a href="/contactus">about</a></li>
+          <li><a href="/contactus">contact</a></li>
+          <br />
+          <li><a id="smallertext" href="#">Contact2WebsiteDeveloper</a></li>
+        </ul>
+      </div>
+      <div class="footer3">
+        <font>
+          <input type="email" required placeholder="Type your Email..." />
+          <br />
+          <button type="submit">Subscribe</button>
+        </font>
 
+        <ul class="icons">
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100088155742567"
+              ><i class="fa-brands fa-facebook fa-beat"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100088155742567"
+              ><i class="fa-brands fa-facebook-messenger fa-fade"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox?compose=XBcJlDNFHvPCvXtSCZVpSczdbMqCsfGLvJfKwVjGqXrcxJRjJJZdFCPsKCDbGRdjMztgnSrNScJtTnkv"
+              ><i class="fa-solid fa-envelope fa-flip"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCg1Hq-lxtFiDxpWxJzsCvzg"
+              ><i class="fa-brands fa-youtube fa-bounce"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer4">
+        <h4>Copyright@ 2023-2024</h4>
+      </div>
+    </footer>
+  </body>
 </html>

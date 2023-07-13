@@ -7,6 +7,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: 300ms linear;
 }
 
 body {
@@ -132,7 +133,6 @@ header button:hover {
     font-size: 13px;
   }
 }
-
 
 @media only screen and (max-width: 851px) {
   #toggleButton {
@@ -417,7 +417,7 @@ footer {
 }
 
 #dialog-4 {
-  >img {
+  > img {
     width: 100%;
   }
 }
@@ -442,7 +442,6 @@ ui-button {
   animation: pulse 700ms ease-in-out infinite;
   font-weight: bold;
 }
-
 
 @keyframes pulse {
   0% {
