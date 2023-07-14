@@ -83,7 +83,24 @@
         <p id="details"><%= details %></p>
       </div>
     </section>
-    <form action="" method="post">
+    <form action="/order" method="post">
+      <input
+        type="hidden"
+        name="referrer"
+        value="/items/<%= image%>"
+        id="referrer"
+      />
+      <input type="hidden" id="product" value="<%= name%>" name="product" />
+      <label for="phone">Enter a phone number:</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="123-45-678"
+        required
+      />
+      <label for="amount">Quantatity:</label>
+      <input type="number" value="1" id="amount" name="amount" />
       <!-- TODO make a form look like an order -->
       <button type="submit">Order Now!</button>
     </form>

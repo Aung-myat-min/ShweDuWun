@@ -69,6 +69,7 @@
 }
 
 .rightabout p {
+  text-align: justify;
   flex: 50%;
   line-height: 2em;
   font-size: 1.3em;

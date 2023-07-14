@@ -4,9 +4,20 @@ const port = 5001;
 const fs = require("fs");
 const csv = require("csv-parser");
 const RateLimit = require("express-rate-limit");
+const nodemailer = require("nodemailer");
+const ejs = require("ejs");
+
 var limiter = RateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
   max: 10000,
+});
+
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "koaungmyatmin0@gmail.com",
+    pass: "vfmrchouuygawnvj",
+  },
 });
 
 const app = express();
@@ -15,7 +26,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // apply rate limiter to all requests
 app.use(limiter);
-
+app.use(express.urlencoded({ extended: true }));
 app.use("/js", express.static(__dirname + "/public/js"));
 app.use("/css", express.static(__dirname + "/public/css"));
 app.use("/imgs", express.static(__dirname + "/public/imgs"));
@@ -82,6 +93,56 @@ app.get("/items/:id", (req, res) => {
 
 app.get("/delivery", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/delivery.html"));
+});
+
+app.post("/order", async (req, res) => {
+  const data = req.body;
+  console.log(data);
+  const readEJSTemplate = (path) => {
+    return new Promise((resolve, reject) => {
+      fs.readFile(path, { encoding: "utf-8" }, (err, template) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(template);
+        }
+      });
+    });
+  };
+
+  // Function to render the EJS template with data
+  const renderTemplate = (template, data) => {
+    return ejs.render(template, data);
+  };
+
+  // Function to send the email
+  const sendEmail = async (data) => {
+    try {
+      // Read the EJS template file
+      const template = await readEJSTemplate(
+        path.join(__dirname, "/public/ordermail.ejs")
+      );
+
+      // Render the template with data
+      const html = renderTemplate(template, data);
+
+      // Create the email options
+      const mailOptions = {
+        from: "koaungmyatmin0@gmail.com",
+        to: "koaungmyatmin0@gmail.com",
+        subject: "ORDER",
+        html: html,
+      };
+
+      // Send the email
+      const info = await transporter.sendMail(mailOptions);
+      console.log("Email sent:", info.response);
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+  sendEmail(data);
+  res.redirect("/store");
 });
 
 app.get("*", (req, res) => {

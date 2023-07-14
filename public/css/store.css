@@ -77,58 +77,63 @@ section {
 }
 
 .categories {
-  flex: 29%;
-  height: 50%;
-  background-color: white;
-  float: left;
-  margin-top: 11.5vh;
+  flex: 20%;
+  margin-top: 20vh;
+  border-radius: 0 50px 50px 0;
 }
 
 #sort {
-  height: 30%;
+  height: auto;
   width: 100%;
   border: 0;
   border-bottom: 5px solid black;
   text-align: left;
+  border-radius: 0 50px 0 0;
+  overflow: hidden;
+  box-shadow: 9px 0px rgba(0, 0, 0, 0.516);
 }
 
 .sort {
   height: 100%;
   width: 100%;
-  padding: 5vh;
+  padding: 3.2vh 1vw;
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+  position: relative;
+  background: linear-gradient(69deg, rgb(11, 142, 194), rgb(67, 187, 196));
   > h1 {
     font-size: 2.3em;
     margin: 0 0 10px 0;
-
+    white-space: nowrap;
+    color: rgb(205, 211, 125);
+    text-shadow: 1px 3px rgba(0, 0, 0, 0.329);
     > i {
-      margin-top: 23px;
       float: right;
+      margin-right: 2vw;
     }
   }
 
   > p {
-    color: gray;
+    position: absolute;
+    color: white;
+    top: 55%;
   }
 }
 
 #subcate {
   height: auto;
   width: 100%;
-  padding: 5vh;
+  padding: 4vh;
   display: flex;
   flex-direction: column;
-  background-color: rgb(233, 230, 231);
-
+  background-color: white;
+  box-shadow: 9px 13px rgba(0, 0, 0, 0.516);
   > h2 {
-    font-size: 2em;
+    font-size: 2.3em;
   }
 
   > .buttons {
-    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -136,8 +141,21 @@ section {
     height: 90%;
 
     > button {
+      background: linear-gradient(
+        400deg,
+        rgb(28, 192, 229),
+        rgb(86, 189, 212),
+        rgb(131, 211, 230),
+        rgb(231, 240, 241),
+        white
+      );
       height: 7vh;
       font-size: 1.2em;
+      transition: 600ms cubic fill;
+    }
+    > button:hover {
+      color: rgb(50, 90, 95);
+      background: skyblue;
     }
   }
 }
