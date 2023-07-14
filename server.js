@@ -78,7 +78,7 @@ app.get("/items/:id", (req, res) => {
       if (row) {
         const dataToEJS = {
           name: rowList[1],
-          image: id + ".jpg",
+          image: id,
           price: rowList[3],
           details: rowList[2],
         };
@@ -137,12 +137,13 @@ app.post("/order", async (req, res) => {
       // Send the email
       const info = await transporter.sendMail(mailOptions);
       console.log("Email sent:", info.response);
+      return res.json({ status: "success" });
     } catch (error) {
       console.error("Error sending email:", error);
     }
   };
   sendEmail(data);
-  res.redirect("/store");
+  res.redirect(req.body.referrer.toString());
 });
 
 app.get("*", (req, res) => {
