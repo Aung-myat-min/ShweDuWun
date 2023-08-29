@@ -1,229 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/header.css" type="text/css" />
-    <link href="css/homepage.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/mobile_view/homepage_mobile.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link
-      href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/ef09da54b9.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Home-ShweDuWun</title>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797744983626717"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" type="text/css" />
+  <link href="css/homepage.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/mobile_view/homepage_mobile.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/ef09da54b9.js" crossorigin="anonymous"></script>
+  <title>Home-ShweDuWun</title>
 
-    <!-- Javascript -->
-    <script src="js/main.js"></script>
-  </head>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-  <body class="mainn">
-    <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
+  <!-- Javascript -->
+  <script src="js/main.js"></script>
+</head>
 
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
+<body class="mainn">
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
 
-    <script>
-      var chatbox = document.getElementById("fb-customer-chat");
-      chatbox.setAttribute("page_id", "107644432183763");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+  <!-- Your Chat Plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: "v17.0",
-        });
-      };
+  <script>
+    var chatbox = document.getElementById("fb-customer-chat");
+    chatbox.setAttribute("page_id", "107644432183763");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
 
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-    <!--
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v17.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+  <!--
     <a href="#" id="messenger">
       <i class="fa-brands fa-facebook-messengr"></i
     ></a>-->
 
-    <header>
-      <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
-      <nav>
-        <button id="toggleButton"><i class="fa fa-bars"></i></button>
-        <div class="hidden">
-          <a href="/" id="active">ပင်မ</a><span class="bordering"></span>
-          <a href="/store">စတိုး</a><span class="bordering"></span>
-          <a href="/delivery">ဝန်​ဆောင်မှု</a><span class="bordering"></span>
-          <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh"
-            >အ​ကြောင်း|ဆက်သွယ်ရန်</a
-          >
-        </div>
-      </nav>
-    </header>
-    <script src="js/navigation.js"></script>
-    <p class="noti">ယခုပဲဝယ်ယူလိုက်ပါ</p>
-    <!-- <div class="noti">Buy NOW!</div> -->
-    <div class="mainpage">
-      <div class="mainpage2">
-        <img class="dttimg" src="imgs/dtt.png" />
-        <p>ဝယ်ယူအား​ပေးသူ၏ ​ပျော်ရွှင်​ရေး/ကျန်းမာ​ရေးသည်သာ အဓိကဖြစ်သည်.</p>
+  <header>
+    <img class="logo" src="imgs/sdwlogo.png" alt="logo" />
+    <nav>
+      <button id="toggleButton"><i class="fa fa-bars"></i></button>
+      <div class="hidden">
+        <a href="/" id="active">ပင်မ</a><span class="bordering"></span>
+        <a href="/store">စတိုး</a><span class="bordering"></span>
+        <a href="/delivery">ဝန်​ဆောင်မှု</a><span class="bordering"></span>
+        <a href="/contactus" style="width: auto; padding: 2.2vh 1.5vh">အ​ကြောင်း|ဆက်သွယ်ရန်</a>
       </div>
-      <div class="mainpage3">
-        <div id="borderleft"></div>
-        <h3>
-          ကမ္ဘာ့အသိအမှတ်ပြုထုတ်ကုန်များကို လူကြီးမင်းတို့ သုံးဆွဲနိုင်ရန်အတွက်
-          ယခုပဲ အမြန်ဆုံးဆက်သွယ်လိုက်ပါ!
-        </h3>
+    </nav>
+  </header>
+  <script src="js/navigation.js"></script>
+  <p class="noti">ယခုပဲဝယ်ယူလိုက်ပါ</p>
+  <!-- <div class="noti">Buy NOW!</div> -->
+  <div class="mainpage">
+    <div class="mainpage2">
+      <img class="dttimg" src="imgs/dtt.png" />
+      <p>ဝယ်ယူအား​ပေးသူ၏ ​ပျော်ရွှင်​ရေး/ကျန်းမာ​ရေးသည်သာ အဓိကဖြစ်သည်.</p>
+    </div>
+    <div class="mainpage3">
+      <div id="borderleft"></div>
+      <h3>
+        ကမ္ဘာ့အသိအမှတ်ပြုထုတ်ကုန်များကို လူကြီးမင်းတို့ သုံးဆွဲနိုင်ရန်အတွက်
+        ယခုပဲ အမြန်ဆုံးဆက်သွယ်လိုက်ပါ!
+      </h3>
+    </div>
+  </div>
+
+  <h1 id="dtt">
+    Daw Thet Htar ၏ကိုယ်စားလှယ်ကြီးဖြစ်ပါသဖြင့် ယုံကြည်စိတ်ချစွာ
+    ဝယ်ယူလို့ရ​နေပါပြီ။ <span>!!</span>
+  </h1>
+
+  <section class="toShop" id="toShop">
+    <div class="TV Tleft" id="Tleft">
+      <div class="cut">
+        <div class="images">
+          <img src="imgs/item_photos/P01.jpg" alt="" />
+          <img src="imgs/item_photos/P02.jpg" alt="" />
+          <img src="imgs/item_photos/P03.jpg" alt="" />
+          <img src="imgs/item_photos/P04.jpg" alt="" />
+        </div>
       </div>
     </div>
-
-    <h1 id="dtt">
-      Daw Thet Htar ၏ကိုယ်စားလှယ်ကြီးဖြစ်ပါသဖြင့် ယုံကြည်စိတ်ချစွာ
-      ဝယ်ယူလို့ရ​နေပါပြီ။ <span>!!</span>
-    </h1>
-
-    <section class="toShop" id="toShop">
-      <div class="TV Tleft" id="Tleft">
-        <div class="cut">
-          <div class="images">
-            <img src="imgs/item_photos/P01.jpg" alt="" />
-            <img src="imgs/item_photos/P02.jpg" alt="" />
-            <img src="imgs/item_photos/P03.jpg" alt="" />
-            <img src="imgs/item_photos/P04.jpg" alt="" />
-          </div>
+    <div class="TV Tright">
+      <div class="cut">
+        <div class="images">
+          <img src="imgs/item_photos/P12.jpg" alt="" />
+          <img src="imgs/item_photos/P13.jpg" alt="" />
+          <img src="imgs/item_photos/P14.jpg" alt="" />
+          <img src="imgs/item_photos/P15.jpg" alt="" />
         </div>
       </div>
-      <div class="TV Tright">
-        <div class="cut">
-          <div class="images">
-            <img src="imgs/item_photos/P12.jpg" alt="" />
-            <img src="imgs/item_photos/P13.jpg" alt="" />
-            <img src="imgs/item_photos/P14.jpg" alt="" />
-            <img src="imgs/item_photos/P15.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-      <a href="/store">စတိုးသို့သွားရန်နှိပ်ပါ</a>
-    </section>
+    </div>
+    <a href="/store">စတိုးသို့သွားရန်နှိပ်ပါ</a>
+  </section>
 
-    <section class="deli" id="deli_id">
-      <h1>Delivery?</h1>
-      <div class="box">
-        <div class="box1">
-          <img src="imgs/delivery.png" alt="" id="deli_img" />
-          <p>
-            အမြို့မြို့ အနယ်နယ်သို့ ပို့​ဆောင်​ပေးပါသည်.
-            လမ်းပမ်းဆက်သွယ်​ရေးအဆင်မ​ပြေခြင်း, ရာသီဥတု အဆင်မ​ပြေချင်းများမှအပ
-            အချိန်မ​ရွေး ပို့​ဆောင်​ပေးပါသည်. Delivery ပို့​ဆောင်​ရေး မှ
-            မြို့များ​ပေါ်မူတည်၍အနည်းဆုံး 2ရက်, အများဆုံး 1ပတ်ခန့်ထိသာ
-            ကြာမြင့်မှာ ဖြစ်ပါတယ်. အိမ်တိုင်ရာ​​ရောက်
-            ​ငွေ​ချေစနစ်ဖြင့်လည်း​ပေး​ချေလို့ရ​နေပြပြီ။
-            <a href="/delivery">DELIVERY</a>
-          </p>
-        </div>
+  <section class="deli" id="deli_id">
+    <h1>Delivery?</h1>
+    <div class="box">
+      <div class="box1">
+        <img src="imgs/delivery.png" alt="" id="deli_img" />
+        <p>
+          အမြို့မြို့ အနယ်နယ်သို့ ပို့​ဆောင်​ပေးပါသည်.
+          လမ်းပမ်းဆက်သွယ်​ရေးအဆင်မ​ပြေခြင်း, ရာသီဥတု အဆင်မ​ပြေချင်းများမှအပ
+          အချိန်မ​ရွေး ပို့​ဆောင်​ပေးပါသည်. Delivery ပို့​ဆောင်​ရေး မှ
+          မြို့များ​ပေါ်မူတည်၍အနည်းဆုံး 2ရက်, အများဆုံး 1ပတ်ခန့်ထိသာ
+          ကြာမြင့်မှာ ဖြစ်ပါတယ်. အိမ်တိုင်ရာ​​ရောက်
+          ​ငွေ​ချေစနစ်ဖြင့်လည်း​ပေး​ချေလို့ရ​နေပြပြီ.
+        <p></p>
+        <a href="/delivery">DELIVERY</a>
+        </p>
       </div>
-    </section>
-    <!-- This site is converting visitors into subscribers and customers with respond.io - https://respond.io -->
-    <!--<script
+    </div>
+  </section>
+  <!-- This site is converting visitors into subscribers and customers with respond.io - https://respond.io -->
+  <!--<script
       src="https://app.respond.io/facebook/chat/plugin/163164/100813059743677"
       async
     ></script>-->
-    <!-- https://respond.io/ -->
+  <!-- https://respond.io/ -->
 
-    <!-- https://respond.io/ -->
-    <div id="ui-dialog">
-      <div id="dialog-4" title="In Myanmar" style="top: 0 !important">
-        VPNခံခြင်းဖြင့် messenger support ရယူပါ
-        <br />
-        <br />
-        <img src="imgs/messenger.png" alt="" />
-      </div>
+  <!-- https://respond.io/ -->
+  <div id="ui-dialog">
+    <div id="dialog-4" title="In Myanmar" style="top: 0 !important;">
+      VPNခံခြင်းဖြင့် messenger support ရယူပါ
+      <br />
+      <br />
+      <img src="imgs/messenger.png" alt="" />
     </div>
-    <footer>
-      <div class="footer1">
-        <h1>ShweDuWun</h1>
+
+  </div>
+  <footer>
+    <div class="footer1">
+      <h1>ShweDuWun</h1>
+      <br />
+      <h3>Medical Product Distributor</h3>
+    </div>
+
+    <div class="footer2">
+      <ul>
+        <li><a href="#">Pages</a></li>
         <br />
-        <h3>Medical Product Distributor</h3>
-      </div>
+        <li><a href="#">stores</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+        <br />
+        <li id="smallertext">
+          <a href="https://www.facebook.com/move.traveller/">Contact2WebsiteDeveloper</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer3">
+      <font>
+        <input type="email" required placeholder="Type your Email..." />
+        <br />
+        <button type="submit">Subscribe</button>
+      </font>
 
-      <div class="footer2">
-        <ul>
-          <li><a href="#">Pages</a></li>
-          <br />
-          <li><a href="#">stores</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
-          <br />
-          <li id="smallertext">
-            <a href="https://www.facebook.com/move.traveller/"
-              >Contact2WebsiteDeveloper</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="footer3">
-        <font>
-          <input type="email" required placeholder="Type your Email..." />
-          <br />
-          <button type="submit">Subscribe</button>
-        </font>
+      <ul class="icons">
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100088155742567"><i
+              class="fa-brands fa-facebook fa-beat"></i></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/profile.php?id=100088155742567"><i
+              class="fa-brands fa-facebook-messenger fa-fade"></i></a>
+        </li>
+        <li>
+          <a
+            href="https://mail.google.com/mail/u/0/#inbox?compose=XBcJlDNFHvPCvXtSCZVpSczdbMqCsfGLvJfKwVjGqXrcxJRjJJZdFCPsKCDbGRdjMztgnSrNScJtTnkv"><i
+              class="fa-solid fa-envelope fa-flip"></i></a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCg1Hq-lxtFiDxpWxJzsCvzg"><i
+              class="fa-brands fa-youtube fa-bounce"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer4">
+      <h4>Copyright@ 2023-2024</h4>
+    </div>
+  </footer>
 
-        <ul class="icons">
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=100088155742567"
-              ><i class="fa-brands fa-facebook fa-beat"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/profile.php?id=100088155742567"
-              ><i class="fa-brands fa-facebook-messenger fa-fade"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://mail.google.com/mail/u/0/#inbox?compose=XBcJlDNFHvPCvXtSCZVpSczdbMqCsfGLvJfKwVjGqXrcxJRjJJZdFCPsKCDbGRdjMztgnSrNScJtTnkv"
-              ><i class="fa-solid fa-envelope fa-flip"></i
-            ></a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/channel/UCg1Hq-lxtFiDxpWxJzsCvzg"
-              ><i class="fa-brands fa-youtube fa-bounce"></i
-            ></a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer4">
-        <h4>Copyright@ 2023-2024</h4>
-      </div>
-    </footer>
+  <script src="js/navigation.js"></script>
+</body>
 
-    <script src="js/navigation.js"></script>
-  </body>
 </html>
